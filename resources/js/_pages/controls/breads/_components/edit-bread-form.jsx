@@ -2,31 +2,41 @@ import { useRef, useState } from "react";
 import Input from "@/_components/input";
 import Drawer from "@/_components/drawer";
 import LoadingComponent from "@/_components/loading-component";
-import { create_bread } from "@/_services/breads-service";
+import { create_bread, update_bread } from "@/_services/breads-service";
 import { useDispatch } from "react-redux";
 import { setBreads } from "../../_redux/controls-slice";
 
-export default function CreateBreadForm() {
+export default function EditBreadForm({data}) {
   
-    const [form,setForm] = useState({})
+    const [form,setForm] = useState({
+      id:data.id,
+      name:data.name,
+      price:data.price
+    })
+    const dispatch = useDispatch()
     const [loading, setLoading] = useState(false);
     const ref = useRef();
-    const dispatch = useDispatch()
 
     function submitHandler(e) {
       e.preventDefault()
       setLoading(true)
-      create_bread(form).then(res=>{
-        dispatch(setBreads(res.data.original.status));
-        setForm({})
-        ref.current.reset();
+      update_bread(form).then(res=>{
+        // setForm({})
+        // ref.current.reset();
+        dispatch(setBreads(res.data.original.status))
+        setLoading(false)
+      })
+      .catch(res=>{
         setLoading(false)
       })
     }
 
     return (
         <>
-            <Drawer title="Create Bread">
+            <Drawer 
+            title="Edit Bread"
+            type="edit"
+            >
                 <form
                  ref={ref}
                     name="form"
@@ -34,9 +44,10 @@ export default function CreateBreadForm() {
                     className="flex flex-col h-full w-full"
                 >
                     <div className="flex-1">
+                     
                         <Input
                             onChange={(e) => setForm({ ...form, name: e.target.value })}
-                            value={form.name}
+                            value={data.name}
                             name="bread_name"
                             title="Name of Bread"
                             placeholder="Enter name of bread"
@@ -44,7 +55,7 @@ export default function CreateBreadForm() {
                         />
                         <Input
                             onChange={(e) => setForm({ ...form, price: e.target.value })}
-                            value={form.price}
+                            value={data.price}
                             name="price"
                             title="Price"
                             placeholder="Enter Price"

@@ -1,97 +1,53 @@
-import { DocumentPlusIcon } from "@heroicons/react/24/outline";
-import { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from 'react'
 
-export default function Modal({children,title}) {
-    const [open, setOpen] = useState(false);
+export default function Modal({children,isOpen,setIsOpen,title,button}) {
+  
 
-    return (
-        <>
-            <button
-                type="button"
-                onClick={() => setOpen(true)}
-                className="inline-flex items-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-            >
-                <DocumentPlusIcon
-                    className="-ml-0.5 mr-1.5 h-6 w-6"
-                    aria-hidden="true"
-                />
-                {title}
-            </button>
 
-            <Transition.Root show={open} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={setOpen}>
-                    <Transition.Child
-                        as={Fragment}
-                        enter="ease-in-out duration-500"
-                        enterFrom="opacity-0"
-                        enterTo="opacity-100"
-                        leave="ease-in-out duration-500"
-                        leaveFrom="opacity-100"
-                        leaveTo="opacity-0"
-                    >
-                        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-                    </Transition.Child>
 
-                    <div className="fixed inset-0 overflow-hidden">
-                        <div className="absolute inset-0 overflow-hidden">
-                            <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-                                <Transition.Child
-                                    as={Fragment}
-                                    enter="transform transition ease-in-out duration-500 sm:duration-700"
-                                    enterFrom="translate-x-full"
-                                    enterTo="translate-x-0"
-                                    leave="transform transition ease-in-out duration-500 sm:duration-700"
-                                    leaveFrom="translate-x-0"
-                                    leaveTo="translate-x-full"
-                                >
-                                    <Dialog.Panel className="pointer-events-auto relative w-screen max-w-md">
-                                        <Transition.Child
-                                            as={Fragment}
-                                            enter="ease-in-out duration-500"
-                                            enterFrom="opacity-0"
-                                            enterTo="opacity-100"
-                                            leave="ease-in-out duration-500"
-                                            leaveFrom="opacity-100"
-                                            leaveTo="opacity-0"
-                                        >
-                                            <div className="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
-                                                <button
-                                                    type="button"
-                                                    className="relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-                                                    onClick={() =>
-                                                        setOpen(false)
-                                                    }
-                                                >
-                                                    <span className="absolute -inset-2.5" />
-                                                    <span className="sr-only">
-                                                        Close panel
-                                                    </span>
-                                                    <XMarkIcon
-                                                        className="h-6 w-6"
-                                                        aria-hidden="true"
-                                                    />
-                                                </button>
-                                            </div>
-                                        </Transition.Child>
-                                        <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
-                                            <div className="px-4 sm:px-6">
-                                                <Dialog.Title className="text-base font-semibold leading-6 text-gray-900">
-                                                    {title}
-                                                </Dialog.Title>
-                                            </div>
-                                            <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                                             {children}
-                                            </div>
-                                        </div>
-                                    </Dialog.Panel>
-                                </Transition.Child>
-                            </div>
-                        </div>
-                    </div>
-                </Dialog>
-            </Transition.Root>
-        </>
-    );
+  return (
+    <>
+    {button}
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={()=>setIsOpen(true)}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black/25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Title
+                    as="h3"
+                    className="text-lg font-medium leading-6 text-gray-900"
+                  >
+                   {title}
+                  </Dialog.Title>
+                 {children}
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+    </>
+  )
 }

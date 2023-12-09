@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function Input({ title, type, placeholder,name,value,onChange }) {
     return (
         <>
@@ -10,6 +8,7 @@ export default function Input({ title, type, placeholder,name,value,onChange }) 
                 onInput={onChange}
                 step="any"
                 name={name}
+                // value={value}
                 defaultValue={value}
                 required
                 className={`${value == "" || value == null?'border-red-500':''} appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}

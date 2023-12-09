@@ -19,7 +19,8 @@ class BreadController extends Controller
   {
     Bread::create($request->data);
     return response()->json([
-      'status' => 'success'
+      'status' => 'success',
+      'data'=>$this->get_all_bread()
     ]);
   }
 
@@ -27,15 +28,17 @@ class BreadController extends Controller
   {
     Bread::find($id)->delete();
     return response()->json([
-      'status' => 'success'
+      'status' => 'success',
+      'data'=>$this->get_all_bread()
     ]);
   }
 
   public function update_bread(Request $request)
   {
-    Bread::find($request)->update($request->data);
+    Bread::find($request->data['id'])->update($request->data);
     return response()->json([
-      'status' => 'success'
+      'status' => 'success',
+      'data'=>$this->get_all_bread()
     ]);
   }
 

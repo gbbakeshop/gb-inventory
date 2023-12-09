@@ -1,18 +1,16 @@
 import {
     BriefcaseIcon,
     CalendarIcon,
-    CheckIcon,
     CurrencyDollarIcon,
-    DocumentPlusIcon,
-    LinkIcon,
     MagnifyingGlassIcon,
     MapPinIcon,
-    PencilIcon,
 } from "@heroicons/react/24/outline";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilteredBreads } from "../../_redux/controls-slice";
 import { useEffect, useState } from "react";
 import CreateBreadForm from "./create-bread-form";
+import CreateBreadGroupForm from "./bread-group-create";
+
 
 export default function BreadTableHeader() {
     const [query, setQuery] = useState("");
@@ -32,7 +30,6 @@ export default function BreadTableHeader() {
     useEffect(() => {
         dispatch(setFilteredBreads(filtered));
     }, [query]);
-
     return (
         <div className="lg:flex lg:items-center lg:justify-between p-3">
             <div className="min-w-0 flex-1">
@@ -83,20 +80,9 @@ export default function BreadTableHeader() {
                 </div>
             </div>
             <div className="mt-4 flex lg:ml-4 lg:mt-0">
-                <span className="hidden sm:block">
-                    <button
-                        type="button"
-                        className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                    >
-                        <PencilIcon
-                            className="-ml-0.5 mr-1.5 h-6 w-6 text-gray-400"
-                            aria-hidden="true"
-                        />
-                        Edit
-                    </button>
-                </span>
+                <CreateBreadGroupForm />
 
-                <span className="ml-3 hidden sm:block">
+                {/* <span className="ml-3 hidden sm:block">
                     <button
                         type="button"
                         className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
@@ -107,7 +93,7 @@ export default function BreadTableHeader() {
                         />
                         View
                     </button>
-                </span>
+                </span> */}
 
                 <span className="sm:ml-3">
                     <CreateBreadForm />

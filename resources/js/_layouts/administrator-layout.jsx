@@ -19,7 +19,7 @@ export default function AdministratorLayout({ auth, children, subNav }) {
             <div className="flex-none ">
                 <SideNavbar subNav={subNav} />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 w-screen">
                 <div className="flex flex-col">
                     <div className="flex-none top-0 sticky">
                         <TopNavbar />

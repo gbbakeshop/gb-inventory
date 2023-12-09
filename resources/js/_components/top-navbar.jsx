@@ -26,7 +26,7 @@ export default function TopNavbar() {
     const { isTopBarToggled } = useSelector((state) => state.app);
 
     return (
-        <Disclosure as="nav" className="bg-white shadow-lg">
+        <Disclosure as="nav" className="bg-white shadow-lg z-50">
             {({ open }) => (
                 <>
                     <div className="mx-auto w-full px-3">

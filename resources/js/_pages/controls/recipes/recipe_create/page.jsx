@@ -12,7 +12,7 @@ export default function RecipesCreatePage() {
     return (
         <>
             <RecipesStepper />
-            <div className="flex min-h-[69vh] mt-2">
+            <div className="flex min-h-[59vh] mt-2">
                 <div className="flex flex-col w-full gap-2">
                     <div className="flex-1 ">
                       {stepperValue == 1 && <RecipeDetailsSection />}

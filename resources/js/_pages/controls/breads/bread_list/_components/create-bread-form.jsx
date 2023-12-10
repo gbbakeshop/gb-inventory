@@ -4,38 +4,60 @@ import Drawer from "@/_components/drawer";
 import LoadingComponent from "@/_components/loading-component";
 import { create_bread } from "@/_services/breads-service";
 import { useDispatch } from "react-redux";
-import { setBreads } from "../../_redux/controls-slice";
+import { setBreads } from "../../../_redux/controls-slice";
+import { setToastStatus } from "@/_redux/app-slice";
 
 export default function CreateBreadForm() {
-  
-    const [form,setForm] = useState({})
+    const [form, setForm] = useState({});
     const [loading, setLoading] = useState(false);
     const ref = useRef();
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     function submitHandler(e) {
-      e.preventDefault()
-      setLoading(true)
-      create_bread(form).then(res=>{
-        dispatch(setBreads(res.data.original.status));
-        setForm({})
-        ref.current.reset();
-        setLoading(false)
-      })
+        e.preventDefault();
+        dispatch(
+            setToastStatus({
+                status: "loading",
+                message: "Loading...",
+            })
+        );
+        setLoading(true);
+        create_bread(form)
+            .then((res) => {
+                dispatch(setToastStatus(res.notify));
+                dispatch(setBreads(res.data.original.status));
+                setForm({});
+                ref.current.reset();
+                setLoading(false);
+            })
+            .catch((err) => {
+                dispatch(
+                    setToastStatus({
+                        status: "error",
+                        message: "Loading...",
+                    })
+                );
+                setLoading(false);
+            });
     }
 
     return (
         <>
             <Drawer title="Create Bread">
                 <form
-                 ref={ref}
+                    ref={ref}
                     name="form"
                     onSubmit={submitHandler}
                     className="flex flex-col h-full w-full"
                 >
                     <div className="flex-1">
                         <Input
-                            onChange={(e) => setForm({ ...form, name: e.target.value })}
+                            onChange={(e) =>
+                                setForm({
+                                    ...form,
+                                    name: e.target.value.toUpperCase(),
+                                })
+                            }
                             value={form.name}
                             name="bread_name"
                             title="Name of Bread"
@@ -43,7 +65,9 @@ export default function CreateBreadForm() {
                             type="text"
                         />
                         <Input
-                            onChange={(e) => setForm({ ...form, price: e.target.value })}
+                            onChange={(e) =>
+                                setForm({ ...form, price: e.target.value })
+                            }
                             value={form.price}
                             name="price"
                             title="Price"
@@ -55,7 +79,10 @@ export default function CreateBreadForm() {
                         {loading ? (
                             <LoadingComponent />
                         ) : (
-                            <button type="submit" className="flex-none w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded bottom-0">
+                            <button
+                                type="submit"
+                                className="flex-none w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded bottom-0"
+                            >
                                 SUBMIT
                             </button>
                         )}

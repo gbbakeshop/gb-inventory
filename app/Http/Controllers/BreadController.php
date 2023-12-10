@@ -20,7 +20,11 @@ class BreadController extends Controller
     Bread::create($request->data);
     return response()->json([
       'status' => 'success',
-      'data'=>$this->get_all_bread()
+      'notify' => [
+        'status' => 'success',
+        'message' => 'Created Successfully'
+      ],
+      'data' => $this->get_all_bread()
     ]);
   }
 
@@ -29,7 +33,11 @@ class BreadController extends Controller
     Bread::find($id)->delete();
     return response()->json([
       'status' => 'success',
-      'data'=>$this->get_all_bread()
+      'notify' => [
+        'status' => 'success',
+        'message' => 'Deleted Successfully'
+      ],
+      'data' => $this->get_all_bread()
     ]);
   }
 
@@ -38,7 +46,11 @@ class BreadController extends Controller
     Bread::find($request->data['id'])->update($request->data);
     return response()->json([
       'status' => 'success',
-      'data'=>$this->get_all_bread()
+      'notify' => [
+        'status' => 'success',
+        'message' => 'Updated Successfully'
+      ],
+      'data' => $this->get_all_bread()
     ]);
   }
 

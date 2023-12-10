@@ -4,6 +4,7 @@ import { get_all_branches } from "@/_services/branches-service";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setBranches } from "@/_redux/app-slice";
+import Toastify from "@/_components/toastify";
 
 export default function AdministratorLayout({ auth, children, subNav }) {
     const dispatch = useDispatch();
@@ -15,6 +16,8 @@ export default function AdministratorLayout({ auth, children, subNav }) {
     }, [dispatch]);
 
     return (
+      <>
+      <Toastify />
         <div className="flex">
             <div className="flex-none ">
                 <SideNavbar subNav={subNav} />
@@ -30,5 +33,6 @@ export default function AdministratorLayout({ auth, children, subNav }) {
                 </div>
             </div>
         </div>
+        </>
     );
 }

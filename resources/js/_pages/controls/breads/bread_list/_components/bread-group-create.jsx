@@ -2,38 +2,53 @@ import { useRef, useState } from "react";
 import Drawer from "@/_components/drawer";
 import LoadingComponent from "@/_components/loading-component";
 import { useDispatch, useSelector } from "react-redux";
-import { setBreads } from "../../_redux/controls-slice";
+import { setBreads } from "../../../_redux/controls-slice";
 import { Fragment } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import { create_bread_group } from "@/_services/bread-group-service";
 import Input from "@/_components/input";
+import { setToastStatus } from "@/_redux/app-slice";
 
 export default function CreateBreadGroupForm() {
     const [selectedBreads, setSelectedBreads] = useState([]);
     const [query, setQuery] = useState("");
     const [loading, setLoading] = useState(false);
     const { breads } = useSelector((state) => state.controls);
-    const [groupName,setGroupName] = useState('')
-
+    const [groupName, setGroupName] = useState("");
+    const dispatch = useDispatch();
     function submitHandler(e) {
         e.preventDefault();
+        dispatch(
+            setToastStatus({
+                status: "loading",
+                message: "Loading...",
+            })
+        );
         if (selectedBreads.length !== 0) {
             setLoading(true);
-            create_bread_group(selectedBreads,groupName).then((res) => {
-               if(res.status == 'success'){
-                setSelectedBreads([])
-                setQuery('')
-               }else{
-                  alert('exist')
-               }
-               setLoading(false);
-            })
-            .catch(err=>{
-              setLoading(false);
-            });
-        }else{
-          alert('ss')
+            create_bread_group(selectedBreads, groupName)
+                .then((res) => {
+                    if (res.status == "success") {
+                        dispatch(setToastStatus(res.notify));
+                        setSelectedBreads([]);
+                        setQuery("");
+                    } else {
+                        dispatch(setToastStatus(res.notify));
+                    }
+                    setLoading(false);
+                })
+                .catch((err) => {
+                    dispatch(
+                        setToastStatus({
+                            status: "error",
+                            message: "Loading...",
+                        })
+                    );
+                    setLoading(false);
+                });
+        } else {
+            alert("Please Select Bread");
         }
     }
 
@@ -52,9 +67,9 @@ export default function CreateBreadGroupForm() {
                     className="flex flex-col h-full w-full"
                 >
                     <div className="flex-1">
-                    <Input
+                        <Input
                             onChange={(e) => setGroupName(e.target.value)}
-                            value=''
+                            value=""
                             name="bread_name"
                             title="Group Name"
                             placeholder="Enter of Group"

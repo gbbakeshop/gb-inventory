@@ -2,9 +2,10 @@ import Modal from "@/_components/modal";
 import { delete_bread } from "@/_services/breads-service";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import { setBreads } from "../../_redux/controls-slice";
+import { setBreads } from "../../../_redux/controls-slice";
 import { useDispatch } from "react-redux";
 import LoadingComponent from "@/_components/loading-component";
+import { setToastStatus } from "@/_redux/app-slice";
 
 export default function DeleteBread({ data }) {
     let [isOpen, setIsOpen] = useState(false);
@@ -13,13 +14,28 @@ export default function DeleteBread({ data }) {
 
     function deleteBreadSubmit() {
         setLoading(true);
+        dispatch(
+            setToastStatus({
+                status: "loading",
+                message: "Loading...",
+            })
+        );
+
         delete_bread(data.id)
             .then((res) => {
+              dispatch(setToastStatus(res.notify));
                 setIsOpen(false);
                 dispatch(setBreads(res.data.original.status));
                 setLoading(false);
             })
             .catch((err) => {
+                dispatch(
+                    setToastStatus({
+                        status: "error",
+                        message: "Loading...",
+                    })
+                );
+                setLoading(false);
                 setLoading(false);
             });
     }
@@ -53,9 +69,9 @@ export default function DeleteBread({ data }) {
                             Close
                         </button>
                         {loading ? (
-                           <div className="w-20">
-                           <LoadingComponent />
-                           </div>
+                            <div className="w-20">
+                                <LoadingComponent />
+                            </div>
                         ) : (
                             <button
                                 type="button"
@@ -65,7 +81,6 @@ export default function DeleteBread({ data }) {
                                 Delete It
                             </button>
                         )}
-                       
                     </div>
                 </div>
             </Modal>

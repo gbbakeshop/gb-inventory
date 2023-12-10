@@ -2,9 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import BreadTableHeader from "./bread-table-header";
 import { useEffect } from "react";
 import { get_all_bread } from "@/_services/breads-service";
-import { setBreads } from "../../_redux/controls-slice";
+import { setBreads } from "../../../_redux/controls-slice";
 import EditBreadForm from "./edit-bread-form";
-import Modal from "@/_components/modal";
 import DeleteBread from "./delete-bread";
 
 export default function BreadTable() {

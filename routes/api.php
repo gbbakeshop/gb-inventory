@@ -27,8 +27,10 @@ Route::post('/create_bread','App\Http\Controllers\BreadController@create_bread')
 Route::delete('/delete_bread/{id}','App\Http\Controllers\BreadController@delete_bread');
 Route::post('/update_bread','App\Http\Controllers\BreadController@update_bread');
 //
-
+Route::get('/get_all_bread_group','App\Http\Controllers\BreadGroupController@get_all_bread_group');
 Route::post('/create_bread_group','App\Http\Controllers\BreadGroupController@create_bread_group');
+Route::delete('/delete_bread_group/{id}','App\Http\Controllers\BreadGroupController@delete_bread_group');
+
 //
 Route::get('/get_all_raw_materials','App\Http\Controllers\RawMaterialController@get_all_raw_materials');
 Route::post('/create_raw_materials','App\Http\Controllers\RawMaterialController@create_raw_materials');

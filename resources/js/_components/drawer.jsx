@@ -3,35 +3,35 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
-export default function Drawer({children,title,type}) {
+export default function Drawer({ children, title, type }) {
     const [open, setOpen] = useState(false);
 
     return (
         <>
-        {
-          type=='edit'?
-          <>
-          <button
-           onClick={() => setOpen(true)}>
-          <PencilIcon
-              className="-ml-0.5 mr-1.5 h-6 w-6 text-blue-500"
-              aria-hidden="true"
-          />
-          </button>
-          </>
-          :<button
-          type="button"
-          onClick={() => setOpen(true)}
-          className="inline-flex items-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-      >
-          <DocumentPlusIcon
-              className="-ml-0.5 mr-1.5 h-6 w-6"
-              aria-hidden="true"
-          />
-          {title}
-      </button>
-        }
-            
+            {type == "edit" ? (
+                <>
+                    <button onClick={() => setOpen(true)}>
+                        <PencilIcon
+                            className="-ml-0.5 mr-1.5 h-6 w-6 text-blue-500"
+                            aria-hidden="true"
+                        />
+                    </button>
+                </>
+            ) : (
+                <span className="hidden sm:block">
+                    <button
+                    onClick={() => setOpen(true)}
+                        type="button"
+                        className="bg-red-500 inline-flex items-center rounded-md  text-white px-3 py-2 text-sm font-semibold  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-600"
+                    >
+                        <PencilIcon
+                            className="-ml-0.5 mr-1.5 h-6 w-6 text-white"
+                            aria-hidden="true"
+                        />
+                      {title}
+                    </button>
+                </span>
+            )}
 
             <Transition.Root show={open} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -95,7 +95,7 @@ export default function Drawer({children,title,type}) {
                                                 </Dialog.Title>
                                             </div>
                                             <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                                             {children}
+                                                {children}
                                             </div>
                                         </div>
                                     </Dialog.Panel>

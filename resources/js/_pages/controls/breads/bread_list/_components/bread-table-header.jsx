@@ -4,13 +4,13 @@ import {
     CurrencyDollarIcon,
     MagnifyingGlassIcon,
     MapPinIcon,
+    PencilSquareIcon,
 } from "@heroicons/react/24/outline";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilteredBreads } from "../../_redux/controls-slice";
+import { setFilteredBreads } from "../../../_redux/controls-slice";
 import { useEffect, useState } from "react";
 import CreateBreadForm from "./create-bread-form";
 import CreateBreadGroupForm from "./bread-group-create";
-
 
 export default function BreadTableHeader() {
     const [query, setQuery] = useState("");
@@ -36,13 +36,13 @@ export default function BreadTableHeader() {
                 <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
                     List of Bread
                 </h2>
-                <div class=" flex mx-auto text-gray-600 ">
-                    <button type="submit" class=" right-0 top-0 mx-3">
+                <div className=" flex mx-auto text-gray-600 ">
+                    <button type="submit" className=" right-0 top-0 mx-3">
                         <MagnifyingGlassIcon className="h-6" />
                     </button>
                     <input
                         onChange={(event) => setQuery(event.target.value)}
-                        class="border-2 h-10 px-5 pr-16 w-full rounded-lg text-sm "
+                        className="border-2 h-10  w-full rounded-lg text-sm "
                         type="search"
                         name="search"
                         placeholder="Search..."
@@ -80,20 +80,9 @@ export default function BreadTableHeader() {
                 </div>
             </div>
             <div className="mt-4 flex lg:ml-4 lg:mt-0">
-                <CreateBreadGroupForm />
-
-                {/* <span className="ml-3 hidden sm:block">
-                    <button
-                        type="button"
-                        className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                    >
-                        <LinkIcon
-                            className="-ml-0.5 mr-1.5 h-6 w-6 text-gray-400"
-                            aria-hidden="true"
-                        />
-                        View
-                    </button>
-                </span> */}
+                <span className="sm:ml-3">
+                    <CreateBreadGroupForm />
+                </span>
 
                 <span className="sm:ml-3">
                     <CreateBreadForm />

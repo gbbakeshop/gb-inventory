@@ -4,7 +4,11 @@ export const appSlice = createSlice({
   name: 'app',
   initialState: {
     isTopBarToggled: true,
-    branches:[]
+    branches:[],
+    toastStatus:{
+      status:'waiting',
+      message:''
+    }
   },
   reducers: {
     setIsTopbarToggled: (state, action) => {
@@ -13,13 +17,17 @@ export const appSlice = createSlice({
     setBranches: (state, action) => {
       state.branches = action.payload;
     },
+    setToastStatus: (state, action) => {
+      state.toastStatus = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
 export const { 
   setIsTopbarToggled,
-  setBranches
+  setBranches,
+  setToastStatus
  } = appSlice.actions;
 
 export default appSlice.reducer;

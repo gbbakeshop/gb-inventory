@@ -4,6 +4,8 @@ export const controlsSlice = createSlice({
   name: 'controls',
   initialState: {
     stepperValue: 1, 
+    breadGroup:[],
+    filteredBreadGroup:[],
     breads:[],
     filteredBreads:[]
   },
@@ -18,6 +20,13 @@ export const controlsSlice = createSlice({
     setFilteredBreads: (state, action) => {
       state.filteredBreads = action.payload;
     },
+    setBreadGroup: (state, action) => {
+      state.breadGroup = action.payload;
+      state.filteredBreadGroup = action.payload;
+    },
+    setFilteredBreadGroup: (state, action) => {
+      state.filteredBreadGroup = action.payload;
+    }
   },
 });
 
@@ -25,6 +34,9 @@ export const controlsSlice = createSlice({
 export const { 
   setStepperValue,
   setBreads,
-  setFilteredBreads } = controlsSlice.actions;
+  setFilteredBreads,
+  setBreadGroup,
+  setFilteredBreadGroup
+ } = controlsSlice.actions;
 
 export default controlsSlice.reducer;

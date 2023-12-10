@@ -20,6 +20,34 @@ class BreadGroupController extends Controller
     return $randomString;
   }
 
+  public function get_all_bread_group()
+  {
+    $breadGroup = BreadGroup::select('token', 'group_name')->distinct()->get();
+    $newData = [];
+    foreach ($breadGroup as $record) {
+      $token = $record->token;
+      $data = BreadGroup::where('token', $token)->with('bread')->get();
+      $newData[] = $data;  // Append the records to the array
+    }
+    return response()->json([
+      'group' => $breadGroup,
+      'status' => $newData
+    ]);
+  }
+
+  public function delete_bread_group($token)
+  {
+    BreadGroup::where('token', $token)->delete();
+    return response()->json([
+      'status' => 'success',
+      'notify' => [
+        'status' => 'success',
+        'message' => 'Deleted Successfully'
+      ],
+      'data' => $this->get_all_bread_group()
+    ]);
+  }
+
   public function create_bread_group(Request $request)
   {
     $token = $this->randomToken();
@@ -35,10 +63,18 @@ class BreadGroupController extends Controller
       }
       return response()->json([
         'status' => 'success',
+        'notify' => [
+          'status' => 'success',
+          'message' => 'Created Successfully'
+        ],
       ]);
     } else {
       return response()->json([
         'status' => 'exist',
+        'notify' => [
+          'status' => 'exist',
+          'message' => 'Name of group is already exist!'
+        ],
       ]);
     }
 

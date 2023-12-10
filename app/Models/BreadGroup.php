@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class BreadGroup extends Model
 {
@@ -13,5 +14,11 @@ class BreadGroup extends Model
       'group_name',
       'token'
    ];
+
+
+   public function bread(): HasOne
+   {
+       return $this->hasOne(Bread::class,'id');
+   }
    
 }

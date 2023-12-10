@@ -378,7 +378,7 @@ createApp(App).use(ZiggyVue);
 Now you can use the `route()` function anywhere in your Vue components and templates:
 
 ```vue
-<a class="nav-link" :href="route('home')">Home</a>
+<a className="nav-link" :href="route('home')">Home</a>
 ```
 
 If you are not using the `@routes` Blade directive, import Ziggy's configuration too and pass it to `.use()`:

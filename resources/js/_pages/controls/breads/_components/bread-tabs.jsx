@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import BreadTable from "./bread-table";
+import RecordBreadListPage from "../bread_list/page";
+import RecordBreadGroupPage from "../bread_group/page";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -11,12 +12,12 @@ export default function BreadTabs() {
         {
             id: 1,
             name: "Breads",
-            component:<BreadTable />
+            component:<RecordBreadListPage />
         },
         {
             id2: 2,
             name: "Bread Group",
-            component:<>Waa</>
+            component:<RecordBreadGroupPage />
         },
     ]);
 

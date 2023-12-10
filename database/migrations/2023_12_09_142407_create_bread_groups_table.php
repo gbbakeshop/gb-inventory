@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('bread_id')->nullable();
             $table->string('group_name')->nullable();
-            $table->string('token')->nullable();
+            $table->bigInteger('token')->nullable();
             $table->timestamps();
         });
     }

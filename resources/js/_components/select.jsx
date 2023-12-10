@@ -16,7 +16,7 @@ export default function Select({
                 } appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
             >
                 {items.map((res,index) => (
-                    <option key={index} value={res} selected={res == value}>{res}</option>
+                    <option key={index} value={res.value} selected={res.value == value}>{res.value}</option>
                 ))}
             </select>
             {value == "" && (

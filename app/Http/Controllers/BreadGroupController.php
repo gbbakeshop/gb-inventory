@@ -10,7 +10,7 @@ class BreadGroupController extends Controller
 
   function randomToken($length = 32)
   {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $characters = '0123456789';
     $randomString = '';
 
     for ($i = 0; $i < $length; $i++) {

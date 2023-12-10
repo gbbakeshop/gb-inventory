@@ -90,7 +90,7 @@ export default function RawMaterialsListEdit({ data }) {
                             onChange={(e) =>
                                 setForm({ ...form, bind: e.target.value })
                             }
-                            items={["Grams", "Pcs"]}
+                            items={[{value:"Grams",id:1}, {value:"Pcs",id:2}]}
                         />
                     </div>
                     <div className="flex-none">

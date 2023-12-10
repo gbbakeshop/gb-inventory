@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('raw_materials_groups', function (Blueprint $table) {
+        Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('raw_materials_id')->nullable();
-            $table->string('group_name')->nullable();
-            $table->bigInteger('token')->nullable();
+            $table->string('name')->nullable();
+            $table->bigInteger('target')->nullable();
+            $table->bigInteger('bread_group_token')->nullable();
+            $table->bigInteger('raw_materials_group_token')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('raw_materials_groups');
+        Schema::dropIfExists('recipes');
     }
 };

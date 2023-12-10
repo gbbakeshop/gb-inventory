@@ -12,24 +12,12 @@ export default function RecipesCreatePage() {
     return (
         <>
             <RecipesStepper />
-            <div className="flex min-h-[59vh] mt-2">
+            <div className="flex min-h-[57vh] mt-2">
                 <div className="flex flex-col w-full gap-2">
                     <div className="flex-1 ">
-                      {stepperValue == 1 && <RecipeDetailsSection />}
-                      {stepperValue == 2 && <GroupBreadSection />}
-                      {stepperValue == 3 && <GroupRawMaterialsSection />}
-                    </div>
-                    <div className="flex-none ">
-                        <div className="flex w-full items-center justify-end">
-                            <button
-                                onClick={()=>dispatch(setStepperValue(stepperValue+1))}
-                                type="button"
-                                className="flex  justify-center rounded-md bg-red-600 px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-                            >
-                                NEXT PAGE{" "}
-                                <ChevronDoubleRightIcon className="h-6 ml-3" />
-                            </button>
-                        </div>
+                        {stepperValue == 1 && <RecipeDetailsSection />}
+                        {stepperValue == 2 && <GroupBreadSection />}
+                        {stepperValue == 3 && <GroupRawMaterialsSection />}
                     </div>
                 </div>
             </div>

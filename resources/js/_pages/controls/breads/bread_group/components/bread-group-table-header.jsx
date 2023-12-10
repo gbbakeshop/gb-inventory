@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 
 export default function BreadGroupTableHeader() {
     const [query, setQuery] = useState("");
-    const { breadGroup, filteredbreadGroup } = useSelector(
+    const { breadGroup } = useSelector(
         (state) => state.controls
     );
     const dispatch = useDispatch();

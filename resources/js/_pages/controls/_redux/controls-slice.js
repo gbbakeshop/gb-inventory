@@ -7,7 +7,9 @@ export const controlsSlice = createSlice({
     breadGroup:[],
     filteredBreadGroup:[],
     breads:[],
-    filteredBreads:[]
+    filteredBreads:[],
+    rawMaterials:[],
+    filteredRawMaterials:[]
   },
   reducers: {
     setStepperValue: (state, action) => {
@@ -26,7 +28,14 @@ export const controlsSlice = createSlice({
     },
     setFilteredBreadGroup: (state, action) => {
       state.filteredBreadGroup = action.payload;
-    }
+    },
+    setRawMaterials: (state, action) => {
+      state.rawMaterials = action.payload;
+      state.filteredRawMaterials = action.payload;
+    },
+    setFilteredRawMaterials: (state, action) => {
+      state.filteredRawMaterials = action.payload;
+    },
   },
 });
 
@@ -36,7 +45,9 @@ export const {
   setBreads,
   setFilteredBreads,
   setBreadGroup,
-  setFilteredBreadGroup
+  setFilteredBreadGroup,
+  setRawMaterials,
+  setFilteredRawMaterials
  } = controlsSlice.actions;
 
 export default controlsSlice.reducer;

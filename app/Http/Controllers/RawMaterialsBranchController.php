@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class RawMaterialsBranchController extends Controller
 {
+  
   public function get_all_branch_raw_materials($branchid){
     $data = RawMaterialsBranch::find($branchid);
     return response()->json([

@@ -41,6 +41,8 @@ Route::post('/update_raw_materials','App\Http\Controllers\RawMaterialController@
 Route::get('/get_all_branch_raw_materials/{branchid}','App\Http\Controllers\RawMaterialsBranchController@get_all_branch_raw_materials');
 Route::post('/update_branch_raw_materials','App\Http\Controllers\RawMaterialController@update_branch_raw_materials');
 //
+Route::post('/create_raw_materials_group','App\Http\Controllers\RawMaterialsGroupController@create_raw_materials_group');
+//
 Route::get('/get_all_selecta','App\Http\Controllers\SelectaController@get_all_selecta');
 Route::post('/create_selecta','App\Http\Controllers\SelectaController@create_selecta');
 Route::delete('/delete_selecta/{id}','App\Http\Controllers\SelectaController@delete_selecta');

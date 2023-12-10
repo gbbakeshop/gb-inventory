@@ -1,13 +1,13 @@
 import Modal from "@/_components/modal";
-import { delete_bread } from "@/_services/breads-service";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import { setBreads } from "../../../_redux/controls-slice";
+import { setRawMaterials } from "../../../_redux/controls-slice";
 import { useDispatch } from "react-redux";
 import LoadingComponent from "@/_components/loading-component";
 import { setToastStatus } from "@/_redux/app-slice";
+import { delete_raw_materials } from "@/_services/raw-materials-service";
 
-export default function DeleteBread({ data }) {
+export default function RawMaterialsListDelete({ data }) {
     let [isOpen, setIsOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
@@ -21,11 +21,11 @@ export default function DeleteBread({ data }) {
             })
         );
 
-        delete_bread(data.id)
+        delete_raw_materials(data.id)
             .then((res) => {
               dispatch(setToastStatus(res.notify));
                 setIsOpen(false);
-                dispatch(setBreads(res.data.original.status));
+                dispatch(setRawMaterials(res.data.original.status));
                 setLoading(false);
             })
             .catch((err) => {

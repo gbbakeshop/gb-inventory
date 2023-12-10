@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
+import RawMaterialsList from "../raw_materials_list/page";
+import RawMaterialsGroup from "../raw_materials_group/page";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -10,10 +12,12 @@ export default function RawMaterialsTabs() {
         {
             id: 1,
             name: "Raw Materials",
+            component:<RawMaterialsList />
         },
         {
             id2: 2,
             name: "Raw Materials Group",
+            component:<RawMaterialsGroup />
         },
     ]);
 
@@ -47,16 +51,7 @@ export default function RawMaterialsTabs() {
                                 "ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
                             )}
                         >
-                            <ul>
-                                <li
-                                    key={res.id}
-                                    className="relative rounded-md p-3 hover:bg-gray-100"
-                                >
-                                    <h3 className="text-sm font-medium leading-5">
-                                        {res.name}
-                                    </h3>
-                                </li>
-                            </ul>
+                           {res.component}
                         </Tab.Panel>
                     ))}
                 </Tab.Panels>

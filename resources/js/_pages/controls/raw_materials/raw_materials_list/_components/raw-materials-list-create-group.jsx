@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import Drawer from "@/_components/drawer";
 import LoadingComponent from "@/_components/loading-component";
 import { useDispatch, useSelector } from "react-redux";
-import { setBreads } from "../../../_redux/controls-slice";
 import { Fragment } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/20/solid";
@@ -10,12 +9,13 @@ import { create_bread_group } from "@/_services/bread-group-service";
 import Input from "@/_components/input";
 import { setToastStatus } from "@/_redux/app-slice";
 import { PencilSquareIcon } from "@heroicons/react/24/outline";
+import { create_raw_materials_group } from "@/_services/raw-materials-group-service";
 
-export default function CreateBreadGroupForm() {
+export default function RawMaterialsListCreateGroup() {
     const [selectedBreads, setSelectedBreads] = useState([]);
     const [query, setQuery] = useState("");
     const [loading, setLoading] = useState(false);
-    const { breads } = useSelector((state) => state.controls);
+    const { rawMaterials } = useSelector((state) => state.controls);
     const [groupName, setGroupName] = useState("");
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
@@ -30,7 +30,7 @@ export default function CreateBreadGroupForm() {
         );
         if (selectedBreads.length !== 0) {
             setLoading(true);
-            create_bread_group(selectedBreads, groupName)
+            create_raw_materials_group(selectedBreads, groupName)
                 .then((res) => {
                     if (res.status == "success") {
                         dispatch(setToastStatus(res.notify));
@@ -57,8 +57,8 @@ export default function CreateBreadGroupForm() {
 
     const filteredBreads =
         query === ""
-            ? breads
-            : breads.filter((bread) => {
+            ? rawMaterials
+            : rawMaterials.filter((bread) => {
                   return bread.name.toLowerCase().includes(query.toLowerCase());
               });
 
@@ -76,10 +76,10 @@ export default function CreateBreadGroupForm() {
                             className="bg-white inline-flex items-center rounded-md  text-red-500 border-red-500 border px-3 py-2 text-sm font-semibold  shadow-sm ring-1 ring-inset ring-red-500 hover:bg-gray-100"
                         >
                             <PencilSquareIcon
-                                 className="-ml-0.5 mr-1.5 h-6 w-6 text-red-500"
+                                className="-ml-0.5 mr-1.5 h-6 w-6 text-red-500"
                                 aria-hidden="true"
                             />
-                            Create Group of Bread
+                            Create Group of Raw Materials
                         </button>
                     </span>
                 }
@@ -105,7 +105,7 @@ export default function CreateBreadGroupForm() {
                             <div className="relative mt-1">
                                 <div className="relative w-full cursor-default rounded-lg text-left  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-red-300 sm:text-sm">
                                     <Combobox.Input
-                                        placeholder="Search bread"
+                                        placeholder="Search Raw Material"
                                         className="w-full h-full border rounded-md border-red-500 py-4 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
                                         // displayValue={(bread) => bread.map(res=>res.name)}
                                         onChange={(event) =>

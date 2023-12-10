@@ -1,58 +1,37 @@
-import { useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import Drawer from "@/_components/drawer";
-import LoadingComponent from "@/_components/loading-component";
 import { useDispatch, useSelector } from "react-redux";
-import { setBreads } from "../../../_redux/controls-slice";
-import { Fragment } from "react";
+import {
+    CheckIcon,
+    PencilSquareIcon,
+    TrashIcon,
+} from "@heroicons/react/24/outline";
+import {
+    delete_specific_bread_group,
+    update_bread_group,
+} from "@/_services/bread-group-service";
+import { setBreadGroup } from "@/_pages/controls/_redux/controls-slice";
 import { Combobox, Transition } from "@headlessui/react";
-import { CheckIcon } from "@heroicons/react/20/solid";
-import { create_bread_group } from "@/_services/bread-group-service";
-import Input from "@/_components/input";
-import { setToastStatus } from "@/_redux/app-slice";
-import { PencilSquareIcon } from "@heroicons/react/24/outline";
+import LoadingComponent from "@/_components/loading-component";
 
-export default function CreateBreadGroupForm() {
-    const [selectedBreads, setSelectedBreads] = useState([]);
-    const [query, setQuery] = useState("");
-    const [loading, setLoading] = useState(false);
-    const { breads } = useSelector((state) => state.controls);
-    const [groupName, setGroupName] = useState("");
+export default function BreadGroupEdit({ data }) {
     const dispatch = useDispatch();
+    const [selectedBreads, setSelectedBreads] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [loading2, setLoading2] = useState(false);
+    const ref = useRef();
+    const [query, setQuery] = useState("");
+    const { breads } = useSelector((state) => state.controls);
     const [open, setOpen] = useState(false);
+    const [currentId, setCurrentId] = useState(0);
 
-    function submitHandler(e) {
-        e.preventDefault();
-        dispatch(
-            setToastStatus({
-                status: "loading",
-                message: "Loading...",
-            })
-        );
-        if (selectedBreads.length !== 0) {
-            setLoading(true);
-            create_bread_group(selectedBreads, groupName)
-                .then((res) => {
-                    if (res.status == "success") {
-                        dispatch(setToastStatus(res.notify));
-                        setSelectedBreads([]);
-                        setQuery("");
-                    } else {
-                        dispatch(setToastStatus(res.notify));
-                    }
-                    setLoading(false);
-                })
-                .catch((err) => {
-                    dispatch(
-                        setToastStatus({
-                            status: "error",
-                            message: "Loading...",
-                        })
-                    );
-                    setLoading(false);
-                });
-        } else {
-            alert("Please Select Bread");
-        }
+    function deleteSpecificBreadGroup(id) {
+        setLoading(true);
+        setCurrentId(id);
+        delete_specific_bread_group(id).then((res) => {
+            setCurrentId(false);
+            dispatch(setBreadGroup(res.data.original.status));
+        });
     }
 
     const filteredBreads =
@@ -62,41 +41,37 @@ export default function CreateBreadGroupForm() {
                   return bread.name.toLowerCase().includes(query.toLowerCase());
               });
 
+    function submitHandler(e) {
+        e.preventDefault();
+        setLoading2(true);
+        update_bread_group(selectedBreads, data[0]).then((res) => {
+            setSelectedBreads([]);
+            setLoading2(false);
+            dispatch(setBreadGroup(res.data.original.status));
+        });
+    }
+
     return (
-        <div className="w-full">
+        <>
             <Drawer
-                title="Create Bread Group"
+                title="Edit Bread"
                 open={open}
                 setOpen={setOpen}
                 button={
-                    <span className="hidden sm:block">
-                        <button
-                            onClick={() => setOpen(true)}
-                            type="button"
-                            className="bg-red-500 inline-flex items-center rounded-md  text-white px-3 py-2 text-sm font-semibold  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-600"
-                        >
-                            <PencilSquareIcon
-                                className="-ml-0.5 mr-1.5 h-6 w-6 text-white"
-                                aria-hidden="true"
-                            />
-                            Create Group of Bread
-                        </button>
-                    </span>
+                    <button onClick={() => setOpen(true)}>
+                        <PencilSquareIcon
+                            className="-ml-0.5 mr-1.5 h-6 w-6 text-violet-500"
+                            aria-hidden="true"
+                        />
+                    </button>
                 }
             >
                 <form
+                    name="form"
                     onSubmit={submitHandler}
                     className="flex flex-col h-full w-full"
                 >
-                    <div className="flex-1">
-                        <Input
-                            onChange={(e) => setGroupName(e.target.value)}
-                            value=""
-                            name="bread_name"
-                            title="Group Name"
-                            placeholder="Enter of Group"
-                            type="text"
-                        />
+                    <div className="flex-none">
                         <Combobox
                             value={selectedBreads}
                             onChange={setSelectedBreads}
@@ -182,20 +157,66 @@ export default function CreateBreadGroupForm() {
                             </div>
                         </Combobox>
                     </div>
-                    <div className="flex-none">
-                        {loading ? (
-                            <LoadingComponent />
-                        ) : (
-                            <button
-                                type="submit"
-                                className="flex-none w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded bottom-0"
-                            >
-                                SUBMIT
-                            </button>
-                        )}
+                    <div className="flex-1">
+                        <ul role="list" className="divide-y divide-gray-100">
+                            {data.map((res, index) => (
+                                <li
+                                    key={index}
+                                    className="flex justify-between gap-x-6 py-3"
+                                >
+                                    <div className="flex min-w-0 gap-x-4">
+                                        <div className="min-w-0 flex-auto">
+                                            <p className="text-sm font-semibold leading-6 text-gray-900">
+                                                {res.bread.name}
+                                            </p>
+                                            <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                                                Price: {res.bread.price}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                                        <p className="text-sm leading-6 text-gray-900">
+                                            {res.group_name}
+                                        </p>
+                                        <div className="mt-1 flex items-center gap-x-1.5">
+                                            {loading && currentId == res.id ? (
+                                                <div className="text-sm leading-5 text-red-500">
+                                                    Loading...
+                                                </div>
+                                            ) : (
+                                                <button
+                                                    onClick={() =>
+                                                        deleteSpecificBreadGroup(
+                                                            res.id
+                                                        )
+                                                    }
+                                                    className="text-lg leading-5 text-red-500"
+                                                >
+                                                    <TrashIcon className="h-4" />
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
+                    {selectedBreads.length !== 0 && (
+                        <div className="flex-none">
+                            {loading2 ? (
+                                <LoadingComponent />
+                            ) : (
+                                <button
+                                    type="submit"
+                                    className="flex-none w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded bottom-0"
+                                >
+                                    SUBMIT
+                                </button>
+                            )}
+                        </div>
+                    )}
                 </form>
             </Drawer>
-        </div>
+        </>
     );
 }

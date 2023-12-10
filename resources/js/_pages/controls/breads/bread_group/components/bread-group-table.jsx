@@ -7,6 +7,9 @@ import DeleteBread from "../../bread_list/_components/delete-bread";
 import { get_all_bread_group } from "@/_services/bread-group-service";
 import BreadGroupTableHeader from "./bread-group-table-header";
 import BreadGroupDelete from "./bread-group-delete";
+import BreadGroupShow from "./bread-group-show";
+import BreadGroupEdit from "./bread-group-edit";
+import moment from "moment/moment";
 
 export default function BreadGroupTable() {
     const dispatch = useDispatch();
@@ -35,9 +38,14 @@ export default function BreadGroupTable() {
                                 scope="col"
                                 className="px-6 py-4 font-medium text-gray-900"
                             >
-                                Price
+                                Token
                             </th>
-
+                            <th
+                                scope="col"
+                                className="px-6 py-4 font-medium text-gray-900"
+                            >
+                                Created At
+                            </th>
                             <th
                                 scope="col"
                                 className="px-6 py-4 font-medium text-gray-900"
@@ -50,20 +58,26 @@ export default function BreadGroupTable() {
                                 <th className="flex gap-3 px-6 py-4 font-normal text-gray-900">
                                     <div className="text-sm">
                                         <div className="font-medium text-gray-700">
-                                            {res[0].group_name}
+                                            {res[0]?.group_name}
                                         </div>
                                     </div>
                                 </th>
                                 <td className="px-6 py-4">
-                                    <span className="inline-flex items-center gap-1 rounded-full w-14 justify-center text-center bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
-                                        ₱ {res[0].bread.price}
+                                    <span className="inline-flex items-center gap-1 rounded-full justify-center text-center  px-2 py-1 text-xs font-semibold ">
+                                        {res[0]?.token}
                                     </span>
                                 </td>
-
+                                <td className="px-6 py-4">
+                                    <span className="inline-flex items-center gap-1 rounded-full justify-center text-center  px-2 py-1 text-xs font-semibold ">
+                                        {moment(res[0]?.created_at).format(
+                                            "LLL"
+                                        )}
+                                    </span>
+                                </td>
                                 <td className="px-6 py-4">
                                     <div className="flex justify-end gap-4">
-                                        <EditBreadForm data={res} />
-
+                                        <BreadGroupShow data={res} />
+                                        <BreadGroupEdit data={res} />
                                         <BreadGroupDelete data={res} />
                                     </div>
                                 </td>

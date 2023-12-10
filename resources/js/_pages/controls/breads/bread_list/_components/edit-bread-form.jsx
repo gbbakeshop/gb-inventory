@@ -6,6 +6,7 @@ import { create_bread, update_bread } from "@/_services/breads-service";
 import { useDispatch } from "react-redux";
 import { setBreads } from "../../../_redux/controls-slice";
 import { setToastStatus } from "@/_redux/app-slice";
+import { PencilIcon } from "@heroicons/react/24/outline";
 
 export default function EditBreadForm({ data }) {
     const [form, setForm] = useState({
@@ -16,6 +17,7 @@ export default function EditBreadForm({ data }) {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const ref = useRef();
+    const [open, setOpen] = useState(false);
 
     function submitHandler(e) {
         e.preventDefault();
@@ -39,7 +41,20 @@ export default function EditBreadForm({ data }) {
 
     return (
         <>
-            <Drawer title="Edit Bread" type="edit">
+            <Drawer
+                title="Edit Bread"
+                type="edit"
+                open={open}
+                setOpen={setOpen}
+                button={
+                    <button onClick={() => setOpen(true)}>
+                        <PencilIcon
+                            className="-ml-0.5 mr-1.5 h-6 w-6 text-blue-500"
+                            aria-hidden="true"
+                        />
+                    </button>
+                }
+            >
                 <form
                     ref={ref}
                     name="form"

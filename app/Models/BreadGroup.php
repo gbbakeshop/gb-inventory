@@ -18,7 +18,7 @@ class BreadGroup extends Model
 
    public function bread(): HasOne
    {
-       return $this->hasOne(Bread::class,'id');
+       return $this->hasOne(Bread::class,'id','bread_id');
    }
    
 }

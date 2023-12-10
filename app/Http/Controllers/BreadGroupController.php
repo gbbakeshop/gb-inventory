@@ -48,6 +48,38 @@ class BreadGroupController extends Controller
     ]);
   }
 
+  public function delete_specific_bread_group($id)
+  {
+    BreadGroup::where('id', $id)->delete();
+    return response()->json([
+      'status' => 'success',
+      'notify' => [
+        'status' => 'success',
+        'message' => 'Deleted Successfully'
+      ],
+      'data' => $this->get_all_bread_group()
+    ]);
+  }
+
+  
+  public function update_bread_group(Request $request){
+
+    foreach ($request->data as $data) {
+      BreadGroup::create([
+        'bread_id' => $data['id'],
+        'group_name' => $request->groupName['group_name'],
+        'token' =>  $request->groupName['token']
+      ]);
+    }
+    return response()->json([
+      'status' => 'success',
+      'notify' => [
+        'status' => 'success',
+        'message' => 'Updated Successfully'
+      ],
+      'data' => $this->get_all_bread_group()
+    ]);
+  }
   public function create_bread_group(Request $request)
   {
     $token = $this->randomToken();

@@ -3,36 +3,12 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
-export default function Drawer({ children, title, type }) {
-    const [open, setOpen] = useState(false);
-
+export default function Drawer({ children, title,button,open,setOpen }) {
+  
+  console.log('open',open)
     return (
         <>
-            {type == "edit" ? (
-                <>
-                    <button onClick={() => setOpen(true)}>
-                        <PencilIcon
-                            className="-ml-0.5 mr-1.5 h-6 w-6 text-blue-500"
-                            aria-hidden="true"
-                        />
-                    </button>
-                </>
-            ) : (
-                <span className="hidden sm:block">
-                    <button
-                    onClick={() => setOpen(true)}
-                        type="button"
-                        className="bg-red-500 inline-flex items-center rounded-md  text-white px-3 py-2 text-sm font-semibold  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-600"
-                    >
-                        <PencilIcon
-                            className="-ml-0.5 mr-1.5 h-6 w-6 text-white"
-                            aria-hidden="true"
-                        />
-                      {title}
-                    </button>
-                </span>
-            )}
-
+        { button }
             <Transition.Root show={open} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={setOpen}>
                     <Transition.Child

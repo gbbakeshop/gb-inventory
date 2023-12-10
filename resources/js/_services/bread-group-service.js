@@ -13,7 +13,20 @@ export async function create_bread_group(data,groupName) {
   return response.data;
 }
 
+export async function update_bread_group(data,groupName) {
+  const response = await axios.post('/api/update_bread_group',{
+    data:data,
+    groupName:groupName
+  })
+  return response.data;
+}
+
 export async function delete_bread_group(id) {
   const response = await axios.delete('/api/delete_bread_group/'+id)
+  return response.data;
+}
+
+export async function delete_specific_bread_group(id) {
+  const response = await axios.delete('/api/delete_specific_bread_group/'+id)
   return response.data;
 }

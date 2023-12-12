@@ -17,7 +17,6 @@ class Recipe extends Model
       'raw_materials_group_token'
    ];
 
-
   public function bread_group(): HasMany
   {
       return $this->hasMany(BreadGroup::class,'token','bread_group_token');

@@ -54,3 +54,7 @@ Route::post('/update_selecta','App\Http\Controllers\SelectaController@update_sel
 //
 Route::get('/get_all_selecta_branch/{branchid}','App\Http\Controllers\SelectaBranchController@get_all_selecta_branch');
 Route::post('/update_selecta_branch','App\Http\Controllers\SelectaBranchController@update_selecta_branch');
+//
+Route::get('/get_all_recipe','App\Http\Controllers\RecipeController@get_all_recipe');
+Route::post('/create_recipe','App\Http\Controllers\RecipeController@create_recipe');
+

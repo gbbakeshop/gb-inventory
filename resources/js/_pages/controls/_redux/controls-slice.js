@@ -12,6 +12,9 @@ export const controlsSlice = createSlice({
     filteredRawMaterials:[],
     rawMaterialsGroup:[],
     filteredRawMaterialsGroup:[],
+    recipeForm:{},
+    recipeList:[],
+    filteredRecipeList:[]
   },
   reducers: {
     setStepperValue: (state, action) => {
@@ -50,6 +53,16 @@ export const controlsSlice = createSlice({
     setFilteredRawMaterialsGroup: (state, action) => {
       state.filteredRawMaterialsGroup = action.payload;
     },
+    setRecipeForm:(state, action)=>{
+      state.recipeForm= action.payload;
+    },
+    setRecipeList:(state, action)=>{
+      state.recipeList = action.payload;
+      state.filteredRecipeList =  action.payload;
+    },
+    setFilteredRecipeList:(state, action)=>{
+      state.filteredRecipeList =  action.payload;
+    },
   },
 });
 
@@ -63,7 +76,10 @@ export const {
   setRawMaterials,
   setFilteredRawMaterials,
   setRawMaterialsGroup,
-  setFilteredRawMaterialsGroup
+  setFilteredRawMaterialsGroup,
+  setRecipeForm,
+  setRecipeList,
+  setFilteredRecipeList
  } = controlsSlice.actions;
 
 export default controlsSlice.reducer;

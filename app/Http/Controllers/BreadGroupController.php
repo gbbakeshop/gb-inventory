@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class BreadGroupController extends Controller
 {
 
-  function randomToken($length = 32)
+  function randomToken($length = 10)
   {
-    $characters = '0123456789';
+    $characters = '123456789';
     $randomString = '';
 
     for ($i = 0; $i < $length; $i++) {

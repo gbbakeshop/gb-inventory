@@ -21,7 +21,6 @@ export default function RawMaterialsListCreate() {
 
     function submitHandler(e) {
         e.preventDefault();
-        console.log("form", form);
         dispatch(
             setToastStatus({
                 status: "loading",

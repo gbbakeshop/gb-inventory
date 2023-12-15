@@ -8,7 +8,10 @@ export const appSlice = createSlice({
     toastStatus:{
       status:'waiting',
       message:''
-    }
+    },
+    recipes:[],
+    recipeList:[],
+    filteredRecipeList:[]
   },
   reducers: {
     setIsTopbarToggled: (state, action) => {
@@ -20,6 +23,16 @@ export const appSlice = createSlice({
     setToastStatus: (state, action) => {
       state.toastStatus = action.payload;
     },
+    setRecipes: (state, action) => {
+      state.recipes = action.payload;
+    },
+    setRecipeList:(state, action)=>{
+      state.recipeList = action.payload;
+      state.filteredRecipeList =  action.payload;
+    },
+    setFilteredRecipeList:(state, action)=>{
+      state.filteredRecipeList =  action.payload;
+    },
   },
 });
 
@@ -27,7 +40,10 @@ export const appSlice = createSlice({
 export const { 
   setIsTopbarToggled,
   setBranches,
-  setToastStatus
+  setToastStatus,
+  setRecipes,
+  setRecipeList,
+  setFilteredRecipeList
  } = appSlice.actions;
 
 export default appSlice.reducer;

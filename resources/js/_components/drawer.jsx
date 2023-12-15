@@ -5,7 +5,6 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Drawer({ children, title,button,open,setOpen }) {
   
-  console.log('open',open)
     return (
         <>
         { button }

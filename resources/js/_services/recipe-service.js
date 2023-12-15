@@ -13,3 +13,24 @@ export async function create_recipe(data) {
   })
   return response.data;
 }
+
+export async function edit_recipe_bread_token(data) {
+  const response = await axios.post('/api/edit_recipe_bread_token',{
+    data:data
+  })
+  return response.data;
+}
+
+export async function edit_recipe_raw_materials_token(data) {
+  const response = await axios.post('/api/edit_recipe_raw_materials_token',{
+    data:data
+  })
+  return response.data;
+}
+
+export async function edit_recipe(data) {
+  const response = await axios.post('/api/edit_recipe',{
+    data:data
+  })
+  return response.data;
+}

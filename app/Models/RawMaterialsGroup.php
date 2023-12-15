@@ -13,6 +13,7 @@ class RawMaterialsGroup extends Model
     protected $fillable = [
       'raw_materials_id',
       'group_name',
+      'grams',
       'token'
    ];
 

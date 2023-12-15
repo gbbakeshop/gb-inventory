@@ -63,6 +63,25 @@ class RawMaterialsGroupController extends Controller
     ]);
   }
 
+
+  public function update_raw_materials_group_grams(Request $request)
+  {
+
+    foreach ($request->data as $data) {
+      RawMaterialsGroup::where('id', $data['id'])->update([
+        'grams' => $data['grams'],
+      ]);
+    }
+
+    return response()->json([
+      'status' => 'success',
+      'notify' => [
+        'status' => 'success',
+        'message' => 'Updated Successfully'
+      ],
+      'data' => $this->get_all_raw_materials_group()
+    ]);
+  }
   public function update_raw_materials_group(Request $request)
   {
 
@@ -70,7 +89,7 @@ class RawMaterialsGroupController extends Controller
       RawMaterialsGroup::create([
         'raw_materials_id' => $data['id'],
         'group_name' => $request->groupName['group_name'],
-        'token' => $request->groupName['token']
+        'token' => $request->groupName['token'],
       ]);
     }
 
@@ -94,7 +113,8 @@ class RawMaterialsGroupController extends Controller
         RawMaterialsGroup::create([
           'raw_materials_id' => $data['id'],
           'group_name' => $request->groupName,
-          'token' => $token
+          'token' => $token,
+          'grams' => $data['grams']
         ]);
       }
       return response()->json([

@@ -1,17 +1,12 @@
-import { Fragment, useState } from "react";
-import { Dialog, Disclosure, Transition } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import { useDispatch, useSelector } from "react-redux";
-import { setIsTopbarToggled } from "@/_redux/app-slice";
-import DisclosureComponent from "./disclosure";
+import { Transition } from "@headlessui/react";
+import { useSelector } from "react-redux";
 
 export default function SubSideNavbar({subNav}) {
     const { isTopBarToggled } = useSelector((state) => state.app);
-    const dispatch = useDispatch();
+
 
     return (
         <Transition
-            
             show={isTopBarToggled}
             enter="transform transition ease-in-out duration-500 sm:duration-500"
             enterFrom="opacity-0"

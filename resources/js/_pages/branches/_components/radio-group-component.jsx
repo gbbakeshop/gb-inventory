@@ -4,6 +4,7 @@ import {
   BanknotesIcon,
   CakeIcon,
   CalendarDaysIcon,
+  CheckCircleIcon,
   ClipboardDocumentCheckIcon,
   PresentationChartBarIcon,
   ShoppingBagIcon,
@@ -102,7 +103,7 @@ export default function BranchRadioGroupComponent({ branchid }) {
                                   : "text-red-500"
                               }`}
                             >
-                              {plan.name}
+                             {plan.name}
                             </RadioGroup.Label>
                           </div>
                         </div>

@@ -2,7 +2,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Fragment, useEffect, useState } from "react";
 
-export default function RecipeListPopover({ data, result }) {
+export default function RecipeListPopover({ data }) {
     return (
         <div className="w-full ">
             <Popover className="relative">
@@ -14,7 +14,7 @@ export default function RecipeListPopover({ data, result }) {
                 group inline-flex items-center rounded-md  px-3  text-base font-medium hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75`}
                         >
                             <span className="text-sm">
-                                {data[0].group_name}
+                                {data[0]?.group_name}
                             </span>
                             <ChevronDownIcon
                                 className={`${
@@ -36,9 +36,17 @@ export default function RecipeListPopover({ data, result }) {
                             <Popover.Panel className="absolute bg-white z-10  w-[15vw] max-w-sm transform px-4 sm:px-0 lg:max-w-3xl">
                                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 p-3 ring-black/5">
                                     <ul className="max-w-md space-y-1 text-gray-900 list-disc list-inside overflow-auto  ">
-                                        {result?.map((res, index) => (
-                                            <li key={index}>{res.name}</li>
-                                        ))}
+                                        {data?.map((res, index) =>
+                                            res?.bread?.name ? (
+                                                <li key={index}>
+                                                    {res.bread.name}
+                                                </li>
+                                            ) : (
+                                                <li key={index}>
+                                                    {res.raw_materials.name}
+                                                </li>
+                                            )
+                                        )}
                                     </ul>
                                 </div>
                             </Popover.Panel>

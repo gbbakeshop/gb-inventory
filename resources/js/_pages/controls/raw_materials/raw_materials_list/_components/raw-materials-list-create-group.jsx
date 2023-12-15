@@ -19,9 +19,15 @@ export default function RawMaterialsListCreateGroup() {
     const [groupName, setGroupName] = useState("");
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
+    const ref = useRef();
 
     function submitHandler(e) {
         e.preventDefault();
+        const formData = new FormData(ref.current);
+        const updatedBreads = selectedBreads.map((res, index) => ({
+            ...res,
+            grams: formData.get(`grams_${index}`).replace(/[^0-9.]/g, ""),
+        }));
         dispatch(
             setToastStatus({
                 status: "loading",
@@ -30,9 +36,10 @@ export default function RawMaterialsListCreateGroup() {
         );
         if (selectedBreads.length !== 0) {
             setLoading(true);
-            create_raw_materials_group(selectedBreads, groupName)
+            create_raw_materials_group(updatedBreads, groupName)
                 .then((res) => {
                     if (res.status == "success") {
+                        setOpen(false);
                         dispatch(setToastStatus(res.notify));
                         setSelectedBreads([]);
                         setQuery("");
@@ -85,6 +92,7 @@ export default function RawMaterialsListCreateGroup() {
                 }
             >
                 <form
+                    ref={ref}
                     onSubmit={submitHandler}
                     className="flex flex-col h-full w-full"
                 >
@@ -93,7 +101,7 @@ export default function RawMaterialsListCreateGroup() {
                             onChange={(e) => setGroupName(e.target.value)}
                             value=""
                             name="bread_name"
-                            title="Group Name"
+                            title={"Group Name"}
                             placeholder="Enter of Group"
                             type="text"
                         />
@@ -112,73 +120,89 @@ export default function RawMaterialsListCreateGroup() {
                                             setQuery(event.target.value)
                                         }
                                     />
-                                    <div className="flex flex-wrap">
-                                        {selectedBreads.length > 0 &&
-                                            selectedBreads.map((res) => (
-                                                <div className="m-1 p-2 bg-red-500 rounded-md text-white">
-                                                    {res.name}
+                                    <Transition
+                                        as={Fragment}
+                                        leave="transition ease-in duration-100"
+                                        leaveFrom="opacity-100"
+                                        leaveTo="opacity-0"
+                                        afterLeave={() => setQuery("")}
+                                    >
+                                        <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                                            {filteredBreads.length === 0 &&
+                                            query !== "" ? (
+                                                <div className="relative cursor-default select-none px-4 py-2 text-gray-700">
+                                                    Nothing found.
                                                 </div>
+                                            ) : (
+                                                filteredBreads.map((bread) => (
+                                                    <Combobox.Option
+                                                        key={bread.id}
+                                                        className={({
+                                                            active,
+                                                        }) =>
+                                                            `relative cursor-default select-none py-2 pl-10 pr-4 ${
+                                                                active
+                                                                    ? "bg-red-500 text-white"
+                                                                    : "text-gray-900"
+                                                            }`
+                                                        }
+                                                        value={bread}
+                                                    >
+                                                        {({
+                                                            selected,
+                                                            active,
+                                                        }) => (
+                                                            <>
+                                                                <span
+                                                                    className={`block truncate ${
+                                                                        selected
+                                                                            ? "font-medium"
+                                                                            : "font-normal"
+                                                                    }`}
+                                                                >
+                                                                    {bread.name}
+                                                                </span>
+                                                                {selected ? (
+                                                                    <span
+                                                                        className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
+                                                                            active
+                                                                                ? "text-white"
+                                                                                : "text-red-500"
+                                                                        }`}
+                                                                    >
+                                                                        <CheckIcon
+                                                                            className="h-5 w-5"
+                                                                            aria-hidden="true"
+                                                                        />
+                                                                    </span>
+                                                                ) : null}
+                                                            </>
+                                                        )}
+                                                    </Combobox.Option>
+                                                ))
+                                            )}
+                                        </Combobox.Options>
+                                    </Transition>
+                                    <div className="">
+                                        {selectedBreads.length > 0 &&
+                                            selectedBreads.map((res, index) => (
+                                                // <div className="m-1 p-2 bg-red-500 rounded-md text-white">
+                                                //     {res.name}
+                                                // </div>
+                                                <Input
+                                                    key={index}
+                                                    // onChange={(e) => handleInputChange(e)}
+                                                    value={0} // Provide the actual value if applicable
+                                                    name={`grams_${index}`} // Use a unique name for each input
+                                                    title={res.name}
+                                                    placeholder={`Enter grams ${
+                                                        index + 1
+                                                    }`}
+                                                    type="text"
+                                                />
                                             ))}
                                     </div>
                                 </div>
-                                <Transition
-                                    as={Fragment}
-                                    leave="transition ease-in duration-100"
-                                    leaveFrom="opacity-100"
-                                    leaveTo="opacity-0"
-                                    afterLeave={() => setQuery("")}
-                                >
-                                    <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
-                                        {filteredBreads.length === 0 &&
-                                        query !== "" ? (
-                                            <div className="relative cursor-default select-none px-4 py-2 text-gray-700">
-                                                Nothing found.
-                                            </div>
-                                        ) : (
-                                            filteredBreads.map((bread) => (
-                                                <Combobox.Option
-                                                    key={bread.id}
-                                                    className={({ active }) =>
-                                                        `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                                                            active
-                                                                ? "bg-red-500 text-white"
-                                                                : "text-gray-900"
-                                                        }`
-                                                    }
-                                                    value={bread}
-                                                >
-                                                    {({ selected, active }) => (
-                                                        <>
-                                                            <span
-                                                                className={`block truncate ${
-                                                                    selected
-                                                                        ? "font-medium"
-                                                                        : "font-normal"
-                                                                }`}
-                                                            >
-                                                                {bread.name}
-                                                            </span>
-                                                            {selected ? (
-                                                                <span
-                                                                    className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                                                                        active
-                                                                            ? "text-white"
-                                                                            : "text-red-500"
-                                                                    }`}
-                                                                >
-                                                                    <CheckIcon
-                                                                        className="h-5 w-5"
-                                                                        aria-hidden="true"
-                                                                    />
-                                                                </span>
-                                                            ) : null}
-                                                        </>
-                                                    )}
-                                                </Combobox.Option>
-                                            ))
-                                        )}
-                                    </Combobox.Options>
-                                </Transition>
                             </div>
                         </Combobox>
                     </div>

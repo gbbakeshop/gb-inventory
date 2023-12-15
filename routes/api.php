@@ -44,6 +44,7 @@ Route::post('/update_branch_raw_materials','App\Http\Controllers\RawMaterialCont
 Route::get('/get_all_raw_materials_group','App\Http\Controllers\RawMaterialsGroupController@get_all_raw_materials_group');
 Route::post('/update_raw_materials_group','App\Http\Controllers\RawMaterialsGroupController@update_raw_materials_group');
 Route::post('/create_raw_materials_group','App\Http\Controllers\RawMaterialsGroupController@create_raw_materials_group');
+Route::post('/update_raw_materials_group_grams','App\Http\Controllers\RawMaterialsGroupController@update_raw_materials_group_grams');
 Route::delete('/delete_specific_raw_materials_group/{id}','App\Http\Controllers\RawMaterialsGroupController@delete_specific_raw_materials_group');
 Route::delete('/delete_raw_materials/{id}','App\Http\Controllers\RawMaterialsGroupController@delete_raw_materials');
 //
@@ -57,4 +58,7 @@ Route::post('/update_selecta_branch','App\Http\Controllers\SelectaBranchControll
 //
 Route::get('/get_all_recipe','App\Http\Controllers\RecipeController@get_all_recipe');
 Route::post('/create_recipe','App\Http\Controllers\RecipeController@create_recipe');
+Route::post('/edit_recipe','App\Http\Controllers\RecipeController@edit_recipe');
+Route::post('/edit_recipe_bread_token','App\Http\Controllers\RecipeController@edit_recipe_bread_token');
+Route::post('/edit_recipe_raw_materials_token','App\Http\Controllers\RecipeController@edit_recipe_raw_materials_token');
 

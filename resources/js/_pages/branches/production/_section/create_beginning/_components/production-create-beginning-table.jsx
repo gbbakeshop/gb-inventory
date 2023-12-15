@@ -1,12 +1,10 @@
-
 import { useSelector } from "react-redux";
-import RecipeListTableHeader from "./recipe-list-table-header";
+import RecipeListTableHeader from "@/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header";
 import RecipeListPopover from "@/_pages/controls/recipes/recipe_list/_components/recipe-list-popover";
-import RecipeListBreadGroupEdit from "./recipe-list-bread-group-edit";
-import RecipeListRawMaterialsGroupEdit from "./recipe-list-raw-materials-group-edit";
-import RecipeListRecipeEdit from "./recipe-list-recipe-edit";
+import ProductionCreateBeginningForm from "./production-create-beginning-form";
 
-export default function RecipeListTable() {
+
+export default function ProductionCreateBeginningTable() {
     const { filteredRecipeList } = useSelector((state) => state.app);
 
     return (
@@ -65,7 +63,6 @@ export default function RecipeListTable() {
 
                             <td className="px-6 py-4 ">
                                 <div className="flex">
-                                    <RecipeListBreadGroupEdit data={res} />
                                     <span className="inline-flex items-center gap-1 rounded-full w-14 justify-center  px-2 py-1 text-xs font-semibold text-red-600">
                                         <RecipeListPopover
                                             data={res.bread_group}
@@ -75,7 +72,6 @@ export default function RecipeListTable() {
                             </td>
                             <td className="px-6 py-4 ">
                                 <div className="flex">
-                                    <RecipeListRawMaterialsGroupEdit data={res}/>
                                     <span className="inline-flex items-center gap-1 rounded-full w-14 justify-center  px-2 py-1 text-xs font-semibold text-red-600">
                                         <RecipeListPopover
                                             data={res.raw_materials_group}
@@ -85,7 +81,7 @@ export default function RecipeListTable() {
                             </td>
 
                             <td className="px-6 py-4">
-                                <RecipeListRecipeEdit data={res} />
+                             <ProductionCreateBeginningForm data={res}/>
                             </td>
                         </tr>
                     ))}

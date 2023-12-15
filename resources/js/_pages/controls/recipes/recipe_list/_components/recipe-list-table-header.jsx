@@ -6,10 +6,9 @@ import {
     MapPinIcon,
 } from "@heroicons/react/24/outline";
 import { useDispatch, useSelector } from "react-redux";
-import {
-    setFilteredRecipeList,
-} from "../../../_redux/controls-slice";
+
 import { useEffect, useState } from "react";
+import { setFilteredRecipeList } from "@/_redux/app-slice";
 // import RawMaterialsListCreate from "./raw-materials-list-create";
 // import RawMaterialsListCreateGroup from "./raw-materials-list-create-group";
 // import CreateBreadForm from "./create-bread-form";
@@ -17,7 +16,7 @@ import { useEffect, useState } from "react";
 
 export default function RecipeListTableHeader() {
     const [query, setQuery] = useState("");
-    const { recipeList } = useSelector((state) => state.controls);
+    const { recipeList } = useSelector((state) => state.app);
     const dispatch = useDispatch();
 
     const filtered =

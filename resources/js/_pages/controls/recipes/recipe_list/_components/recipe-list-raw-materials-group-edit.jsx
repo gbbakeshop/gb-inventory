@@ -2,34 +2,38 @@ import Drawer from "@/_components/drawer";
 import Input from "@/_components/input";
 import LoadingComponent from "@/_components/loading-component";
 import Select from "@/_components/select";
-import { setFilteredRecipeList, setRecipeList, setToastStatus } from "@/_redux/app-slice";
+import { setBreadGroup } from "@/_pages/controls/_redux/controls-slice";
+import {
+    setFilteredRecipeList,
+    setRecipeList,
+    setToastStatus,
+} from "@/_redux/app-slice";
 import {
     edit_recipe,
-    edit_recipe_bread_token,
+    edit_recipe_raw_materials_token,
 } from "@/_services/recipe-service";
 import { PencilSquareIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function RecipeListBreadGroupEdit({ data }) {
+export default function RecipeListRawMaterialsGroupEdit({ data }) {
     const [form, setForm] = useState({
         id: data.id,
-        bread_group: data?.bread_group[0]?.group_name,
-        bread_group_token: data.bread_group_token,
+        raw_materials: data?.raw_materials_group[0]?.group_name,
+        raw_materials_token: data.raw_materials_group_token,
     });
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
-    const { breadGroup } = useSelector((state) => state.controls);
+    const { rawMaterialsGroup } = useSelector((state) => state.controls);
 
     function submitHandler(e) {
         e.preventDefault();
         setLoading(true);
-        edit_recipe_bread_token(form).then((res) => {
+        edit_recipe_raw_materials_token(form).then((res) => {
             if (res.status == "success") {
                 dispatch(setToastStatus(res.notify));
                 dispatch(setRecipeList(res[0].original.status));
-                // dispatch(setFilteredRecipeList(res[0].original.status));
                 setLoading(false);
             } else {
                 dispatch(setToastStatus(res.notify));
@@ -37,7 +41,6 @@ export default function RecipeListBreadGroupEdit({ data }) {
                 setLoading(false);
             }
         });
-       
     }
 
     function selectBread(e) {
@@ -46,9 +49,9 @@ export default function RecipeListBreadGroupEdit({ data }) {
         const token = e.target.options[selectedIndex].getAttribute("dataid");
 
         setForm({
-            id: data.id,
-            bread_group: selectedOption,
-            bread_group_token: token,
+            ...form,
+            raw_materials: selectedOption,
+            raw_materials_token: token,
         });
     }
 
@@ -57,7 +60,6 @@ export default function RecipeListBreadGroupEdit({ data }) {
 
         for (let i = 0; i < array.length; i++) {
             for (let j = 0; j < array[i].length; j++) {
-                // Check if the current element's token matches the target token
                 if (targetToken == array[i][j].token) {
                     matchingElements.push(array[i][j]);
                 }
@@ -66,11 +68,14 @@ export default function RecipeListBreadGroupEdit({ data }) {
         return matchingElements;
     }
 
-    const foundElement = findTokens(breadGroup, form.bread_group_token);
+    const foundElement = findTokens(
+        rawMaterialsGroup,
+        form.raw_materials_token
+    );
 
     return (
         <Drawer
-            title="Edit Bread Group"
+            title="Edit Raw Materials Group"
             button={
                 <button onClick={() => setOpen(true)}>
                     <PencilSquareIcon className="h-6 text-blue-700" />
@@ -86,10 +91,10 @@ export default function RecipeListBreadGroupEdit({ data }) {
             >
                 <div className="flex-1">
                     <Select
-                        value={form?.bread_group}
+                        value={form?.raw_materials}
                         onChange={selectBread}
                         title="Select Bread Group"
-                        items={breadGroup.map((res) => ({
+                        items={rawMaterialsGroup.map((res) => ({
                             id: res[0].token,
                             value: res[0].group_name,
                         }))}
@@ -97,7 +102,7 @@ export default function RecipeListBreadGroupEdit({ data }) {
 
                     <ul className="max-w-md space-y-1 text-gray-900 list-disc list-inside overflow-auto h-38 ">
                         {foundElement.map((res, index) => (
-                            <li key={index}>{res.bread.name}</li>
+                            <li key={index}>{res.raw_materials.name}</li>
                         ))}
                     </ul>
                 </div>

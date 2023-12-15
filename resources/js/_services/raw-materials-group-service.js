@@ -28,6 +28,13 @@ export async function update_raw_materials_group(data,groupName) {
   return response.data;
 }
 
+export async function update_raw_materials_group_grams(data) {
+  const response = await axios.post('/api/update_raw_materials_group_grams',{
+    data:data
+  })
+  return response.data;
+}
+
 export async function create_raw_materials_group(data,groupName) {
   const response = await axios.post('/api/create_raw_materials_group',{
     data:data,

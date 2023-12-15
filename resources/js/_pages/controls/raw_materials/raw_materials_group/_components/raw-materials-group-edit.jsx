@@ -54,7 +54,7 @@ export default function RawMaterialsGroupEdit({ data }) {
     return (
         <>
             <Drawer
-                title="Edit Bread"
+                title="Edit Group Raw Materials"
                 open={open}
                 setOpen={setOpen}
                 button={

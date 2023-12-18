@@ -1,18 +1,21 @@
 import Drawer from "@/_components/drawer";
 import Input from "@/_components/input";
 import LoadingComponent from "@/_components/loading-component";
-import { move_record_to_bread_report } from "@/_services/bread-record-service";
-import { ChevronDoubleRightIcon } from "@heroicons/react/24/outline";
+import { edit_new_production_record } from "@/_services/bread-record-service";
+import {
+    ChevronDoubleRightIcon,
+    PencilIcon,
+} from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setBakersData } from "../../../_redux/production-slice";
 import { setToastStatus } from "@/_redux/app-slice";
 
-export default function ProductionBakersReportMove({ data,account }) {
+export default function ProductionBakersReportEdit({ data }) {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
-    const [over, setOver] = useState(0);
+    const [newProduction, setNewProduction] = useState(data.new_production);
 
     function submitHandler(e) {
         e.preventDefault();
@@ -23,14 +26,12 @@ export default function ProductionBakersReportMove({ data,account }) {
                 message: "Loading...",
             })
         );
-        move_record_to_bread_report({
+        edit_new_production_record({
             ...data,
-            over: over,
-            seller_id:account.id
+            new_production: newProduction,
         }).then((res) => {
             setLoading(false);
             setOpen(false);
-            setOver(0)
             dispatch(setToastStatus(res.notify));
             dispatch(setBakersData(res[0].original.status));
         });
@@ -38,10 +39,10 @@ export default function ProductionBakersReportMove({ data,account }) {
 
     return (
         <Drawer
-            title={"MOVE " + data.bread.name + " BREAD"}
+            title={"EDIT " + data.bread.name + " BREAD NEW PRODUCTION"}
             button={
                 <button onClick={() => setOpen(true)}>
-                    <ChevronDoubleRightIcon className="h-6 text-red-500" />
+                    <PencilIcon className="h-6 text-blue-500 mr-3" />
                 </button>
             }
             open={open}
@@ -54,11 +55,11 @@ export default function ProductionBakersReportMove({ data,account }) {
             >
                 <div className="flex-1">
                     <Input
-                        onChange={(e) => setOver(e.target.value)}
-                        value={over} // Provide the actual value if applicable
-                        name={`over`} // Use a unique name for each input
-                        title="Enter Over Bread"
-                        placeholder={`Enter Over`}
+                        onChange={(e) => setNewProduction(e.target.value)}
+                        value={newProduction} // Provide the actual value if applicable
+                        name={`new_production`} // Use a unique name for each input
+                        title="Edit New Production"
+                        placeholder={`New Production`}
                         type="number"
                     />
                 </div>

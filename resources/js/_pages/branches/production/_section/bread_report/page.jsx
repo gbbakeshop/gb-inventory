@@ -13,7 +13,6 @@ export default function BreadReportPage({ account }) {
             baker_id: account.id,
             branch_id: account.branch_id,
         }).then((res) => {
-          console.log('filteredBreadData',res.status)
             dispatch(setBreadData(res.status));
         });
     }, []);

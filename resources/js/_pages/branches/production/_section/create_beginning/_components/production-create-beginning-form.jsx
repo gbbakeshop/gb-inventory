@@ -3,63 +3,69 @@ import Input from "@/_components/input";
 import Drawer from "@/_components/drawer";
 import LoadingComponent from "@/_components/loading-component";
 import { useDispatch } from "react-redux";
-// import { setRawMaterials } from "../../../_redux/controls-slice";
 import { setToastStatus } from "@/_redux/app-slice";
 import { PencilIcon } from "@heroicons/react/24/outline";
 import Select from "@/_components/select";
 import { create_raw_materials } from "@/_services/raw-materials-service";
+import { create_new_records } from "@/_services/bread-record-service";
+import moment from "moment";
 
-export default function ProductionCreateBeginningForm({ data }) {
-    const [form, setForm] = useState({
-        name: "",
-        bind: "Grams",
-    });
+export default function ProductionCreateBeginningForm({ data, account }) {
     const [loading, setLoading] = useState(false);
     const ref = useRef();
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
-
+    const [actualTarget, setActualTarget] = useState(0);
     function submitHandler(e) {
         e.preventDefault();
         const formData = new FormData(ref.current);
-        
-  
+        setLoading(true);
+        dispatch(
+            setToastStatus({
+                status: "loading",
+                message: "Loading...",
+            })
+        );
         const raw_materials = data.bread_group.map((res, index) => ({
-          ...res,
-          quantity: formData.get(`quantity_${index}`).replace(/[^0-9.]/g, ""),
-      }));
-      console.log('sssss',raw_materials)
-        // dispatch(
-        //     setToastStatus({
-        //         status: "loading",
-        //         message: "Loading...",
-        //     })
-        // );
-        // setLoading(true);
-        // create_raw_materials(form)
-        //     .then((res) => {
-        //         dispatch(setToastStatus(res.notify));
-        //         if (res.status == "success") {
-        //             dispatch(setRawMaterials(res.data.original.status));
-        //             setForm({
-        //                 name: "",
-        //                 bind: "Grams",
-        //             });
-        //             ref.current.reset();
-        //         }
-        //         setLoading(false);
-        //     })
-        //     .catch((err) => {
-        //         dispatch(
-        //             setToastStatus({
-        //                 status: "error",
-        //                 message: "Loading...",
-        //             })
-        //         );
-        //         setLoading(false);
-        //     });
+            ...res,
+            bakers_id: account.id,
+            branch_id: account.branch_id,
+            meridiem: moment().format("A"),
+            new_production: formData
+                .get(`new_production${index}`)
+                .replace(/[^0-9.]/g, ""),
+        }));
+
+        create_new_records(raw_materials)
+            .then((res) => {
+                dispatch(setToastStatus(res.notify));
+                if (res.status == "success") {
+                    ref.current.reset();
+                }
+                setLoading(false);
+            })
+            .catch((err) => {
+                setLoading(false);
+            });
     }
     console.log("data", data);
+
+    function handleInputChange(e) {
+        const formData = new FormData(ref.current);
+        const newTarget = data.bread_group
+            .map((res, index) =>
+                parseInt(
+                    formData
+                        .get(`new_production${index}`)
+                        .replace(/[^0-9.]/g, "")
+                )
+            )
+            .reduce(
+                (accumulator, currentValue) => accumulator + currentValue,
+                0
+            );
+        setActualTarget(newTarget);
+    }
     return (
         <>
             <Drawer
@@ -89,12 +95,50 @@ export default function ProductionCreateBeginningForm({ data }) {
                     className="flex flex-col h-full w-full"
                 >
                     <div className="flex-none">
+                        <div class="relative overflow-x-auto w-full ">
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                                <tbody>
+                                    <tr class="bg-white border-b">
+                                        <th
+                                            scope="row"
+                                            class=" py-4 font-medium text-gray-900 whitespace-nowrap "
+                                        >
+                                            Name of Recipe
+                                        </th>
+                                        <td class=" py-4">{data.name}</td>
+                                    </tr>
+                                    <tr class="bg-white border-b">
+                                        <th
+                                            scope="row"
+                                            class=" py-4 font-medium text-gray-900 whitespace-nowrap "
+                                        >
+                                            Target Pieces
+                                        </th>
+                                        <td class=" py-4">{data.target}</td>
+                                    </tr>
+                                    <tr class="bg-white border-b">
+                                        <th
+                                            scope="row"
+                                            class=" py-4 font-medium text-gray-900 whitespace-nowrap "
+                                        >
+                                            Actual Target
+                                        </th>
+                                        <td class=" py-4">
+                                            {isNaN(actualTarget)
+                                                ? 0
+                                                : actualTarget}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                         {data.bread_group.map((res, index) => (
                             <Input
                                 key={index}
-                                // onChange={(e) => handleInputChange(e)}
+                                onChange={(e) => handleInputChange(e)}
                                 value={0} // Provide the actual value if applicable
-                                name={`quantity_${index}`} // Use a unique name for each input
+                                name={`new_production${index}`} // Use a unique name for each input
                                 title={res.bread.name}
                                 placeholder={`Enter bread ${index + 1}`}
                                 type="number"

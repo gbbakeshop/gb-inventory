@@ -15,16 +15,20 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', function () {
-//     return Inertia::render('Welcome', [
-//         'canLogin' => Route::has('login'),
-//         'canRegister' => Route::has('register'),
-//         'laravelVersion' => Application::VERSION,
-//         'phpVersion' => PHP_VERSION,
-//     ]);
-// });
 Route::middleware('guest')->group(function () {
+  Route::get('/', function () {
+    return Inertia::render('auth/Login');
+  });
+
+  return Inertia::render('auth/Login', [
+    'canResetPassword' => Route::has('password.request'),
+    'status' => session('status'),
+  ]);
+});
+
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
   Route::group(['prefix' => 'administrator'], function () {
 
     Route::get('dashboard', function () {
@@ -71,7 +75,7 @@ Route::middleware('guest')->group(function () {
         Route::get('selecta', function () {
           return Inertia::render('branches/selecta/page');
         })->name('branches.selecta');
-        
+
         Route::get('production', function () {
           return Inertia::render('branches/production/page');
         })->name('branches.production');
@@ -92,7 +96,7 @@ Route::middleware('guest')->group(function () {
 
     });
 
-    
+
     Route::get('accounts', function () {
       return Inertia::render('accounts/page');
     })->name('administrator.accounts');

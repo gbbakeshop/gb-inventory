@@ -10,32 +10,32 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
-export default function BranchProductionTabsComponent() {
+export default function BranchProductionTabsComponent({account}) {
     let [categories] = useState([
         {
             id: 1,
             name: "Create Beginning",
-            component: <CreateBeginningPage />,
+            component: <CreateBeginningPage account={account}/>,
         },
         {
             id2: 2,
             name: "Bakers Report",
-            component: <BakersReportPage />,
+            component: <BakersReportPage account={account}/>,
         },
         {
             id2: 3,
             name: "Bread Report",
-            component: <BreadReportPage />,
+            component: <BreadReportPage account={account}/>,
         },
         {
             id2: 4,
             name: "Sales Report",
-            component: <SalesReportPage />,
+            component: <SalesReportPage account={account}/>,
         },
         {
             id2: 5,
             name: "History Logs",
-            component:<HistoryLogsPage />,
+            component:<HistoryLogsPage account={account}/>,
         },
     ]);
 

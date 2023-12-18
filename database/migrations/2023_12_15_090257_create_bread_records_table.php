@@ -14,6 +14,7 @@ return new class extends Migration {
   {
     Schema::create('bread_records', function (Blueprint $table) {
       $table->id();
+      $table->bigInteger('branch_id')->nullable();
       $table->bigInteger('bread_id')->nullable();
       $table->bigInteger('baker_id')->nullable();
       $table->bigInteger('seller_id')->nullable();
@@ -28,6 +29,7 @@ return new class extends Migration {
       $table->bigInteger('over')->nullable();
       $table->float('sales')->nullable();
       $table->string('meridiem')->nullable();
+      $table->string('status')->nullable();
       $table->timestamps();
     });
   }

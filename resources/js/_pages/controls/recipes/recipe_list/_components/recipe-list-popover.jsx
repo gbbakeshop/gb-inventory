@@ -4,7 +4,7 @@ import { Fragment, useEffect, useState } from "react";
 
 export default function RecipeListPopover({ data }) {
     return (
-        <div className="w-full ">
+        <div className="w-full">
             <Popover className="relative">
                 {({ open }) => (
                     <>
@@ -33,7 +33,7 @@ export default function RecipeListPopover({ data }) {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 translate-y-1"
                         >
-                            <Popover.Panel className="absolute bg-white z-10  w-[15vw] max-w-sm transform px-4 sm:px-0 lg:max-w-3xl">
+                            <Popover.Panel className="absolute bg-white  z-50  w-[15vw] max-w-sm transform px-4 sm:px-0 lg:max-w-3xl">
                                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 p-3 ring-black/5">
                                     <ul className="max-w-md space-y-1 text-gray-900 list-disc list-inside overflow-auto  ">
                                         {data?.map((res, index) =>

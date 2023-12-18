@@ -9,6 +9,7 @@ import {
     Bars3BottomRightIcon,
     ChevronDoubleLeftIcon,
 } from "@heroicons/react/20/solid";
+import { Link } from "@inertiajs/react";
 
 const navigation = [
     { name: "Dashboard", href: "#", current: true },
@@ -34,7 +35,6 @@ export default function TopNavbar() {
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
                                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 border-2 border-gray-500 bg-white hover:bg-white hover:white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                                    
                                     {open ? (
                                         <XMarkIcon
                                             className="block h-6 w-6"
@@ -162,8 +162,9 @@ export default function TopNavbar() {
                                             </Menu.Item>
                                             <Menu.Item>
                                                 {({ active }) => (
-                                                    <a
-                                                        href="#"
+                                                    <Link
+                                                        method="post"
+                                                        href={route("logout")}
                                                         className={classNames(
                                                             active
                                                                 ? "bg-gray-100"
@@ -172,7 +173,7 @@ export default function TopNavbar() {
                                                         )}
                                                     >
                                                         Sign out
-                                                    </a>
+                                                    </Link>
                                                 )}
                                             </Menu.Item>
                                         </Menu.Items>

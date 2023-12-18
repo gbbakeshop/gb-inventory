@@ -12,7 +12,7 @@ import { setBreadData } from "../../../_redux/production-slice";
 import { setToastStatus } from "@/_redux/app-slice";
 import moment from "moment";
 
-export default function ProductionBreadMoveSalesReport({ data,account }) {
+export default function ProductionBreadMoveSalesReport({ data, account }) {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
@@ -25,20 +25,19 @@ export default function ProductionBreadMoveSalesReport({ data,account }) {
 
     function submitHandler(e) {
         e.preventDefault();
-        console.log("newRecord", newRecord);
-        // setLoading(true);
-        // dispatch(
-        //     setToastStatus({
-        //         status: "loading",
-        //         message: "Loading...",
-        //     })
-        // );
-        // move_record_to_sales_report(newRecord).then((res) => {
-        //     setLoading(false);
-        //     setOpen(false);
-        //     dispatch(setToastStatus(res.notify));
-        //     dispatch(setBreadData(res[0].original.status));
-        // });
+        setLoading(true);
+        dispatch(
+            setToastStatus({
+                status: "loading",
+                message: "Loading...",
+            })
+        );
+        move_record_to_sales_report(newRecord).then((res) => {
+            setLoading(false);
+            setOpen(false);
+            dispatch(setToastStatus(res.notify));
+            dispatch(setBreadData(res[0].original.status));
+        });
     }
 
     return (
@@ -67,7 +66,7 @@ export default function ProductionBreadMoveSalesReport({ data,account }) {
                         }
                         value={newRecord.remaining} // Provide the actual value if applicable
                         name={`remaining`} // Use a unique name for each input
-                        title="Edit Remaining"
+                        title="Remaining"
                         placeholder={`Remaining`}
                         type="number"
                     />
@@ -81,7 +80,7 @@ export default function ProductionBreadMoveSalesReport({ data,account }) {
                         }
                         value={newRecord.bread_out} // Provide the actual value if applicable
                         name={`bread_out`} // Use a unique name for each input
-                        title="Edit Bread Out"
+                        title="Bread Out"
                         placeholder={`Bread Out`}
                         type="number"
                     />

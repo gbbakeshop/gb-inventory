@@ -1,89 +1,317 @@
 {
-  "_ChevronDoubleRightIcon-daf374c9.js": {
-    "file": "assets/ChevronDoubleRightIcon-daf374c9.js",
+  "_BuildingStorefrontIcon-c366a6c7.js": {
+    "file": "assets/BuildingStorefrontIcon-c366a6c7.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js"
+    ]
+  },
+  "_CheckIcon-725b9668.js": {
+    "file": "assets/CheckIcon-725b9668.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_TruckIcon-31f29eed.js": {
-    "file": "assets/TruckIcon-31f29eed.js",
-    "imports": [
-      "resources/js/app.jsx",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_hidden-390c5988.js"
-    ]
-  },
-  "_UserGroupIcon-50352687.js": {
-    "file": "assets/UserGroupIcon-50352687.js",
+  "_CheckIcon-cd9eca49.js": {
+    "file": "assets/CheckIcon-cd9eca49.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_administrator-layout-dd24f647.js": {
-    "file": "assets/administrator-layout-dd24f647.js",
-    "imports": [
-      "resources/js/app.jsx",
-      "_side-navbar-7d27d3a0.js"
-    ]
-  },
-  "_disclosure-8e4c316d.js": {
-    "file": "assets/disclosure-8e4c316d.js",
-    "imports": [
-      "resources/js/app.jsx",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js"
-    ]
-  },
-  "_hidden-390c5988.js": {
-    "file": "assets/hidden-390c5988.js",
-    "imports": [
-      "_use-is-mounted-b1cee01c.js"
-    ]
-  },
-  "_side-navbar-7d27d3a0.js": {
-    "file": "assets/side-navbar-7d27d3a0.js",
-    "imports": [
-      "resources/js/app.jsx",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js"
-    ]
-  },
-  "_tabs-0505f35d.js": {
-    "file": "assets/tabs-0505f35d.js",
-    "imports": [
-      "resources/js/app.jsx",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_hidden-390c5988.js"
-    ]
-  },
-  "_use-flags-775b83eb.js": {
-    "file": "assets/use-flags-775b83eb.js",
-    "imports": [
-      "resources/js/app.jsx",
-      "_use-is-mounted-b1cee01c.js"
-    ]
-  },
-  "_use-is-mounted-b1cee01c.js": {
-    "file": "assets/use-is-mounted-b1cee01c.js",
+  "_ChevronDoubleLeftIcon-111e3bec.js": {
+    "file": "assets/ChevronDoubleLeftIcon-111e3bec.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_use-resolve-button-type-64f70eea.js": {
-    "file": "assets/use-resolve-button-type-64f70eea.js",
+  "_ChevronDoubleRightIcon-bdb4f1b1.js": {
+    "file": "assets/ChevronDoubleRightIcon-bdb4f1b1.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_HomeModernIcon-4b729e77.js": {
+    "file": "assets/HomeModernIcon-4b729e77.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_InputError-19f4c02b.js": {
+    "file": "assets/InputError-19f4c02b.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_InputLabel-a1aa9d10.js": {
+    "file": "assets/InputLabel-a1aa9d10.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_MapPinIcon-e2df669e.js": {
+    "file": "assets/MapPinIcon-e2df669e.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_PencilIcon-4616ed46.js": {
+    "file": "assets/PencilIcon-4616ed46.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_PencilSquareIcon-e69370a4.js": {
+    "file": "assets/PencilSquareIcon-e69370a4.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_PrimaryButton-e03308c9.js": {
+    "file": "assets/PrimaryButton-e03308c9.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_TextInput-14c8fa95.js": {
+    "file": "assets/TextInput-14c8fa95.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_TrashIcon-1575e225.js": {
+    "file": "assets/TrashIcon-1575e225.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_TruckIcon-34b2237b.js": {
+    "file": "assets/TruckIcon-34b2237b.js",
     "imports": [
       "resources/js/app.jsx",
-      "_use-is-mounted-b1cee01c.js"
+      "_use-flags-370f42e7.js",
+      "_description-27a61611.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js"
     ]
+  },
+  "_UserGroupIcon-95f9119f.js": {
+    "file": "assets/UserGroupIcon-95f9119f.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_administrator-layout-9507d502.js": {
+    "css": [
+      "assets/administrator-layout-93d8b085.css"
+    ],
+    "file": "assets/administrator-layout-9507d502.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_side-navbar-1746f202.js",
+      "_recipe-service-5bc9ac77.js"
+    ]
+  },
+  "_bread-group-service-c0fcb782.js": {
+    "file": "assets/bread-group-service-c0fcb782.js"
+  },
+  "_bread-record-service-6f175cc2.js": {
+    "file": "assets/bread-record-service-6f175cc2.js"
+  },
+  "_breads-service-c7783896.js": {
+    "file": "assets/breads-service-c7783896.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_combobox-b7644b4d.js": {
+    "file": "assets/combobox-b7644b4d.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js",
+      "_transition-298a5609.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_hidden-957318ab.js",
+      "_open-closed-aad4ea97.js",
+      "_dialog-78626260.js"
+    ]
+  },
+  "_description-27a61611.js": {
+    "file": "assets/description-27a61611.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js"
+    ]
+  },
+  "_dialog-78626260.js": {
+    "file": "assets/dialog-78626260.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_description-27a61611.js",
+      "_open-closed-aad4ea97.js"
+    ]
+  },
+  "_drawer-42ec8ad2.js": {
+    "file": "assets/drawer-42ec8ad2.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_dialog-78626260.js",
+      "_transition-298a5609.js"
+    ]
+  },
+  "_hidden-957318ab.js": {
+    "file": "assets/hidden-957318ab.js",
+    "imports": [
+      "_use-flags-370f42e7.js"
+    ]
+  },
+  "_input-bb9ea5bc.js": {
+    "file": "assets/input-bb9ea5bc.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_loading-component-92634ae4.js": {
+    "file": "assets/loading-component-92634ae4.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_modal-041b90f5.js": {
+    "file": "assets/modal-041b90f5.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_transition-298a5609.js",
+      "_dialog-78626260.js"
+    ]
+  },
+  "_moment-07a5d5c8.js": {
+    "file": "assets/moment-07a5d5c8.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_moment-fbc5633a.js": {
+    "file": "assets/moment-fbc5633a.js"
+  },
+  "_open-closed-aad4ea97.js": {
+    "file": "assets/open-closed-aad4ea97.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_raw-materials-group-service-db323325.js": {
+    "file": "assets/raw-materials-group-service-db323325.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_raw-materials-service-42254b0b.js": {
+    "file": "assets/raw-materials-service-42254b0b.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_recipe-service-5bc9ac77.js": {
+    "file": "assets/recipe-service-5bc9ac77.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_select-d4a3003a.js": {
+    "file": "assets/select-d4a3003a.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_side-navbar-1746f202.js": {
+    "file": "assets/side-navbar-1746f202.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_UserGroupIcon-95f9119f.js"
+    ]
+  },
+  "_tabs-edd43771.js": {
+    "file": "assets/tabs-edd43771.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_hidden-957318ab.js"
+    ]
+  },
+  "_transition-298a5609.js": {
+    "file": "assets/transition-298a5609.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js"
+    ]
+  },
+  "_use-controllable-67a20139.js": {
+    "file": "assets/use-controllable-67a20139.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js"
+    ]
+  },
+  "_use-flags-370f42e7.js": {
+    "file": "assets/use-flags-370f42e7.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_use-resolve-button-type-a6947fda.js": {
+    "file": "assets/use-resolve-button-type-a6947fda.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js"
+    ]
+  },
+  "_use-root-containers-94fc8c7e.js": {
+    "file": "assets/use-root-containers-94fc8c7e.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_transition-298a5609.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js"
+    ]
+  },
+  "_use-tracked-pointer-a6e6ec3c.js": {
+    "file": "assets/use-tracked-pointer-a6e6ec3c.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_use-tree-walker-4f1c9e00.js": {
+    "file": "assets/use-tree-walker-4f1c9e00.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js"
+    ]
+  },
+  "administrator-layout.css": {
+    "file": "assets/administrator-layout-93d8b085.css",
+    "src": "administrator-layout.css"
   },
   "resources/js/_pages/accounts/_components/accounts-table.jsx": {
-    "file": "assets/accounts-table-3e1743f4.js",
+    "file": "assets/accounts-table-27d7f742.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -91,61 +319,137 @@
     "src": "resources/js/_pages/accounts/_components/accounts-table.jsx"
   },
   "resources/js/_pages/accounts/page.jsx": {
-    "file": "assets/page-6edb6ce6.js",
+    "file": "assets/page-4a93de5d.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/accounts/_components/accounts-table.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js"
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/accounts/page.jsx"
   },
-  "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx": {
-    "file": "assets/branch-breadcrumbs-component-ae025c53.js",
+  "resources/js/_pages/auth/ConfirmPassword.jsx": {
+    "file": "assets/ConfirmPassword-badf6777.js",
     "imports": [
       "resources/js/app.jsx",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_PrimaryButton-e03308c9.js",
+      "_InputError-19f4c02b.js",
+      "_InputLabel-a1aa9d10.js",
+      "_TextInput-14c8fa95.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/auth/ConfirmPassword.jsx"
+  },
+  "resources/js/_pages/auth/ForgotPassword.jsx": {
+    "file": "assets/ForgotPassword-1660b948.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_PrimaryButton-e03308c9.js",
+      "_InputError-19f4c02b.js",
+      "_TextInput-14c8fa95.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/auth/ForgotPassword.jsx"
+  },
+  "resources/js/_pages/auth/Login.jsx": {
+    "file": "assets/Login-8a7a4b0f.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_InputError-19f4c02b.js",
+      "_moment-fbc5633a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/auth/Login.jsx"
+  },
+  "resources/js/_pages/auth/Register.jsx": {
+    "file": "assets/Register-7ffdb9a2.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_PrimaryButton-e03308c9.js",
+      "_InputError-19f4c02b.js",
+      "_InputLabel-a1aa9d10.js",
+      "_TextInput-14c8fa95.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/auth/Register.jsx"
+  },
+  "resources/js/_pages/auth/ResetPassword.jsx": {
+    "file": "assets/ResetPassword-1ec06a38.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_PrimaryButton-e03308c9.js",
+      "_InputError-19f4c02b.js",
+      "_InputLabel-a1aa9d10.js",
+      "_TextInput-14c8fa95.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/auth/ResetPassword.jsx"
+  },
+  "resources/js/_pages/auth/VerifyEmail.jsx": {
+    "file": "assets/VerifyEmail-72c80071.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_PrimaryButton-e03308c9.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/auth/VerifyEmail.jsx"
+  },
+  "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx": {
+    "file": "assets/branch-breadcrumbs-component-b3db6296.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx"
   },
   "resources/js/_pages/branches/_components/disclosure.jsx": {
-    "file": "assets/disclosure-c33c419f.js",
+    "file": "assets/disclosure-49138c3f.js",
     "imports": [
       "resources/js/app.jsx",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
-      "_disclosure-8e4c316d.js",
-      "_TruckIcon-31f29eed.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_hidden-390c5988.js",
-      "_UserGroupIcon-50352687.js",
-      "_use-resolve-button-type-64f70eea.js"
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_TruckIcon-34b2237b.js",
+      "_use-flags-370f42e7.js",
+      "_description-27a61611.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/_components/disclosure.jsx"
   },
   "resources/js/_pages/branches/_components/radio-group-component.jsx": {
-    "file": "assets/radio-group-component-32780021.js",
+    "file": "assets/radio-group-component-f2ce93f4.js",
     "imports": [
       "resources/js/app.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_UserGroupIcon-50352687.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_hidden-390c5988.js"
+      "_TruckIcon-34b2237b.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_use-flags-370f42e7.js",
+      "_description-27a61611.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/_components/radio-group-component.jsx"
   },
   "resources/js/_pages/branches/accounts/_components/branch-account-table.jsx": {
-    "file": "assets/branch-account-table-b13a70e0.js",
+    "file": "assets/branch-account-table-a2689ecf.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -153,111 +457,145 @@
     "src": "resources/js/_pages/branches/accounts/_components/branch-account-table.jsx"
   },
   "resources/js/_pages/branches/accounts/page.jsx": {
-    "file": "assets/page-3cd00569.js",
+    "file": "assets/page-213b1963.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/branches/_components/disclosure.jsx",
       "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx",
       "resources/js/_pages/branches/accounts/_components/branch-account-table.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/accounts/page.jsx"
   },
   "resources/js/_pages/branches/analytics/page.jsx": {
-    "file": "assets/page-392d8488.js",
+    "file": "assets/page-000d6c81.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/branches/_components/disclosure.jsx",
       "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/analytics/page.jsx"
   },
   "resources/js/_pages/branches/attendance/page.jsx": {
-    "file": "assets/page-9c19e069.js",
+    "file": "assets/page-abcf683e.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/branches/_components/disclosure.jsx",
       "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/attendance/page.jsx"
   },
   "resources/js/_pages/branches/expenses/page.jsx": {
-    "file": "assets/page-4e1260d1.js",
+    "file": "assets/page-b61e5079.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/branches/_components/disclosure.jsx",
       "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/expenses/page.jsx"
   },
   "resources/js/_pages/branches/page.jsx": {
-    "file": "assets/page-a7581a94.js",
+    "file": "assets/page-2a148538.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/branches/_components/disclosure.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js"
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/page.jsx"
   },
   "resources/js/_pages/branches/production/_components/branch-production-tabs-component.jsx": {
-    "file": "assets/branch-production-tabs-component-f1da4ac0.js",
+    "file": "assets/branch-production-tabs-component-6ac96f28.js",
     "imports": [
       "resources/js/app.jsx",
       "resources/js/_pages/branches/production/_section/create_beginning/page.jsx",
@@ -265,40 +603,314 @@
       "resources/js/_pages/branches/production/_section/bread_report/page.jsx",
       "resources/js/_pages/branches/production/_section/sales_report/page.jsx",
       "resources/js/_pages/branches/production/_section/history_logs/page.jsx",
-      "_tabs-0505f35d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_hidden-390c5988.js"
+      "_tabs-edd43771.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-table.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_transition-298a5609.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_hidden-957318ab.js",
+      "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-form.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_moment-fbc5633a.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-table.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/prouction-bakers-report-move.jsx",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-edit.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-header.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-table.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-edit.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-move-sales-report.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-header.jsx"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/production/_components/branch-production-tabs-component.jsx"
   },
-  "resources/js/_pages/branches/production/_section/bakers_report/page.jsx": {
-    "file": "assets/page-709fc8f4.js",
+  "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-edit.jsx": {
+    "file": "assets/production-bakers-report-edit-d75be4d9.js",
     "imports": [
-      "resources/js/app.jsx"
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_PencilIcon-4616ed46.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-edit.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-header.jsx": {
+    "file": "assets/production-bakers-report-header-5ca53eb1.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_MapPinIcon-e2df669e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-header.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-table.jsx": {
+    "file": "assets/production-bakers-report-table-bc281b33.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/prouction-bakers-report-move.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-edit.jsx",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
+      "_PencilIcon-4616ed46.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-table.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/bakers_report/_components/prouction-bakers-report-move.jsx": {
+    "file": "assets/prouction-bakers-report-move-0cb5f540.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/bakers_report/_components/prouction-bakers-report-move.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/bakers_report/page.jsx": {
+    "file": "assets/page-b4775f7c.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-table.jsx",
+      "_bread-record-service-6f175cc2.js",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-header.jsx",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/prouction-bakers-report-move.jsx",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-edit.jsx",
+      "_PencilIcon-4616ed46.js",
+      "_MapPinIcon-e2df669e.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/production/_section/bakers_report/page.jsx"
   },
-  "resources/js/_pages/branches/production/_section/bread_report/page.jsx": {
-    "file": "assets/page-ee5872b1.js",
+  "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-move-sales-report.jsx": {
+    "file": "assets/production-bread-move-sales-report-ef1b8285.js",
     "imports": [
-      "resources/js/app.jsx"
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_moment-fbc5633a.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-move-sales-report.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-edit.jsx": {
+    "file": "assets/production-bread-report-edit-96da7509.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_PencilIcon-4616ed46.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-edit.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-header.jsx": {
+    "file": "assets/production-bread-report-header-71261335.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_MapPinIcon-e2df669e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-header.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-table.jsx": {
+    "file": "assets/production-bread-report-table-e0298491.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-edit.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-move-sales-report.jsx",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_PencilIcon-4616ed46.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-table.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/bread_report/page.jsx": {
+    "file": "assets/page-34ee0290.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-table.jsx",
+      "_bread-record-service-6f175cc2.js",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-header.jsx",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-edit.jsx",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-move-sales-report.jsx",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
+      "_MapPinIcon-e2df669e.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/production/_section/bread_report/page.jsx"
   },
-  "resources/js/_pages/branches/production/_section/create_beginning/page.jsx": {
-    "file": "assets/page-49f1d213.js",
+  "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-form.jsx": {
+    "file": "assets/production-create-beginning-form-10774615.js",
     "imports": [
-      "resources/js/app.jsx"
+      "resources/js/app.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_moment-fbc5633a.js",
+      "_PencilIcon-4616ed46.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-form.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-table.jsx": {
+    "file": "assets/production-create-beginning-table-c4f52d12.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx",
+      "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-form.jsx",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_transition-298a5609.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_hidden-957318ab.js",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_moment-fbc5633a.js",
+      "_PencilIcon-4616ed46.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-table.jsx"
+  },
+  "resources/js/_pages/branches/production/_section/create_beginning/page.jsx": {
+    "file": "assets/page-27ad0409.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx",
+      "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-table.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_transition-298a5609.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_hidden-957318ab.js",
+      "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-form.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_moment-fbc5633a.js",
+      "_PencilIcon-4616ed46.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/production/_section/create_beginning/page.jsx"
   },
   "resources/js/_pages/branches/production/_section/history_logs/page.jsx": {
-    "file": "assets/page-d2ada48c.js",
+    "file": "assets/page-79a484b8.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -306,7 +918,7 @@
     "src": "resources/js/_pages/branches/production/_section/history_logs/page.jsx"
   },
   "resources/js/_pages/branches/production/_section/sales_report/page.jsx": {
-    "file": "assets/page-e5dd4b92.js",
+    "file": "assets/page-01cbc6a2.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -314,324 +926,1428 @@
     "src": "resources/js/_pages/branches/production/_section/sales_report/page.jsx"
   },
   "resources/js/_pages/branches/production/page.jsx": {
-    "file": "assets/page-4c3b8de5.js",
+    "file": "assets/page-e37b8bca.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/branches/_components/disclosure.jsx",
       "resources/js/_pages/branches/production/_components/branch-production-tabs-component.jsx",
       "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
       "resources/js/_pages/branches/production/_section/create_beginning/page.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-table.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx",
+      "_use-root-containers-94fc8c7e.js",
+      "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-form.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_loading-component-92634ae4.js",
+      "_bread-record-service-6f175cc2.js",
+      "_moment-fbc5633a.js",
+      "_PencilIcon-4616ed46.js",
       "resources/js/_pages/branches/production/_section/bakers_report/page.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-table.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/prouction-bakers-report-move.jsx",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-edit.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-header.jsx",
       "resources/js/_pages/branches/production/_section/bread_report/page.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-table.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-edit.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-move-sales-report.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-header.jsx",
       "resources/js/_pages/branches/production/_section/sales_report/page.jsx",
       "resources/js/_pages/branches/production/_section/history_logs/page.jsx",
-      "_tabs-0505f35d.js",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_tabs-edd43771.js",
+      "_HomeModernIcon-4b729e77.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/production/page.jsx"
   },
   "resources/js/_pages/branches/raw_materials/page.jsx": {
-    "file": "assets/page-10babeee.js",
+    "file": "assets/page-6b6332cf.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/branches/_components/disclosure.jsx",
       "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/raw_materials/page.jsx"
   },
   "resources/js/_pages/branches/selecta/page.jsx": {
-    "file": "assets/page-118686b1.js",
+    "file": "assets/page-8cad90e2.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/branches/_components/disclosure.jsx",
       "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/branches/selecta/page.jsx"
   },
   "resources/js/_pages/controls/_components/RadioGroupComponent.jsx": {
-    "file": "assets/RadioGroupComponent-73bd8e18.js",
+    "file": "assets/RadioGroupComponent-7b94d766.js",
     "imports": [
       "resources/js/app.jsx",
-      "_TruckIcon-31f29eed.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_hidden-390c5988.js"
+      "_TruckIcon-34b2237b.js",
+      "_use-flags-370f42e7.js",
+      "_description-27a61611.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/_components/RadioGroupComponent.jsx"
   },
-  "resources/js/_pages/controls/breads/_components/bread-tabs.jsx": {
-    "file": "assets/bread-tabs-de53c82d.js",
+  "resources/js/_pages/controls/_components/control-breadcrumbs.jsx": {
+    "file": "assets/control-breadcrumbs-a0c88397.js",
     "imports": [
       "resources/js/app.jsx",
-      "_tabs-0505f35d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_hidden-390c5988.js"
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/_components/control-breadcrumbs.jsx"
+  },
+  "resources/js/_pages/controls/breads/_components/bread-tabs.jsx": {
+    "file": "assets/bread-tabs-f81109d9.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/breads/bread_list/page.jsx",
+      "resources/js/_pages/controls/breads/bread_group/page.jsx",
+      "_tabs-edd43771.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-table.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-table-header.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/create-bread-form.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_breads-service-c7783896.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-group-create.jsx",
+      "_bread-group-service-c0fcb782.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_CheckIcon-cd9eca49.js",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/edit-bread-form.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/delete-bread.jsx",
+      "_modal-041b90f5.js",
+      "_TrashIcon-1575e225.js",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-table.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-table-header.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-delete.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-show.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-edit.jsx",
+      "_CheckIcon-725b9668.js",
+      "_moment-07a5d5c8.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/breads/_components/bread-tabs.jsx"
   },
-  "resources/js/_pages/controls/breads/page.jsx": {
-    "file": "assets/page-accccd32.js",
+  "resources/js/_pages/controls/breads/bread_group/components/bread-group-delete.jsx": {
+    "file": "assets/bread-group-delete-32e34c94.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_modal-041b90f5.js",
+      "_loading-component-92634ae4.js",
+      "_bread-group-service-c0fcb782.js",
+      "_TrashIcon-1575e225.js",
+      "_transition-298a5609.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_dialog-78626260.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_group/components/bread-group-delete.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_group/components/bread-group-edit.jsx": {
+    "file": "assets/bread-group-edit-305957f4.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_bread-group-service-c0fcb782.js",
+      "_loading-component-92634ae4.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-725b9668.js",
+      "_TrashIcon-1575e225.js",
+      "_combobox-b7644b4d.js",
+      "_transition-298a5609.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_group/components/bread-group-edit.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_group/components/bread-group-show.jsx": {
+    "file": "assets/bread-group-show-91973e2d.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_group/components/bread-group-show.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_group/components/bread-group-table-header.jsx": {
+    "file": "assets/bread-group-table-header-3923b4ec.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_MapPinIcon-e2df669e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_group/components/bread-group-table-header.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_group/components/bread-group-table.jsx": {
+    "file": "assets/bread-group-table-ab22243f.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_bread-group-service-c0fcb782.js",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-table-header.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-delete.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-show.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-edit.jsx",
+      "_moment-07a5d5c8.js",
+      "_MapPinIcon-e2df669e.js",
+      "_modal-041b90f5.js",
+      "_transition-298a5609.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_dialog-78626260.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_TrashIcon-1575e225.js",
+      "_drawer-42ec8ad2.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-725b9668.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_group/components/bread-group-table.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_group/page.jsx": {
+    "file": "assets/page-9fe8e357.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-table.jsx",
+      "_bread-group-service-c0fcb782.js",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-table-header.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-delete.jsx",
+      "_modal-041b90f5.js",
+      "_transition-298a5609.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_dialog-78626260.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_TrashIcon-1575e225.js",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-show.jsx",
+      "_drawer-42ec8ad2.js",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-edit.jsx",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-725b9668.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_moment-07a5d5c8.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_group/page.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_list/_components/bread-group-create.jsx": {
+    "file": "assets/bread-group-create-6941e61c.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_bread-group-service-c0fcb782.js",
+      "_input-bb9ea5bc.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_combobox-b7644b4d.js",
+      "_CheckIcon-cd9eca49.js",
+      "_transition-298a5609.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_list/_components/bread-group-create.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_list/_components/bread-table-header.jsx": {
+    "file": "assets/bread-table-header-a6c522c4.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/create-bread-form.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-group-create.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_breads-service-c7783896.js",
+      "_PencilIcon-4616ed46.js",
+      "_bread-group-service-c0fcb782.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_CheckIcon-cd9eca49.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_list/_components/bread-table-header.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_list/_components/bread-table.jsx": {
+    "file": "assets/bread-table-db9c3ac9.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-table-header.jsx",
+      "_breads-service-c7783896.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/edit-bread-form.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/delete-bread.jsx",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/create-bread-form.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-group-create.jsx",
+      "_bread-group-service-c0fcb782.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_CheckIcon-cd9eca49.js",
+      "_MapPinIcon-e2df669e.js",
+      "_modal-041b90f5.js",
+      "_TrashIcon-1575e225.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_list/_components/bread-table.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_list/_components/create-bread-form.jsx": {
+    "file": "assets/create-bread-form-b3a3e99f.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_breads-service-c7783896.js",
+      "_PencilIcon-4616ed46.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_list/_components/create-bread-form.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_list/_components/delete-bread.jsx": {
+    "file": "assets/delete-bread-ddfc8562.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_modal-041b90f5.js",
+      "_breads-service-c7783896.js",
+      "_loading-component-92634ae4.js",
+      "_TrashIcon-1575e225.js",
+      "_transition-298a5609.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_dialog-78626260.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_list/_components/delete-bread.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_list/_components/edit-bread-form.jsx": {
+    "file": "assets/edit-bread-form-ff5f5187.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_breads-service-c7783896.js",
+      "_PencilIcon-4616ed46.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_list/_components/edit-bread-form.jsx"
+  },
+  "resources/js/_pages/controls/breads/bread_list/page.jsx": {
+    "file": "assets/page-f9c97dce.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-table.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-table-header.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/create-bread-form.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_breads-service-c7783896.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-group-create.jsx",
+      "_bread-group-service-c0fcb782.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_CheckIcon-cd9eca49.js",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/edit-bread-form.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/delete-bread.jsx",
+      "_modal-041b90f5.js",
+      "_TrashIcon-1575e225.js",
+      "_moment-fbc5633a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/breads/bread_list/page.jsx"
+  },
+  "resources/js/_pages/controls/breads/page.jsx": {
+    "file": "assets/page-1ed6a84e.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/controls/_components/RadioGroupComponent.jsx",
       "resources/js/_pages/controls/breads/_components/bread-tabs.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
-      "_tabs-0505f35d.js"
+      "resources/js/_pages/controls/_components/control-breadcrumbs.jsx",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "resources/js/_pages/controls/breads/bread_list/page.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-table.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-table-header.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/create-bread-form.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_loading-component-92634ae4.js",
+      "_breads-service-c7783896.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-group-create.jsx",
+      "_bread-group-service-c0fcb782.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_combobox-b7644b4d.js",
+      "_CheckIcon-cd9eca49.js",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/controls/breads/bread_list/_components/edit-bread-form.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/delete-bread.jsx",
+      "_modal-041b90f5.js",
+      "_TrashIcon-1575e225.js",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/controls/breads/bread_group/page.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-table.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-table-header.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-delete.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-show.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-edit.jsx",
+      "_CheckIcon-725b9668.js",
+      "_moment-07a5d5c8.js",
+      "_tabs-edd43771.js",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/breads/page.jsx"
   },
   "resources/js/_pages/controls/raw_materials/_components/raw-materials-tabs.jsx": {
-    "file": "assets/raw-materials-tabs-4bce46d1.js",
+    "file": "assets/raw-materials-tabs-6d1cd6a3.js",
     "imports": [
       "resources/js/app.jsx",
-      "_tabs-0505f35d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_hidden-390c5988.js"
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/page.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/page.jsx",
+      "_tabs-edd43771.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table-header.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_raw-materials-service-42254b0b.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create-group.jsx",
+      "_raw-materials-group-service-db323325.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-cd9eca49.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_MapPinIcon-e2df669e.js",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-edit.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-delete.jsx",
+      "_modal-041b90f5.js",
+      "_TrashIcon-1575e225.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table.jsx",
+      "_moment-07a5d5c8.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table-header.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-show.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-edit.jsx",
+      "_CheckIcon-725b9668.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-delete.jsx"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/raw_materials/_components/raw-materials-tabs.jsx"
   },
   "resources/js/_pages/controls/raw_materials/page.jsx": {
-    "file": "assets/page-586e0016.js",
+    "file": "assets/page-9f2c7afe.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/controls/_components/RadioGroupComponent.jsx",
       "resources/js/_pages/controls/raw_materials/_components/raw-materials-tabs.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
-      "_tabs-0505f35d.js"
+      "resources/js/_pages/controls/_components/control-breadcrumbs.jsx",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/page.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table-header.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_raw-materials-service-42254b0b.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create-group.jsx",
+      "_raw-materials-group-service-db323325.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-cd9eca49.js",
+      "_combobox-b7644b4d.js",
+      "_MapPinIcon-e2df669e.js",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-edit.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-delete.jsx",
+      "_modal-041b90f5.js",
+      "_TrashIcon-1575e225.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/page.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table.jsx",
+      "_moment-07a5d5c8.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table-header.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-show.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-edit.jsx",
+      "_CheckIcon-725b9668.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-delete.jsx",
+      "_tabs-edd43771.js",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/raw_materials/page.jsx"
   },
+  "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-delete.jsx": {
+    "file": "assets/raw-materials-group-delete-1ca33ade.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_modal-041b90f5.js",
+      "_loading-component-92634ae4.js",
+      "_raw-materials-group-service-db323325.js",
+      "_TrashIcon-1575e225.js",
+      "_transition-298a5609.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_dialog-78626260.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-delete.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-edit.jsx": {
+    "file": "assets/raw-materials-group-edit-eb9a356b.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_raw-materials-group-service-db323325.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-725b9668.js",
+      "_TrashIcon-1575e225.js",
+      "_combobox-b7644b4d.js",
+      "_transition-298a5609.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-edit.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-show.jsx": {
+    "file": "assets/raw-materials-group-show-ce70e8bb.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_raw-materials-group-service-db323325.js",
+      "_PencilIcon-4616ed46.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-show.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table-header.jsx": {
+    "file": "assets/raw-materials-group-table-header-ea19dc2a.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_MapPinIcon-e2df669e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table-header.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table.jsx": {
+    "file": "assets/raw-materials-group-table-b3bb9936.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_moment-07a5d5c8.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table-header.jsx",
+      "_raw-materials-group-service-db323325.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-show.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-edit.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-delete.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_PencilIcon-4616ed46.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-725b9668.js",
+      "_TrashIcon-1575e225.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_modal-041b90f5.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_group/page.jsx": {
+    "file": "assets/page-4e7e757e.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table.jsx",
+      "_moment-07a5d5c8.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table-header.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "_raw-materials-group-service-db323325.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-show.jsx",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-edit.jsx",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-725b9668.js",
+      "_TrashIcon-1575e225.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-delete.jsx",
+      "_modal-041b90f5.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_group/page.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create-group.jsx": {
+    "file": "assets/raw-materials-list-create-group-c096e908.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_input-bb9ea5bc.js",
+      "_raw-materials-group-service-db323325.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-cd9eca49.js",
+      "_combobox-b7644b4d.js",
+      "_transition-298a5609.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create-group.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create.jsx": {
+    "file": "assets/raw-materials-list-create-52beec8c.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_raw-materials-service-42254b0b.js",
+      "_PencilIcon-4616ed46.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-delete.jsx": {
+    "file": "assets/raw-materials-list-delete-23756b44.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_modal-041b90f5.js",
+      "_loading-component-92634ae4.js",
+      "_raw-materials-service-42254b0b.js",
+      "_TrashIcon-1575e225.js",
+      "_transition-298a5609.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_dialog-78626260.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-delete.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-edit.jsx": {
+    "file": "assets/raw-materials-list-edit-d0bb655b.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_raw-materials-service-42254b0b.js",
+      "_PencilIcon-4616ed46.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-edit.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table-header.jsx": {
+    "file": "assets/raw-materials-list-table-header-c46ca7a8.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create-group.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_raw-materials-service-42254b0b.js",
+      "_PencilIcon-4616ed46.js",
+      "_raw-materials-group-service-db323325.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-cd9eca49.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table-header.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table.jsx": {
+    "file": "assets/raw-materials-list-table-3cde430d.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table-header.jsx",
+      "_raw-materials-service-42254b0b.js",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-edit.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-delete.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create-group.jsx",
+      "_raw-materials-group-service-db323325.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-cd9eca49.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_MapPinIcon-e2df669e.js",
+      "_modal-041b90f5.js",
+      "_TrashIcon-1575e225.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table.jsx"
+  },
+  "resources/js/_pages/controls/raw_materials/raw_materials_list/page.jsx": {
+    "file": "assets/page-9b742136.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table-header.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create.jsx",
+      "_input-bb9ea5bc.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_raw-materials-service-42254b0b.js",
+      "_PencilIcon-4616ed46.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create-group.jsx",
+      "_raw-materials-group-service-db323325.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_CheckIcon-cd9eca49.js",
+      "_combobox-b7644b4d.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_use-controllable-67a20139.js",
+      "_MapPinIcon-e2df669e.js",
+      "_moment-fbc5633a.js",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-edit.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-delete.jsx",
+      "_modal-041b90f5.js",
+      "_TrashIcon-1575e225.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/raw_materials/raw_materials_list/page.jsx"
+  },
   "resources/js/_pages/controls/recipes/_components/recipes-tabs.jsx": {
-    "file": "assets/recipes-tabs-7b650dd6.js",
+    "file": "assets/recipes-tabs-7b5fc509.js",
     "imports": [
       "resources/js/app.jsx",
       "resources/js/_pages/controls/recipes/recipe_create/page.jsx",
       "resources/js/_pages/controls/recipes/recipe_list/page.jsx",
-      "_tabs-0505f35d.js",
+      "_tabs-edd43771.js",
       "resources/js/_pages/controls/recipes/recipe_create/_components/recipes-stepper.jsx",
-      "_ChevronDoubleRightIcon-daf374c9.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/recipe-details.jsx",
+      "_input-bb9ea5bc.js",
+      "_bread-group-service-c0fcb782.js",
+      "_raw-materials-group-service-db323325.js",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/group-bread.jsx",
+      "_select-d4a3003a.js",
+      "_ChevronDoubleLeftIcon-111e3bec.js",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/group-raw-materials.jsx",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_hidden-390c5988.js"
+      "_loading-component-92634ae4.js",
+      "_recipe-service-5bc9ac77.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_transition-298a5609.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_hidden-957318ab.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-bread-group-edit.jsx",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_description-27a61611.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-raw-materials-group-edit.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-recipe-edit.jsx",
+      "_PencilIcon-4616ed46.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/recipes/_components/recipes-tabs.jsx"
   },
   "resources/js/_pages/controls/recipes/page.jsx": {
-    "file": "assets/page-50f1aa97.js",
+    "file": "assets/page-e3889f43.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/controls/_components/RadioGroupComponent.jsx",
       "resources/js/_pages/controls/recipes/_components/recipes-tabs.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js",
+      "resources/js/_pages/controls/_components/control-breadcrumbs.jsx",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
       "resources/js/_pages/controls/recipes/recipe_create/page.jsx",
       "resources/js/_pages/controls/recipes/recipe_create/_components/recipes-stepper.jsx",
-      "_ChevronDoubleRightIcon-daf374c9.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/recipe-details.jsx",
+      "_input-bb9ea5bc.js",
+      "_bread-group-service-c0fcb782.js",
+      "_raw-materials-group-service-db323325.js",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/group-bread.jsx",
+      "_select-d4a3003a.js",
+      "_ChevronDoubleLeftIcon-111e3bec.js",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/group-raw-materials.jsx",
+      "_loading-component-92634ae4.js",
       "resources/js/_pages/controls/recipes/recipe_list/page.jsx",
-      "_tabs-0505f35d.js"
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx",
+      "_use-root-containers-94fc8c7e.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-bread-group-edit.jsx",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-raw-materials-group-edit.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-recipe-edit.jsx",
+      "_PencilIcon-4616ed46.js",
+      "_tabs-edd43771.js",
+      "_HomeModernIcon-4b729e77.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/recipes/page.jsx"
   },
   "resources/js/_pages/controls/recipes/recipe_create/_components/recipes-stepper.jsx": {
-    "file": "assets/recipes-stepper-ae2ef938.js",
+    "file": "assets/recipes-stepper-5fa75c07.js",
     "imports": [
       "resources/js/app.jsx",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/recipes/recipe_create/_components/recipes-stepper.jsx"
   },
   "resources/js/_pages/controls/recipes/recipe_create/_sections/group-bread.jsx": {
-    "file": "assets/group-bread-b88fd8c5.js",
+    "file": "assets/group-bread-1f1c19c9.js",
     "imports": [
-      "resources/js/app.jsx"
+      "resources/js/app.jsx",
+      "_select-d4a3003a.js",
+      "_ChevronDoubleLeftIcon-111e3bec.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/recipes/recipe_create/_sections/group-bread.jsx"
   },
   "resources/js/_pages/controls/recipes/recipe_create/_sections/group-raw-materials.jsx": {
-    "file": "assets/group-raw-materials-d9f16789.js",
+    "file": "assets/group-raw-materials-78e96d71.js",
     "imports": [
-      "resources/js/app.jsx"
+      "resources/js/app.jsx",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_recipe-service-5bc9ac77.js",
+      "_ChevronDoubleLeftIcon-111e3bec.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/recipes/recipe_create/_sections/group-raw-materials.jsx"
   },
   "resources/js/_pages/controls/recipes/recipe_create/_sections/recipe-details.jsx": {
-    "file": "assets/recipe-details-ac838ad9.js",
+    "file": "assets/recipe-details-acb07e4e.js",
     "imports": [
-      "resources/js/app.jsx"
+      "resources/js/app.jsx",
+      "_input-bb9ea5bc.js",
+      "_bread-group-service-c0fcb782.js",
+      "_raw-materials-group-service-db323325.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/recipes/recipe_create/_sections/recipe-details.jsx"
   },
   "resources/js/_pages/controls/recipes/recipe_create/page.jsx": {
-    "file": "assets/page-ac7db6ca.js",
+    "file": "assets/page-f5fdb523.js",
     "imports": [
       "resources/js/app.jsx",
       "resources/js/_pages/controls/recipes/recipe_create/_components/recipes-stepper.jsx",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/recipe-details.jsx",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/group-bread.jsx",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/group-raw-materials.jsx",
-      "_ChevronDoubleRightIcon-daf374c9.js"
+      "_ChevronDoubleRightIcon-bdb4f1b1.js",
+      "_input-bb9ea5bc.js",
+      "_bread-group-service-c0fcb782.js",
+      "_raw-materials-group-service-db323325.js",
+      "_select-d4a3003a.js",
+      "_ChevronDoubleLeftIcon-111e3bec.js",
+      "_loading-component-92634ae4.js",
+      "_recipe-service-5bc9ac77.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/recipes/recipe_create/page.jsx"
   },
-  "resources/js/_pages/controls/recipes/recipe_list/page.jsx": {
-    "file": "assets/page-c0edd65a.js",
+  "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-bread-group-edit.jsx": {
+    "file": "assets/recipe-list-bread-group-edit-b48d0183.js",
     "imports": [
-      "resources/js/app.jsx"
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_recipe-service-5bc9ac77.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-bread-group-edit.jsx"
+  },
+  "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx": {
+    "file": "assets/recipe-list-popover-5a060d7b.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_transition-298a5609.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_hidden-957318ab.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx"
+  },
+  "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-raw-materials-group-edit.jsx": {
+    "file": "assets/recipe-list-raw-materials-group-edit-00823db6.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_recipe-service-5bc9ac77.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-raw-materials-group-edit.jsx"
+  },
+  "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-recipe-edit.jsx": {
+    "file": "assets/recipe-list-recipe-edit-7dc5312a.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_drawer-42ec8ad2.js",
+      "_input-bb9ea5bc.js",
+      "_loading-component-92634ae4.js",
+      "_recipe-service-5bc9ac77.js",
+      "_PencilIcon-4616ed46.js",
+      "_dialog-78626260.js",
+      "_use-flags-370f42e7.js",
+      "_hidden-957318ab.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_transition-298a5609.js",
+      "_open-closed-aad4ea97.js",
+      "_description-27a61611.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-recipe-edit.jsx"
+  },
+  "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx": {
+    "file": "assets/recipe-list-table-header-f881b61b.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_MapPinIcon-e2df669e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx"
+  },
+  "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table.jsx": {
+    "file": "assets/recipe-list-table-34d904ce.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-bread-group-edit.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-raw-materials-group-edit.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-recipe-edit.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_transition-298a5609.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_hidden-957318ab.js",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_recipe-service-5bc9ac77.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "_input-bb9ea5bc.js",
+      "_PencilIcon-4616ed46.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table.jsx"
+  },
+  "resources/js/_pages/controls/recipes/recipe_list/page.jsx": {
+    "file": "assets/page-89ae1b4d.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_bread-group-service-c0fcb782.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table.jsx",
+      "_raw-materials-group-service-db323325.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx",
+      "_MapPinIcon-e2df669e.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_transition-298a5609.js",
+      "_use-root-containers-94fc8c7e.js",
+      "_hidden-957318ab.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-bread-group-edit.jsx",
+      "_drawer-42ec8ad2.js",
+      "_dialog-78626260.js",
+      "_description-27a61611.js",
+      "_loading-component-92634ae4.js",
+      "_select-d4a3003a.js",
+      "_recipe-service-5bc9ac77.js",
+      "_PencilSquareIcon-e69370a4.js",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-raw-materials-group-edit.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-recipe-edit.jsx",
+      "_input-bb9ea5bc.js",
+      "_PencilIcon-4616ed46.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/recipes/recipe_list/page.jsx"
   },
   "resources/js/_pages/controls/selecta/page.jsx": {
-    "file": "assets/page-c5eadd8c.js",
+    "file": "assets/page-93371cec.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
+      "_administrator-layout-9507d502.js",
       "resources/js/_pages/controls/_components/RadioGroupComponent.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js",
-      "_TruckIcon-31f29eed.js",
-      "_hidden-390c5988.js"
+      "resources/js/_pages/controls/_components/control-breadcrumbs.jsx",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js",
+      "_TruckIcon-34b2237b.js",
+      "_description-27a61611.js",
+      "_hidden-957318ab.js",
+      "_use-controllable-67a20139.js",
+      "_HomeModernIcon-4b729e77.js",
+      "_ChevronDoubleRightIcon-bdb4f1b1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/controls/selecta/page.jsx"
   },
   "resources/js/_pages/dashboard/page.jsx": {
-    "file": "assets/page-084599fd.js",
+    "file": "assets/page-de273086.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js"
+      "_administrator-layout-9507d502.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/dashboard/page.jsx"
   },
   "resources/js/_pages/index.jsx": {
-    "file": "assets/index-7e9e8b0e.js",
+    "file": "assets/index-79467280.js",
     "imports": [
       "resources/js/app.jsx",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js"
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/index.jsx"
   },
   "resources/js/_pages/settings/page.jsx": {
-    "file": "assets/page-c824b9e9.js",
+    "file": "assets/page-8a0864f4.js",
     "imports": [
       "resources/js/app.jsx",
-      "_administrator-layout-dd24f647.js",
-      "_side-navbar-7d27d3a0.js",
-      "_disclosure-8e4c316d.js",
-      "_use-is-mounted-b1cee01c.js",
-      "_use-flags-775b83eb.js",
-      "_use-resolve-button-type-64f70eea.js",
-      "_UserGroupIcon-50352687.js"
+      "_administrator-layout-9507d502.js",
+      "_side-navbar-1746f202.js",
+      "_BuildingStorefrontIcon-c366a6c7.js",
+      "_use-flags-370f42e7.js",
+      "_open-closed-aad4ea97.js",
+      "_use-resolve-button-type-a6947fda.js",
+      "_use-tracked-pointer-a6e6ec3c.js",
+      "_transition-298a5609.js",
+      "_use-tree-walker-4f1c9e00.js",
+      "_UserGroupIcon-95f9119f.js",
+      "_recipe-service-5bc9ac77.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/_pages/settings/page.jsx"
   },
   "resources/js/app.css": {
-    "file": "assets/app-9cfdb104.css",
+    "file": "assets/app-b474e681.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.jsx": {
     "css": [
-      "assets/app-9cfdb104.css"
+      "assets/app-b474e681.css"
     ],
     "dynamicImports": [
       "resources/js/_pages/accounts/_components/accounts-table.jsx",
       "resources/js/_pages/accounts/page.jsx",
+      "resources/js/_pages/auth/ConfirmPassword.jsx",
+      "resources/js/_pages/auth/ForgotPassword.jsx",
+      "resources/js/_pages/auth/Login.jsx",
+      "resources/js/_pages/auth/Register.jsx",
+      "resources/js/_pages/auth/ResetPassword.jsx",
+      "resources/js/_pages/auth/VerifyEmail.jsx",
       "resources/js/_pages/branches/_components/branch-breadcrumbs-component.jsx",
       "resources/js/_pages/branches/_components/disclosure.jsx",
       "resources/js/_pages/branches/_components/radio-group-component.jsx",
@@ -642,8 +2358,18 @@
       "resources/js/_pages/branches/expenses/page.jsx",
       "resources/js/_pages/branches/page.jsx",
       "resources/js/_pages/branches/production/_components/branch-production-tabs-component.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-edit.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-header.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/production-bakers-report-table.jsx",
+      "resources/js/_pages/branches/production/_section/bakers_report/_components/prouction-bakers-report-move.jsx",
       "resources/js/_pages/branches/production/_section/bakers_report/page.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-move-sales-report.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-edit.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-header.jsx",
+      "resources/js/_pages/branches/production/_section/bread_report/_components/production-bread-report-table.jsx",
       "resources/js/_pages/branches/production/_section/bread_report/page.jsx",
+      "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-form.jsx",
+      "resources/js/_pages/branches/production/_section/create_beginning/_components/production-create-beginning-table.jsx",
       "resources/js/_pages/branches/production/_section/create_beginning/page.jsx",
       "resources/js/_pages/branches/production/_section/history_logs/page.jsx",
       "resources/js/_pages/branches/production/_section/sales_report/page.jsx",
@@ -651,10 +2377,37 @@
       "resources/js/_pages/branches/raw_materials/page.jsx",
       "resources/js/_pages/branches/selecta/page.jsx",
       "resources/js/_pages/controls/_components/RadioGroupComponent.jsx",
+      "resources/js/_pages/controls/_components/control-breadcrumbs.jsx",
       "resources/js/_pages/controls/breads/_components/bread-tabs.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-delete.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-edit.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-show.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-table-header.jsx",
+      "resources/js/_pages/controls/breads/bread_group/components/bread-group-table.jsx",
+      "resources/js/_pages/controls/breads/bread_group/page.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-group-create.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-table-header.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/bread-table.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/create-bread-form.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/delete-bread.jsx",
+      "resources/js/_pages/controls/breads/bread_list/_components/edit-bread-form.jsx",
+      "resources/js/_pages/controls/breads/bread_list/page.jsx",
       "resources/js/_pages/controls/breads/page.jsx",
       "resources/js/_pages/controls/raw_materials/_components/raw-materials-tabs.jsx",
       "resources/js/_pages/controls/raw_materials/page.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-delete.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-edit.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-show.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table-header.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/_components/raw-materials-group-table.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_group/page.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create-group.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-create.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-delete.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-edit.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table-header.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/_components/raw-materials-list-table.jsx",
+      "resources/js/_pages/controls/raw_materials/raw_materials_list/page.jsx",
       "resources/js/_pages/controls/recipes/_components/recipes-tabs.jsx",
       "resources/js/_pages/controls/recipes/page.jsx",
       "resources/js/_pages/controls/recipes/recipe_create/_components/recipes-stepper.jsx",
@@ -662,13 +2415,19 @@
       "resources/js/_pages/controls/recipes/recipe_create/_sections/group-raw-materials.jsx",
       "resources/js/_pages/controls/recipes/recipe_create/_sections/recipe-details.jsx",
       "resources/js/_pages/controls/recipes/recipe_create/page.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-bread-group-edit.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-popover.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-raw-materials-group-edit.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-recipe-edit.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table-header.jsx",
+      "resources/js/_pages/controls/recipes/recipe_list/_components/recipe-list-table.jsx",
       "resources/js/_pages/controls/recipes/recipe_list/page.jsx",
       "resources/js/_pages/controls/selecta/page.jsx",
       "resources/js/_pages/dashboard/page.jsx",
       "resources/js/_pages/index.jsx",
       "resources/js/_pages/settings/page.jsx"
     ],
-    "file": "assets/app-ded58547.js",
+    "file": "assets/app-437e6c0e.js",
     "isEntry": true,
     "src": "resources/js/app.jsx"
   }

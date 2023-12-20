@@ -42,7 +42,7 @@ export default function ProductionBreadMoveSalesReport({ data, account }) {
 
     return (
         <Drawer
-            title={"EDIT " + data.bread.name + " BREAD NEW PRODUCTION"}
+            title={"MOVE " + data.bread.name + " TO SALES REPORT"}
             button={
                 <button onClick={() => setOpen(true)}>
                     <ChevronDoubleRightIcon className="h-6 text-red-500 " />

@@ -98,6 +98,14 @@ class BreadRecordController extends Controller
 
   public function move_record_to_sales_report(Request $request)
   {
+    BreadRecord::where('id', $request->data['id'])->update([
+      'bread_out' => $request->data['bread_out'],
+      'bread_sold' => ($request->data['total'] - ($request->data['remaining'] + $request->data['bread_out'])),
+      'remaining' => $request->data['remaining'],
+      'sales' => ($request->data['total'] - ($request->data['remaining'] + $request->data['bread_out'])) * $request->data['price'],
+      'meridiem' => $request->data['meridiem'],
+      'status' => 'sales',
+    ]);
     return response()->json([
       $this->get_bread_report_record($request->data['branch_id'], $request->data['baker_id']),
       'status' => 'success',
@@ -107,7 +115,7 @@ class BreadRecordController extends Controller
       ],
     ]);
   }
-  
+
   public function edit_new_production_record(Request $request)
   {
 

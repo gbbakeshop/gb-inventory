@@ -7,6 +7,8 @@ export const productionSlice = createSlice({
     filteredBakersData:[],
     breadData:[],
     filteredBreadData:[],
+    salesData:[],
+    filteredSalesData:[],
   },
   reducers: {
    
@@ -24,6 +26,14 @@ export const productionSlice = createSlice({
     filteredBreadData:(state, action)=>{
       state.filteredBreadData= action.payload;
     },
+
+    setSalesData:(state, action)=>{
+      state.salesData= action.payload;
+      state.filteredSalesData= action.payload;
+    },
+    filteredSalesData:(state, action)=>{
+      state.filteredSalesData= action.payload;
+    },
   },
 });
 
@@ -32,7 +42,9 @@ export const {
   setBakersData,
   filteredBakersData,
   setBreadData,
-  filteredBreadData
+  filteredBreadData,
+  setSalesData,
+  filteredSalesData
  } = productionSlice.actions;
 
 export default productionSlice.reducer;

@@ -19,18 +19,14 @@ Route::middleware('guest')->group(function () {
   Route::get('/', function () {
     return Inertia::render('auth/Login');
   });
-
-  return Inertia::render('auth/Login', [
-    'canResetPassword' => Route::has('password.request'),
-    'status' => session('status'),
-  ]);
 });
 
+Route::get('/login', function () {
+  return Inertia::render('auth/Login');
+});
 
-
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified','checkPosition:admin'])->group(function () {
   Route::group(['prefix' => 'administrator'], function () {
-
     Route::get('dashboard', function () {
       return Inertia::render('dashboard/page');
     })->name('administrator.dashboard');
@@ -104,11 +100,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('settings', function () {
       return Inertia::render('settings/page');
     })->name('administrator.settings');
-
   });
 });
 
-
+Route::middleware(['auth', 'verified','checkPosition:employee'])->group(function () {
+  Route::get('/branch/dashboard', function () {
+    return Inertia::render('branch_dashboard/page');
+  })->name('branch.dashboard');
+});
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');

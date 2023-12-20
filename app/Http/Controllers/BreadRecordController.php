@@ -51,7 +51,7 @@ class BreadRecordController extends Controller
       'status' => 'success',
       'notify' => [
         'status' => 'success',
-        'message' => 'Deleted Successfully'
+        'message' => 'Created Successfully'
       ],
     ]);
   }
@@ -100,11 +100,27 @@ class BreadRecordController extends Controller
   {
     BreadRecord::where('id', $request->data['id'])->update([
       'bread_out' => $request->data['bread_out'],
-      'bread_sold' => ($request->data['total'] - ($request->data['remaining'] + $request->data['bread_out'])),
+      'bread_sold' => $request->data['total'] - ($request->data['remaining'] + $request->data['bread_out']),
       'remaining' => $request->data['remaining'],
       'sales' => ($request->data['total'] - ($request->data['remaining'] + $request->data['bread_out'])) * $request->data['price'],
       'meridiem' => $request->data['meridiem'],
       'status' => 'sales',
+    ]);
+    BreadRecord::create([
+      'branch_id' => $request->data['branch_id'],
+      'bread_id' => $request->data['bread_id'],
+      'baker_id' => $request->data['baker_id'],
+      'price' => $request->data['price'],
+      'beginning' => $request->data['remaining'],
+      'charge' => 0,
+      'over' => 0,
+      'bread_out' => 0,
+      'bread_sold' => 0,
+      'remaining' => 0,
+      'sales' => 0,
+      'new_production' => 0,
+      'total' => $request->data['remaining'],
+      'status' => 'bread'
     ]);
     return response()->json([
       $this->get_bread_report_record($request->data['branch_id'], $request->data['baker_id']),

@@ -6,7 +6,7 @@ import {
     ChevronDoubleRightIcon,
     PencilIcon,
 } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setBreadData } from "../../../_redux/production-slice";
 import { setToastStatus } from "@/_redux/app-slice";
@@ -16,10 +16,11 @@ export default function ProductionBreadMoveSalesReport({ data, account }) {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
+
     const [newRecord, setNewRecord] = useState({
         ...data,
-        remaining: data.remaining,
-        bread_out: data.bread_out,
+        remaining: parseInt(data.remaining),
+        bread_out: parseInt(data.bread_out),
         meridiem: moment().format("A"),
     });
 
@@ -40,11 +41,20 @@ export default function ProductionBreadMoveSalesReport({ data, account }) {
         });
     }
 
+    function openEdit(e) {
+        setOpen(true);
+        setNewRecord({
+            ...e,
+            remaining: parseInt(e.remaining),
+            bread_out: parseInt(e.bread_out),
+            meridiem: moment().format("A"),
+        });
+    }
     return (
         <Drawer
             title={"MOVE " + data.bread.name + " TO SALES REPORT"}
             button={
-                <button onClick={() => setOpen(true)}>
+                <button onClick={() => openEdit(data)}>
                     <ChevronDoubleRightIcon className="h-6 text-red-500 " />
                 </button>
             }
@@ -62,6 +72,7 @@ export default function ProductionBreadMoveSalesReport({ data, account }) {
                             setNewRecord({
                                 ...newRecord,
                                 remaining: e.target.value,
+                                total: data.total,
                             })
                         }
                         value={newRecord.remaining} // Provide the actual value if applicable
@@ -76,6 +87,7 @@ export default function ProductionBreadMoveSalesReport({ data, account }) {
                             setNewRecord({
                                 ...newRecord,
                                 bread_out: e.target.value,
+                                total: data.total,
                             })
                         }
                         value={newRecord.bread_out} // Provide the actual value if applicable

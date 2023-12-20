@@ -21,10 +21,10 @@ return new class extends Migration {
       $table->float('price')->nullable();
       $table->bigInteger('beginning')->nullable();
       $table->bigInteger('new_production')->nullable();
+      $table->bigInteger('total')->nullable();
       $table->bigInteger('remaining')->nullable();
       $table->bigInteger('bread_sold')->nullable();
       $table->bigInteger('bread_out')->nullable();
-      $table->bigInteger('total')->nullable();
       $table->bigInteger('charge')->nullable();
       $table->bigInteger('over')->nullable();
       $table->float('sales')->nullable();

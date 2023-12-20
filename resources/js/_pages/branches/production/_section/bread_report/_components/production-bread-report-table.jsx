@@ -74,7 +74,6 @@ export default function ProductionBreadReportTable({ data, account }) {
                             <td className="p-3 flex">
                               <ProductionBreadReportEdit data={res}/>
                               <ProductionBreadMoveSalesReport data={res} account={account}/>
-                                {/* <ProductionBakersReportMove data={res}/> */}
                             </td>
                         </tr>
                     ))}

@@ -39,7 +39,7 @@ export default function SalesReportTable({ data, account }) {
                             scope="col"
                             className="px-3 py-4 font-medium text-gray-900"
                         >
-                          Total
+                            Total
                         </th>
                         <th
                             scope="col"
@@ -57,7 +57,7 @@ export default function SalesReportTable({ data, account }) {
                             scope="col"
                             className="px-3 py-4 font-medium text-gray-900"
                         >
-                           Remaining
+                            Remaining
                         </th>
                         <th
                             scope="col"
@@ -76,10 +76,110 @@ export default function SalesReportTable({ data, account }) {
                             className="px-3 py-4 font-medium text-gray-900"
                         ></th>
                     </tr>
+                    <tr className="bg-red-500">
+                        <th
+                            scope="col"
+                            className="px-6 py-4 font-medium text-white "
+                        >
+                            Total
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        >
+                            {data.reduce(
+                                (total, obj) =>
+                                    total + parseFloat(obj.beginning),
+                                0
+                            )}
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        >
+                            {data.reduce(
+                                (total, obj) =>
+                                    total +
+                                    parseFloat(obj.new_production) +
+                                    parseFloat(obj.over),
+                                0
+                            )}
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        >
+                            =
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        >
+                            {data.reduce(
+                                (total, obj) => total + parseFloat(obj.total),
+                                0
+                            )}
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        >
+                            {data.reduce(
+                                (total, obj) =>
+                                    total + parseFloat(obj.bread_out),
+                                0
+                            )}
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        >
+                            {data.reduce(
+                                (total, obj) => total + parseFloat(obj.charge),
+                                0
+                            )}
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        >
+                            {data.reduce(
+                                (total, obj) =>
+                                    total + parseFloat(obj.remaining),
+                                0
+                            )}
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        >
+                            {data.reduce(
+                                (total, obj) =>
+                                    total + parseFloat(obj.bread_sold),
+                                0
+                            )}
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        >
+                            {data.reduce(
+                                (total, obj) => total + parseFloat(obj.sales),
+                                0
+                            )}
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-3 py-4 font-medium text-white "
+                        ></th>
+                    </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100 border-t border-gray-100">
                     {data.map((res, index) => (
-                        <tr key={index} className="bg-white border-b border-gray-300">
+                        <tr
+                            key={index}
+                            className="bg-white border-b border-gray-300"
+                        >
                             <td className="p-3">
                                 <div className="flex align-items-center">
                                     <div className="ml-3">{res.bread.name}</div>
@@ -92,7 +192,7 @@ export default function SalesReportTable({ data, account }) {
                                 {res.new_production + res.over ?? 0}
                             </td>
                             <td className="p-3 xfont-bold">{res.price ?? 0}</td>
-                            <td className="p-3 xfont-bold">{res.new_production + res.over + res.beginning ?? 0}</td>
+                            <td className="p-3 xfont-bold">{res.total}</td>
                             <td className="p-3 xfont-bold">{res.bread_out}</td>
                             <td className="p-3 xfont-bold">{res.charge}</td>
                             <td className="p-3 xfont-bold">{res.remaining}</td>

@@ -11,7 +11,8 @@ export const appSlice = createSlice({
     },
     recipes:[],
     recipeList:[],
-    filteredRecipeList:[]
+    filteredRecipeList:[],
+    refresh:0,
   },
   reducers: {
     setIsTopbarToggled: (state, action) => {
@@ -33,6 +34,9 @@ export const appSlice = createSlice({
     setFilteredRecipeList:(state, action)=>{
       state.filteredRecipeList =  action.payload;
     },
+    setRefresh:(state, action)=>{
+      state.refresh =  action.payload;
+    },
   },
 });
 
@@ -43,7 +47,8 @@ export const {
   setToastStatus,
   setRecipes,
   setRecipeList,
-  setFilteredRecipeList
+  setFilteredRecipeList,
+  setRefresh
  } = appSlice.actions;
 
 export default appSlice.reducer;

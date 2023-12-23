@@ -2,7 +2,7 @@
 import BranchLayout from "@/_layouts/branch-layout";
 import { Link } from "@inertiajs/react";
 
-export default function BranchDashboardPage({ auth }) {
+export default function BranchSelectaPage({ auth }) {
     return (
         <BranchLayout account={auth}>
             {/* <Link

@@ -19,6 +19,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/administrator/dashboard';
     public const BRANCH = '/branch/dashboard';
+    public const LOGIN = '/';
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      *

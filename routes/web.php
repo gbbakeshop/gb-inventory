@@ -15,17 +15,24 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::middleware('guest')->group(function () {
-  Route::get('/', function () {
-    return Inertia::render('auth/Login');
-  });
+// Route::middleware('guest')->group(function () {
+//   Route::get('/', function () {
+//     return Inertia::render('auth/Login');
+//   });
+// });
+
+Route::get('/', function () {
+  return Inertia::render('auth/Login', [
+      'canResetPassword' => Route::has('password.request'),
+      'status' => session('status'),
+  ]);
 });
 
 Route::get('/login', function () {
   return Inertia::render('auth/Login');
 });
 
-Route::middleware(['auth', 'verified','checkPosition:admin'])->group(function () {
+Route::middleware(['auth', 'verified', 'checkPosition:admin'])->group(function () {
   Route::group(['prefix' => 'administrator'], function () {
     Route::get('dashboard', function () {
       return Inertia::render('dashboard/page');
@@ -59,7 +66,6 @@ Route::middleware(['auth', 'verified','checkPosition:admin'])->group(function ()
       })->name('branches');
 
       Route::group(['prefix' => '{id}'], function () {
-
         Route::get('analytics', function () {
           return Inertia::render('branches/analytics/page');
         })->name('branches.analytics');
@@ -87,7 +93,6 @@ Route::middleware(['auth', 'verified','checkPosition:admin'])->group(function ()
         Route::get('attendance', function () {
           return Inertia::render('branches/attendance/page');
         })->name('branches.attendance');
-
       });
 
     });
@@ -103,14 +108,42 @@ Route::middleware(['auth', 'verified','checkPosition:admin'])->group(function ()
   });
 });
 
-Route::middleware(['auth', 'verified','checkPosition:employee'])->group(function () {
-  Route::get('/branch/dashboard', function () {
-    return Inertia::render('branch_dashboard/page');
-  })->name('branch.dashboard');
+Route::middleware(['auth', 'verified', 'checkPosition:employee'])->group(function () {
+  Route::group(['prefix' => 'branch'], function () {
+    Route::get('dashboard', function () {
+      return Inertia::render('branch_dashboard/page');
+    })->name('branch.dashboard');
+
+    Route::get('analytics', function () {
+      return Inertia::render('branch_analytics/page');
+    })->name('branch.analytics');
+
+    Route::get('raw_materials', function () {
+      return Inertia::render('branch_raw_materials/page');
+    })->name('branch.raw_materials');
+
+    Route::get('selecta', function () {
+      return Inertia::render('branch_selecta/page');
+    })->name('branch.selecta');
+
+    Route::get('production', function () {
+      return Inertia::render('branch_production/page');
+    })->name('branch.production');
+
+    Route::get('expenses', function () {
+      return Inertia::render('branch_expenses/page');
+    })->name('branch.expenses');
+
+    Route::get('accounts', function () {
+      return Inertia::render('branch_accounts/page');
+    })->name('branch.accounts');
+
+    Route::get('attendance', function () {
+      return Inertia::render('branch_attendance/page');
+    })->name('branch.attendance');
+  });
 });
-// Route::get('/dashboard', function () {
-//     return Inertia::render('Dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
   Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

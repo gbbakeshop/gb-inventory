@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import moment from 'moment';
 
 export const appSlice = createSlice({
   name: 'app',
@@ -13,6 +14,7 @@ export const appSlice = createSlice({
     recipeList:[],
     filteredRecipeList:[],
     refresh:0,
+    meridiem:moment().format('A')
   },
   reducers: {
     setIsTopbarToggled: (state, action) => {
@@ -37,6 +39,10 @@ export const appSlice = createSlice({
     setRefresh:(state, action)=>{
       state.refresh =  action.payload;
     },
+    setMeridiem:(state, action)=>{
+      state.meridiem =  action.payload;
+    },
+ 
   },
 });
 
@@ -48,7 +54,8 @@ export const {
   setRecipes,
   setRecipeList,
   setFilteredRecipeList,
-  setRefresh
+  setRefresh,
+  setMeridiem
  } = appSlice.actions;
 
 export default appSlice.reducer;

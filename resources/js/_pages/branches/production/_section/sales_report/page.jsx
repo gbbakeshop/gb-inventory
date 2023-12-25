@@ -10,17 +10,17 @@ export default function SalesReportPage({ account }) {
     const { filteredSalesData } = useSelector((state) => state.production);
     const dispatch = useDispatch();
     const branch_id = window.location.pathname.split("/")[3];
-
+    const { meridiem } = useSelector((state) => state.app);
     useEffect(() => {
         get_sales_report_record({
             seller_id: account.id,
             branch_id: branch_id,
             date: moment().format("L"),
-            meridiem: moment().format("A"),
+            meridiem: meridiem,
         }).then((res) => {
             dispatch(setSalesData(res.status));
         });
-    }, []);
+    }, [meridiem]);
     return (
         <>
             <SalesReportTableHeader />

@@ -25,6 +25,7 @@ class BreadRecord extends Model
     'over',
     'sales',
     'meridiem',
+    'date',
     'status'
   ];
 

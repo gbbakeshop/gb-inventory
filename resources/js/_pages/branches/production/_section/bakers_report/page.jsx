@@ -9,10 +9,11 @@ export default function BakersReportPage({ account }) {
   
     const { filteredBakersData } = useSelector((state) => state.production);
     const dispatch = useDispatch()
+    const branch_id = window.location.pathname.split('/')[3]
     useEffect(() => {
       get_bakers_report_record({
         baker_id:account.id,
-        branch_id:account.branch_id
+        branch_id:branch_id
       }).then(res=>{
         dispatch(setBakersData(res.status))
       })

@@ -14,6 +14,12 @@ export default function ProductionBakersReportTable({ data, account }) {
                             scope="col"
                             className="px-6 py-4 font-medium text-gray-900"
                         >
+                            ID #
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-6 py-4 font-medium text-gray-900"
+                        >
                             Name of Bread
                         </th>
                         <th
@@ -47,6 +53,11 @@ export default function ProductionBakersReportTable({ data, account }) {
                         <tr key={index} className="bg-white">
                             <td className="p-3">
                                 <div className="flex align-items-center">
+                                    <div className="ml-3">B-{res.id}</div>
+                                </div>
+                            </td>
+                            <td className="p-3">
+                                <div className="flex align-items-center">
                                     <div className="ml-3">{res.bread.name}</div>
                                 </div>
                             </td>
@@ -61,9 +72,15 @@ export default function ProductionBakersReportTable({ data, account }) {
                             </td>
                             <td className="p-3 flex">
                                 <ProductionBakersReportEdit data={res} />
-                                <ProductionBakersReportMove
-                                account={account}
-                                data={res} />
+                                {account.position !== "Cashier" ||
+                                account.position !== "Chief Baker" ||
+                                account.position !== "Lamesador" ||
+                                account.position !== "Supervisor" ? (
+                                    <ProductionBakersReportMove
+                                        account={account}
+                                        data={res}
+                                    />
+                                ) : null}
                             </td>
                         </tr>
                     ))}

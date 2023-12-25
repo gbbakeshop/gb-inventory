@@ -17,7 +17,7 @@ export async function get_bread_report_record(data) {
 }
 
 export async function get_sales_report_record(data) {
-  const response = await axios.post('/api/get_sales_report_record/'+data.branch_id+'/'+data.baker_id)
+  const response = await axios.post('/api/get_sales_report_record',data)
   return response.data;
 }
 

@@ -11,6 +11,12 @@ export default function SalesReportTable({ data, account }) {
             <table className="w-full border-collapse bg-white text-left text-sm text-gray-500">
                 <thead className="bg-gray-50">
                     <tr>
+                    <th
+                            scope="col"
+                            className="px-6 py-4 font-medium text-gray-900"
+                        >
+                            ID #
+                        </th>
                         <th
                             scope="col"
                             className="px-6 py-4 font-medium text-gray-900"
@@ -77,11 +83,17 @@ export default function SalesReportTable({ data, account }) {
                         ></th>
                     </tr>
                     <tr className="bg-red-500">
+                    <th
+                            scope="col"
+                            className="px-6 py-4 font-medium text-white "
+                        >
+                            
+                        </th>
                         <th
                             scope="col"
                             className="px-6 py-4 font-medium text-white "
                         >
-                            Total
+                            Overall Total
                         </th>
                         <th
                             scope="col"
@@ -180,6 +192,11 @@ export default function SalesReportTable({ data, account }) {
                             key={index}
                             className="bg-white border-b border-gray-300"
                         >
+                           <td className="p-3">
+                                <div className="flex align-items-center">
+                                    <div className="ml-3">B-{res.id}</div>
+                                </div>
+                            </td>
                             <td className="p-3">
                                 <div className="flex align-items-center">
                                     <div className="ml-3">{res.bread.name}</div>

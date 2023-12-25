@@ -64,9 +64,10 @@ Route::post('/edit_recipe_raw_materials_token', 'App\Http\Controllers\RecipeCont
 Route::post('/create_new_records', 'App\Http\Controllers\BreadRecordController@create_new_records');
 Route::post('/get_bakers_report_record/{branchid}/{bakerid}', 'App\Http\Controllers\BreadRecordController@get_bakers_report_record');
 Route::post('/get_bread_report_record/{branchid}/{sellerid}', 'App\Http\Controllers\BreadRecordController@get_bread_report_record');
-Route::post('/get_sales_report_record/{branchid}/{sellerid}', 'App\Http\Controllers\BreadRecordController@get_sales_report_record');
+Route::post('/get_sales_report_record', 'App\Http\Controllers\BreadRecordController@get_sales_report_record');
 Route::post('/move_record_to_bread_report', 'App\Http\Controllers\BreadRecordController@move_record_to_bread_report');
 Route::post('/edit_new_production_record', 'App\Http\Controllers\BreadRecordController@edit_new_production_record');
 Route::post('/edit_bread_report_record', 'App\Http\Controllers\BreadRecordController@edit_bread_report_record');
 Route::post('/move_record_to_sales_report', 'App\Http\Controllers\BreadRecordController@move_record_to_sales_report');
 // });
+Route::post('/get_total_records', 'App\Http\Controllers\DashboardController@get_total_records');

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\BreadRecord;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class BreadRecordController extends Controller
 {
@@ -59,12 +61,18 @@ class BreadRecordController extends Controller
 
   public function get_bakers_report_record($branchid, $bakerid)
   {
-
-    $data = BreadRecord::where([
-      ['branch_id', '=', $branchid],
-      ['baker_id', '=', $bakerid],
-      ['status', '=', 'bakers']
-    ])->with(['baker', 'seller', 'bread'])->get();
+    $user = User::where('id', $bakerid)->first();
+    $data = BreadRecord::where(function ($query) use ($branchid, $user, $bakerid) {
+      $query->where('branch_id', '=', $branchid)
+        ->where(function ($subquery) use ($user, $bakerid) {
+          if ($user->position !== 'admin') {
+            if ($user->position == 'Baker' || $user->position == 'Chief Baker' || $user->position == 'Lamesador' || $user->position == 'Supervisor') {
+              $subquery->where('baker_id', '=', $bakerid);
+            }
+          }
+        })
+        ->where('status', '=', 'bakers');
+    })->with(['baker', 'seller', 'bread'])->get();
     return response()->json([
       'status' => $data,
     ]);
@@ -72,24 +80,42 @@ class BreadRecordController extends Controller
 
   public function get_bread_report_record($branchid, $sellerid)
   {
-    $data = BreadRecord::where([
-      ['branch_id', '=', $branchid],
-      // ['seller_id', '=', $sellerid],
-      ['status', '=', 'bread']
-    ])->with(['baker', 'seller', 'bread'])->get();
+    $user = User::where('id', $sellerid)->first();
+
+    $data = BreadRecord::where(function ($query) use ($branchid, $sellerid, $user) {
+      $query->where('branch_id', '=', $branchid)
+        ->where('status', '=', 'bread');
+
+      if ($user->position !== 'admin') {
+        $query->where(function ($subquery) use ($sellerid) {
+          $subquery->where('seller_id', '<>', $sellerid)
+            ->orWhere('seller_id', '=', null);
+        });
+      }
+
+    })->with(['baker', 'seller', 'bread'])->get();
+
 
     return response()->json([
       'status' => $data,
     ]);
   }
 
-  public function get_sales_report_record($branchid, $sellerid)
+  public function get_sales_report_record(Request $request)
   {
-    $data = BreadRecord::where([
-      ['branch_id', '=', $branchid],
-      // ['seller_id', '=', $sellerid],
-      ['status', '=', 'sales']
-    ])->with(['baker', 'seller', 'bread'])->get();
+    $user = User::where('id', $request->seller_id)->first();
+
+    $data = BreadRecord::where(function ($query) use ($request, $user) {
+      $query->where('branch_id', '=', $request->branch_id)
+        ->where('date', '=', $request->date)
+        ->where('status', '=', 'sales');
+
+      if ($user->position == 'admin') {
+        $query->where('meridiem', '=', $request->meridiem);
+      } else {
+        $query->where('seller_id', '=', $request->seller_id);
+      }
+    })->with(['baker', 'seller', 'bread'])->get();
 
     return response()->json([
       'status' => $data,
@@ -100,16 +126,19 @@ class BreadRecordController extends Controller
   {
     BreadRecord::where('id', $request->data['id'])->update([
       'bread_out' => $request->data['bread_out'],
+      'seller_id' => $request->data['seller_id'],
       'bread_sold' => $request->data['total'] - ($request->data['remaining'] + $request->data['bread_out']),
       'remaining' => $request->data['remaining'],
       'sales' => ($request->data['total'] - ($request->data['remaining'] + $request->data['bread_out'])) * $request->data['price'],
       'meridiem' => $request->data['meridiem'],
+      'date' => $request->data['date'],
       'status' => 'sales',
     ]);
     BreadRecord::create([
       'branch_id' => $request->data['branch_id'],
       'bread_id' => $request->data['bread_id'],
       'baker_id' => $request->data['baker_id'],
+      'seller_id' => $request->data['seller_id'],
       'price' => $request->data['price'],
       'beginning' => $request->data['remaining'],
       'charge' => 0,
@@ -123,7 +152,7 @@ class BreadRecordController extends Controller
       'status' => 'bread'
     ]);
     return response()->json([
-      $this->get_bread_report_record($request->data['branch_id'], $request->data['baker_id']),
+      $this->get_bread_report_record($request->data['branch_id'], $request->data['seller_id']),
       'status' => 'success',
       'notify' => [
         'status' => 'success',
@@ -158,7 +187,7 @@ class BreadRecordController extends Controller
     ]);
 
     return response()->json([
-      $this->get_bread_report_record($request->data['branch_id'], $request->data['baker_id']),
+      $this->get_bread_report_record($request->data['branch_id'], $request->data['findSeller']),
       'status' => 'success',
       'notify' => [
         'status' => 'success',
@@ -176,7 +205,7 @@ class BreadRecordController extends Controller
 
     if ($existBreadReport) {
       $existBreadReport->update([
-        'seller_id' => $request->data['seller_id'],
+        // 'seller_id' => $request->data['seller_id'],
         'new_production' => $existBreadReport->new_production + $request->data['new_production'],
         'over' => $existBreadReport->over + $request->data['over'],
         'total' => ($existBreadReport->beginning + $existBreadReport->new_production + $request->data['new_production'] + $existBreadReport->over + $request->data['over']) - $existBreadReport->charge
@@ -184,7 +213,7 @@ class BreadRecordController extends Controller
       BreadRecord::where('id', $request->data['id'])->delete();
     } else {
       BreadRecord::where('id', $request->data['id'])->update([
-        'seller_id' => $request->data['seller_id'],
+        // 'seller_id' => $request->data['seller_id'],
         'status' => 'bread',
         'over' => $request->data['over'],
         'total' => $request->data['over'] + $request->data['new_production']

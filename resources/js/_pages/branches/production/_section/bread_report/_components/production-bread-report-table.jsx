@@ -15,6 +15,12 @@ export default function ProductionBreadReportTable({ data, account }) {
                             scope="col"
                             className="px-6 py-4 font-medium text-gray-900"
                         >
+                            ID #
+                        </th>
+                        <th
+                            scope="col"
+                            className="px-6 py-4 font-medium text-gray-900"
+                        >
                             Name of Bread
                         </th>
                         <th
@@ -59,6 +65,11 @@ export default function ProductionBreadReportTable({ data, account }) {
                         <tr key={index} className="bg-white">
                             <td className="p-3">
                                 <div className="flex align-items-center">
+                                    <div className="ml-3">B-{res.id}</div>
+                                </div>
+                            </td>
+                            <td className="p-3">
+                                <div className="flex align-items-center">
                                     <div className="ml-3">{res.bread.name}</div>
                                 </div>
                             </td>
@@ -69,11 +80,19 @@ export default function ProductionBreadReportTable({ data, account }) {
                                 {res.new_production ?? 0}
                             </td>
                             <td className="p-3 xfont-bold">{res.over ?? 0}</td>
-                            <td className="p-3 xfont-bold">{res.charge ?? 0}</td>
+                            <td className="p-3 xfont-bold">
+                                {res.charge ?? 0}
+                            </td>
                             <td className="p-3 xfont-bold">{res.total ?? 0}</td>
                             <td className="p-3 flex">
-                              <ProductionBreadReportEdit data={res}/>
-                              <ProductionBreadMoveSalesReport data={res} account={account}/>
+                                <ProductionBreadReportEdit
+                                    data={res}
+                                    account={account}
+                                />
+                                <ProductionBreadMoveSalesReport
+                                    data={res}
+                                    account={account}
+                                />
                             </td>
                         </tr>
                     ))}

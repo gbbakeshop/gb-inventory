@@ -8,17 +8,17 @@ import { useDispatch } from "react-redux";
 import { setBakersData, setBreadData } from "../../../_redux/production-slice";
 import { setToastStatus } from "@/_redux/app-slice";
 
-export default function ProductionBreadReportEdit({ data }) {
+export default function ProductionBreadReportEdit({ data,account }) {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
     const [newRecord, setNewRecord] = useState({
         ...data,
+        findSeller:account.id,
         beginning: data.beginning,
         charge: data.charge,
         over: data.over,
     });
-
     function submitHandler(e) {
         e.preventDefault();
         setLoading(true);

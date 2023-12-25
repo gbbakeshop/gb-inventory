@@ -1,15 +1,29 @@
 import AdministratorLayout from "@/_layouts/administrator-layout";
 import BranchesDisclosure from "./../_components/disclosure";
 import BranchBreadCrumbsComponent from "../_components/branch-breadcrumbs-component";
+import ExpensesDataCard from "./_components/expenses-data-card";
+import { useEffect, useState } from "react";
+import { get_total_records } from "@/_services/dashboard-service";
+import moment from "moment";
 
-export default function BranchExpensesPage({auth}) {
-  return ( 
-    <AdministratorLayout
-    auth={auth}
-    subNav={<BranchesDisclosure />}
-    >
-      <BranchBreadCrumbsComponent />
-      BranchExpensesPage
-    </AdministratorLayout>
-   );
+export default function BranchExpensesPage({ auth }) {
+    const [data, setData] = useState([]);
+    const branch_id = window.location.pathname.split("/")[3];
+    useEffect(() => {
+        get_total_records({
+            branch_id: branch_id,
+            seller_id: auth.user.id,
+            date: moment().format("L"),
+            meridiem: moment().format("A"),
+        }).then((res) => {
+            setData(res);
+        });
+    }, []);
+
+    return (
+        <AdministratorLayout auth={auth} subNav={<BranchesDisclosure />}>
+            <BranchBreadCrumbsComponent />
+            <ExpensesDataCard data={data} />
+        </AdministratorLayout>
+    );
 }

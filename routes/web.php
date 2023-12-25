@@ -23,8 +23,8 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
   return Inertia::render('auth/Login', [
-      'canResetPassword' => Route::has('password.request'),
-      'status' => session('status'),
+    'canResetPassword' => Route::has('password.request'),
+    'status' => session('status'),
   ]);
 });
 
@@ -126,9 +126,29 @@ Route::middleware(['auth', 'verified', 'checkPosition:employee'])->group(functio
       return Inertia::render('branch_selecta/page');
     })->name('branch.selecta');
 
-    Route::get('production', function () {
-      return Inertia::render('branch_production/page');
-    })->name('branch.production');
+    Route::group(['prefix' => 'production'], function () {
+
+      Route::get('create_new_production', function () {
+        return Inertia::render('branch_production/create_new_production/page');
+      })->name('branch.new.production');
+
+      Route::get('bakers_report', function () {
+        return Inertia::render('branch_production/bakers_report/page');
+      })->name('branch.bakers.report');
+
+      Route::get('bread_report', function () {
+        return Inertia::render('branch_production/bread_report/page');
+      })->name('branch.bread.report');
+
+      Route::get('sales_report', function () {
+        return Inertia::render('branch_production/sales_report/page');
+      })->name('branch.sales.report');
+
+      Route::get('history_report', function () {
+        return Inertia::render('branch_production/history_report/page');
+      })->name('branch.history.report');
+
+    });
 
     Route::get('expenses', function () {
       return Inertia::render('branch_expenses/page');

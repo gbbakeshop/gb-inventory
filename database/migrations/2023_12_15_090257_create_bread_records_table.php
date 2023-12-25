@@ -29,6 +29,7 @@ return new class extends Migration {
       $table->bigInteger('over')->nullable();
       $table->float('sales')->nullable();
       $table->string('meridiem')->nullable();
+      $table->string('date')->nullable();
       $table->string('status')->nullable();
       $table->timestamps();
     });

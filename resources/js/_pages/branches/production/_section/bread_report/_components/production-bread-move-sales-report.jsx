@@ -23,7 +23,6 @@ export default function ProductionBreadMoveSalesReport({ data, account }) {
         bread_out: parseInt(data.bread_out),
         meridiem: moment().format("A"),
     });
-
     function submitHandler(e) {
         e.preventDefault();
         setLoading(true);
@@ -45,9 +44,11 @@ export default function ProductionBreadMoveSalesReport({ data, account }) {
         setOpen(true);
         setNewRecord({
             ...e,
+            seller_id: account.id,
             remaining: parseInt(e.remaining),
             bread_out: parseInt(e.bread_out),
             meridiem: moment().format("A"),
+            date: moment().format("L"),
         });
     }
     return (

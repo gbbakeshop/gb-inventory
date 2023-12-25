@@ -8,10 +8,11 @@ import ProductionBreadReportHeader from "./_components/production-bread-report-h
 export default function BreadReportPage({ account }) {
     const { filteredBreadData } = useSelector((state) => state.production);
     const dispatch = useDispatch();
+    const branch_id = window.location.pathname.split('/')[3]
     useEffect(() => {
         get_bread_report_record({
             baker_id: account.id,
-            branch_id: account.branch_id,
+            branch_id: branch_id,
         }).then((res) => {
             dispatch(setBreadData(res.status));
         });

@@ -1,6 +1,7 @@
-
 import BranchLayout from "@/_layouts/branch-layout";
 import { Link } from "@inertiajs/react";
+import BranchSelectaTable from "../branches/selecta/_components/branch-selecta-table";
+import BranchSelectaTableHeader from "../branches/selecta/_components/branch-selecta-table-header";
 
 export default function BranchSelectaPage({ auth }) {
     return (
@@ -11,7 +12,9 @@ export default function BranchSelectaPage({ auth }) {
                
             >
                 Sign out
-            </Link> */}ss
+            </Link> */}
+            <BranchSelectaTableHeader />
+            <BranchSelectaTable />
             {/* {auth.user.position} */}
         </BranchLayout>
     );

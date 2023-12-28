@@ -42,6 +42,7 @@ export const appSlice = createSlice({
     setMeridiem:(state, action)=>{
       state.meridiem =  action.payload;
     },
+    
  
   },
 });

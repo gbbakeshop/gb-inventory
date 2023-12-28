@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class SelectaBranchController extends Controller
 {
   public function get_all_selecta_branch($branchid){
-    $data = SelectaBranch::find($branchid);
+    $data = SelectaBranch::where('branch_id',$branchid)->with('selecta')->get();
     return response()->json([
       'status' => $data
     ]);

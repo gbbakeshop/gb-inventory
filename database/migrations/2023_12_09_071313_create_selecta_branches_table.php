@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('branch_id')->nullable();
             $table->bigInteger('selecta_id')->nullable();
-            $table->float('quantity')->nullable();
-            $table->string('warning')->nullable();
+            $table->bigInteger('quantity')->nullable();
+            $table->bigInteger('warning')->nullable();
             $table->timestamps();
         });
     }

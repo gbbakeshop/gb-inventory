@@ -17,7 +17,9 @@ export const controlsSlice = createSlice({
       id:'',
       name:'',
       target:0
-    }
+    },
+    selecta:[],
+    filteredSelecta:[]
   },
   reducers: {
     setStepperValue: (state, action) => {
@@ -63,6 +65,13 @@ export const controlsSlice = createSlice({
       state.recipeListForm= action.payload;
     },
     
+    setSelecta:(state, action)=>{
+      state.selecta =  action.payload;
+      state.filteredSelecta =  action.payload;
+    },
+    setFilteredSelecta:(state, action)=>{
+      state.filteredSelecta =  action.payload;
+    },
   },
 });
 
@@ -79,7 +88,9 @@ export const {
   setFilteredRawMaterialsGroup,
   setRecipeForm,
   setRecipeList,
-  setRecipeListForm
+  setRecipeListForm,
+  setSelecta,
+  setFilteredSelecta
  } = controlsSlice.actions;
 
 export default controlsSlice.reducer;

@@ -23,3 +23,10 @@ export async function update_selecta(data) {
   })
   return response.data;
 }
+
+export async function move_to_selecta_report(data) {
+  const response = await axios.post('/api/move_to_selecta_report',{
+    data:data
+  })
+  return response.data;
+}

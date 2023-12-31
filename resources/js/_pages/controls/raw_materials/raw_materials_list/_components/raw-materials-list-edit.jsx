@@ -3,7 +3,7 @@ import Input from "@/_components/input";
 import Drawer from "@/_components/drawer";
 import LoadingComponent from "@/_components/loading-component";
 import { useDispatch } from "react-redux";
-import {  setRawMaterials } from "../../../_redux/controls-slice";
+import { setRawMaterials } from "../../../_redux/controls-slice";
 import { setToastStatus } from "@/_redux/app-slice";
 import { PencilIcon } from "@heroicons/react/24/outline";
 import Select from "@/_components/select";
@@ -86,11 +86,14 @@ export default function RawMaterialsListEdit({ data }) {
                             type="text"
                         /> */}
                         <Select
-                            value={data.bind}
+                            value={data.bind == "Grams" ? 1 : 0}
                             onChange={(e) =>
                                 setForm({ ...form, bind: e.target.value })
                             }
-                            items={[{value:"Grams",id:1}, {value:"Pcs",id:2}]}
+                            items={[
+                                { value: "Grams", id: 1 },
+                                { value: "Pcs", id: 2 },
+                            ]}
                         />
                     </div>
                     <div className="flex-none">

@@ -122,9 +122,19 @@ Route::middleware(['auth', 'verified', 'checkPosition:employee'])->group(functio
       return Inertia::render('branch_raw_materials/page');
     })->name('branch.raw_materials');
 
-    Route::get('selecta', function () {
-      return Inertia::render('branch_selecta/page');
-    })->name('branch.selecta');
+    Route::group(['prefix' => 'selecta'], function () {
+      Route::get('stock', function () {
+        return Inertia::render('branch_selecta/stock/page');
+      })->name('branch.selecta.stock');
+      Route::get('double_check', function () {
+        return Inertia::render('branch_selecta/double_check/page');
+      })->name('branch.selecta.double_check');
+      Route::get('sales_report', function () {
+        return Inertia::render('branch_selecta/sales_report/page');
+      })->name('branch.selecta.sales_report');
+    });
+
+
 
     Route::group(['prefix' => 'production'], function () {
 

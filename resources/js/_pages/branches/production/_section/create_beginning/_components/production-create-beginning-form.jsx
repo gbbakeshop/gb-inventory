@@ -48,7 +48,6 @@ export default function ProductionCreateBeginningForm({ data, account }) {
                 setLoading(false);
             });
     }
-    console.log("data", data);
 
     function handleInputChange(e) {
         const formData = new FormData(ref.current);

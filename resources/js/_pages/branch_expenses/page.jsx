@@ -22,7 +22,9 @@ export default function BranchExpensesPage({ auth }) {
     return (
         <BranchLayout account={auth}>
             <ExpensesDataCard 
+            account={auth.user}
             data={data}
+            branch_id={auth.user.branch_id}
             />
         </BranchLayout>
     );

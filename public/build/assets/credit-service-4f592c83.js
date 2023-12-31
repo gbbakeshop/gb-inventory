@@ -1,0 +1,1 @@
+async function e(a){return(await axios.post("/api/get_all_credit",a)).data}async function s(a){return(await axios.post("/api/create_credit",{data:a})).data}async function n(a){return(await axios.post("/api/delete_credit",{data:a})).data}async function r(a){return(await axios.post("/api/update_credit",{data:a})).data}export{s as c,n as d,e as g,r as u};

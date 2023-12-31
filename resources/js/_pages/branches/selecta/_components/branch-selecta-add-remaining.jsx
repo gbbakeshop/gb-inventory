@@ -15,7 +15,7 @@ export default function BranchSelectaAddRemaining({ data }) {
     const dispatch = useDispatch();
     const [remainingData, setRemainingData] = useState(data);
     const { selectedSelecta } = useSelector((state) => state.selecta);
-
+    const [disabled, setDisabled] = useState(false);
     function addToList(e) {
         e.preventDefault();
         const isExisting = selectedSelecta.find(
@@ -50,10 +50,26 @@ export default function BranchSelectaAddRemaining({ data }) {
         }
     }
 
+    function inputRemainingHandler(e) {
+        if (e.target.value >= data.quantity) {
+            setDisabled(true);
+        } else {
+            setDisabled(false);
+            setRemainingData({
+                ...remainingData,
+                remaining: parseInt(e.target.value),
+                sold: data.quantity - parseInt(e.target.value),
+                sales:
+                    (data.quantity - parseInt(e.target.value)) *
+                    data.selecta.price,
+            });
+        }
+    }
+
     return (
         <>
             <Modal
-                title={data.selecta.name}
+                title={data.selecta.name + " (" + data.quantity + ")"}
                 setIsOpen={setIsOpen}
                 isOpen={isOpen}
                 button={
@@ -66,21 +82,15 @@ export default function BranchSelectaAddRemaining({ data }) {
             >
                 <form onSubmit={addToList}>
                     <div className="mt-2">
+                        {disabled && (
+                            <p className="text-red-500 text-xs italic">
+                                Incorrect quantity!
+                            </p>
+                        )}
+
                         <p className="text-sm text-gray-500">
                             <Input
-                                onChange={(e) =>
-                                    setRemainingData({
-                                        ...remainingData,
-                                        remaining: parseInt(e.target.value),
-                                        sold:
-                                            data.quantity -
-                                            parseInt(e.target.value),
-                                        sales:
-                                            (data.quantity -
-                                                parseInt(e.target.value)) *
-                                            data.selecta.price,
-                                    })
-                                }
+                                onChange={(e) => inputRemainingHandler(e)}
                                 value={remainingData.remaining ?? 0}
                                 name="remaining"
                                 title="Remaining of Selecta"
@@ -100,6 +110,7 @@ export default function BranchSelectaAddRemaining({ data }) {
                                 Close
                             </button>
                             <button
+                                disabled={disabled}
                                 type="submit"
                                 className="inline-flex justify-center rounded-md border border-transparent bg-red-500 px-4 py-3 text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
                                 onClick={addToList}

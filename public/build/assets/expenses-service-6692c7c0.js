@@ -1,0 +1,1 @@
+async function a(e){return(await axios.post("/api/get_all_expenses",e)).data}async function n(e){return(await axios.post("/api/create_expenses",{data:e})).data}async function t(e){return(await axios.post("/api/delete_expenses",{data:e})).data}async function p(e){return(await axios.post("/api/update_expenses",{data:e})).data}export{n as c,t as d,a as g,p as u};

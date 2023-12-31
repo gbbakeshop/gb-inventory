@@ -16,7 +16,7 @@ export default function Select({ title, items, value, onChange }) {
                         dataId={res.id}
                         key={index}
                         value={res.value}
-                        selected={res.value == value}
+                        selected={res.id == value}
                     >
                         {res.value}
                     </option>

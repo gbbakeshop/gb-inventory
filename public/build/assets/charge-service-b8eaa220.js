@@ -1,0 +1,1 @@
+async function s(a){return(await axios.post("/api/get_all_charge",a)).data}async function t(a){return(await axios.post("/api/create_charge",{data:a})).data}async function n(a){return(await axios.post("/api/delete_charge",{data:a})).data}async function r(a){return(await axios.post("/api/update_charge",{data:a})).data}export{t as c,n as d,s as g,r as u};

@@ -85,5 +85,5 @@ class SelectaController extends Controller
       ],
       'data' => $this->get_all_selecta()
     ]);
-  }
+  } 
 }

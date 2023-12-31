@@ -11,3 +11,10 @@ export async function update_selecta_branch(data) {
   })
   return response.data;
 }
+
+export async function get_selecta_branch_sales_report(data) {
+  const response = await axios.post('/api/get_selecta_branch_sales_report',{
+    data:data
+  })
+  return response.data;
+}

@@ -46,7 +46,7 @@ export default function BranchSelectaEditRemaining({ data }) {
                 button={
                     <div className=" inset-0 flex items-center justify-center">
                         <button type="button" onClick={() => setIsOpen(true)}>
-                            <PencilIcon className="h-6 text-red-500" />
+                            <PencilIcon className="h-6 text-blue-500" />
                         </button>
                     </div>
                 }

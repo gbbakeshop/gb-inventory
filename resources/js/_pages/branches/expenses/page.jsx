@@ -21,11 +21,14 @@ export default function BranchExpensesPage({ auth }) {
             setData(res);
         });
     }, [meridiem]);
-
+    
     return (
         <AdministratorLayout auth={auth} subNav={<BranchesDisclosure />}>
             <BranchBreadCrumbsComponent />
-            <ExpensesDataCard data={data} />
+            <ExpensesDataCard
+            branch_id={branch_id}
+            account={auth.user}
+            data={data} />
         </AdministratorLayout>
     );
 }

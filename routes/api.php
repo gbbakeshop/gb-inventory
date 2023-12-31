@@ -18,6 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
   return $request->user();
 });
 
+
+
+Route::post('/get_branch_account', 'App\Http\Controllers\UserController@get_branch_account');
 // Route::middleware('auth:sanctum')->group(function () {
 Route::get('/get_all_branches', 'App\Http\Controllers\BranchController@get_all_branches');
 //
@@ -52,6 +55,9 @@ Route::post('/create_selecta', 'App\Http\Controllers\SelectaController@create_se
 Route::delete('/delete_selecta/{id}', 'App\Http\Controllers\SelectaController@delete_selecta');
 Route::post('/update_selecta', 'App\Http\Controllers\SelectaController@update_selecta');
 //
+Route::post('/move_to_selecta_report', 'App\Http\Controllers\SelectaRecordController@move_to_selecta_report');
+Route::post('/get_selecta_branch_sales_report', 'App\Http\Controllers\SelectaRecordController@get_selecta_branch_sales_report');
+//
 Route::get('/get_all_selecta_branch/{branchid}', 'App\Http\Controllers\SelectaBranchController@get_all_selecta_branch');
 Route::post('/update_selecta_branch', 'App\Http\Controllers\SelectaBranchController@update_selecta_branch');
 //
@@ -71,3 +77,18 @@ Route::post('/edit_bread_report_record', 'App\Http\Controllers\BreadRecordContro
 Route::post('/move_record_to_sales_report', 'App\Http\Controllers\BreadRecordController@move_record_to_sales_report');
 // });
 Route::post('/get_total_records', 'App\Http\Controllers\DashboardController@get_total_records');
+//
+Route::post('/get_all_credit', 'App\Http\Controllers\CreditController@get_all_credit');
+Route::post('/create_credit', 'App\Http\Controllers\CreditController@create_credit');
+Route::post('/delete_credit', 'App\Http\Controllers\CreditController@delete_credit');
+Route::post('/update_credit', 'App\Http\Controllers\CreditController@update_credit');
+//
+Route::post('/get_all_charge', 'App\Http\Controllers\ChargeController@get_all_charge');
+Route::post('/create_charge', 'App\Http\Controllers\ChargeController@create_charge');
+Route::post('/delete_charge', 'App\Http\Controllers\ChargeController@delete_charge');
+Route::post('/update_charge', 'App\Http\Controllers\ChargeController@update_charge');
+//
+Route::post('/get_all_expenses', 'App\Http\Controllers\ExpensesController@get_all_expenses');
+Route::post('/create_expenses', 'App\Http\Controllers\ExpensesController@create_expenses');
+Route::post('/delete_expenses', 'App\Http\Controllers\ExpensesController@delete_expenses');
+Route::post('/update_expenses', 'App\Http\Controllers\ExpensesController@update_expenses');

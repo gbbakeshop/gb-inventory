@@ -3,12 +3,13 @@ import { Tab } from "@headlessui/react";
 import BranchSelectaTable from "./branch-selecta-table";
 import BranchSelectaDoubleCheckTable from "./branch-selecta-double-check-table";
 import BranchSelectaTableHeader from "./branch-selecta-table-header";
+import BranchSelectaSalesReport from "./branch-selecta-sales-report";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
-export default function BranchSelectaTabs() {
+export default function BranchSelectaTabs({account}) {
     let [categories] = useState([
         {
             id: 1,
@@ -23,12 +24,12 @@ export default function BranchSelectaTabs() {
         {
             id2: 2,
             name: "Double Check",
-            component: <BranchSelectaDoubleCheckTable />,
+            component: <BranchSelectaDoubleCheckTable account={account}/>,
         },
         {
             id3: 3,
             name: "Sales Report",
-            component: <>sss</>,
+            component: <BranchSelectaSalesReport account={account}/>,
         },
     ]);
 

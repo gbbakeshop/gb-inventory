@@ -1,13 +1,71 @@
 import moment from "moment";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import BranchSelectaAddRemaining from "./branch-selecta-add-remaining";
 import BranchSelectaEditRemaining from "./branch-selecta-edit-remaining";
+import { move_to_selecta_report } from "@/_services/selecta-service";
+import { setToastStatus } from "@/_redux/app-slice";
+import { useEffect, useState } from "react";
+import {
+    setBranchSelecta,
+    setSelectaSalesReport,
+    setSelectedSelectaReset,
+} from "../_redux/branch-selecta-slice";
+import LoadingComponent from "@/_components/loading-component";
+import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
-export default function BranchSelectaDoubleCheckTable() {
+export default function BranchSelectaDoubleCheckTable({ account }) {
     const { selectedSelecta } = useSelector((state) => state.selecta);
+    const [loading, setLoading] = useState(false);
+    const dispatch = useDispatch();
 
+    useEffect(() => {
+        setLoading(false);
+    }, []);
+    
+    function moveToSelectaRecord() {
+        setLoading(true);
+        move_to_selecta_report(
+            selectedSelecta.map((res) => ({
+                ...res,
+                meridiem: moment().format("A"),
+                date: moment().format("L"),
+                seller_id: account.id,
+            }))
+        ).then((res) => {
+            dispatch(setSelectaSalesReport(res.data2));
+            dispatch(setBranchSelecta(res.data.original.status));
+            setLoading(false);
+            dispatch(setSelectedSelectaReset([]));
+            dispatch(setToastStatus(res.notify));
+        });
+    }
+
+    function deleteItem(array, idToDelete) {
+        if (confirm("Are you sure you want to delete?")) {
+            dispatch(
+                setSelectedSelectaReset(
+                    array.filter((item) => item.id !== idToDelete)
+                )
+            );
+        }
+    }
     return (
         <>
+            <div className="flex w-full justify-end">
+                {loading ? (
+                    <div className="w-20">
+                        <LoadingComponent />
+                    </div>
+                ) : (
+                    <button
+                        onClick={moveToSelectaRecord}
+                        className="px-3 py-2 border hover:bg-red-700 border-red-600 bg-red-500 text-white rounded-lg"
+                    >
+                        CLICK TO SAVE
+                    </button>
+                )}
+            </div>
+
             <div className="overflow-hidden rounded-lg border border-gray-200  m-1 min-h-[67vh]">
                 <table className="w-full border-collapse bg-white text-left text-sm text-gray-500">
                     <thead className="bg-gray-50">
@@ -102,6 +160,19 @@ export default function BranchSelectaDoubleCheckTable() {
 
                                 <td className="flex px-6 py-4 justify-between">
                                     <BranchSelectaEditRemaining data={res} />
+                                    <div className=" inset-0 flex items-center justify-center">
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                deleteItem(
+                                                    selectedSelecta,
+                                                    res.id
+                                                )
+                                            }
+                                        >
+                                            <TrashIcon className="h-6 text-red-500" />
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                         ))}

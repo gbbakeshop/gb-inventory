@@ -68,24 +68,24 @@ export default function BranchSideNavbar({ subNav, account }) {
                     <CakeIcon className="w-6 h-6" />
                 </Link>
 
+                {account.position !== "Baker" &&
+                    account.position !== "Chief Baker" &&
+                    account.position !== "Lamesador" &&
+                    account.position !== "Supervisor" && (
+                        <Link
+                            href={route("branch.selecta.stock")}
+                            className={active("selecta")}
+                        >
+                            <ClipboardDocumentCheckIcon className="w-6 h-6" />
+                        </Link>
+                    )}
+
                 <Link
                     href={route("branch.raw_materials")}
                     className={active("raw_materials")}
                 >
                     <TruckIcon className="w-6 h-6" />
                 </Link>
-
-                {account.position !== "Baker" &&
-                    account.position !== "Chief Baker" &&
-                    account.position !== "Lamesador" &&
-                    account.position !== "Supervisor" && (
-                        <Link
-                            href={route("branch.selecta")}
-                            className={active("selecta")}
-                        >
-                            <ClipboardDocumentCheckIcon className="w-6 h-6" />
-                        </Link>
-                    )}
 
                 <Link
                     href={route("branch.accounts")}

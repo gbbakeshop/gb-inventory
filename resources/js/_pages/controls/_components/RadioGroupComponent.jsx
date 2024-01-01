@@ -28,6 +28,12 @@ const plans = [
     icon:<ShoppingBagIcon className='h-6'/>,
     href:route('controls.selecta')
   },
+  {
+    name: 'Accounts',
+    path:'accounts',
+    icon:<ShoppingBagIcon className='h-6'/>,
+    href:route('controls.accounts')
+  },
 ]
 
 export default function RadioGroupComponent() {

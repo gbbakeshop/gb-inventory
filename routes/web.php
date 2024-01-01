@@ -55,7 +55,9 @@ Route::middleware(['auth', 'verified', 'checkPosition:admin'])->group(function (
       Route::get('selecta', function () {
         return Inertia::render('controls/selecta/page');
       })->name('controls.selecta');
-
+      Route::get('accounts', function () {
+        return Inertia::render('controls/accounts/page');
+      })->name('controls.accounts');
 
     });
 

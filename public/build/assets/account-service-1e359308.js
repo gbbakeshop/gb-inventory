@@ -1,1 +1,0 @@
-async function n(a){return(await axios.post("/api/get_branch_account",a)).data}async function e(){return(await axios.get("/api/get_all_account")).data}async function s(a){return(await axios.post("/api/create_account",a)).data}async function c(a){return(await axios.post("/api/delete_account",{data:a})).data}export{e as a,s as c,c as d,n as g};

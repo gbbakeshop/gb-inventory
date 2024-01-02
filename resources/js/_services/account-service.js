@@ -17,9 +17,7 @@ export async function create_account(data) {
 }
 
 export async function update_account(data) {
-  const response = await axios.post('/api/update_account',{
-    data:data
-  })
+  const response = await axios.post('/api/update_account',data)
   return response.data;
 }
 

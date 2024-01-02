@@ -1,10 +1,11 @@
-export default function Select({ title, items, value, onChange }) {
+export default function Select({ title, items, value, onChange, name }) {
     return (
         <>
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 {title}
             </label>
             <select
+                name={name}
                 onInput={onChange}
                 className={`${
                     value == "" || value == null ? "border-red-500" : ""

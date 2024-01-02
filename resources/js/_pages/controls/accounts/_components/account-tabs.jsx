@@ -7,19 +7,22 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
-export default function AccountTabs({ accounts }) {
-    let [categories] = useState([
-        {
-            id: 1,
-            name: "Accounts",
-            component: <AccountTable accounts={accounts} />,
-        },
-        {
-            id2: 2,
-            name: "Account Registration",
-            component: <CreateAccount accounts={accounts} />,
-        },
-    ]);
+export default function AccountTabs({ accounts,branches }) {
+  
+    let categories =[
+      {
+          id: 1,
+          name: "Accounts",
+          component: <AccountTable 
+          branches={branches}
+          accounts={accounts} />,
+      },
+      {
+          id2: 2,
+          name: "Account Registration",
+          component: <CreateAccount />,
+      },
+  ]
 
     return (
         <div className="w-full">

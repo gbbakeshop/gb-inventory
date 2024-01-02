@@ -11,7 +11,7 @@ class UserController extends Controller
 {
   public function get_all_account()
   {
-    $users = User::with('branch')->get();
+    $users = User::where('position', '<>', 'admin')->with('branch')->get();
     return response()->json([
       'status' => $users,
     ]);
@@ -51,8 +51,13 @@ class UserController extends Controller
   }
   public function update_account(Request $request)
   {
-    User::where('id', $request->data['id'])
-      ->update([$request->data]);
+    User::where('id', $request->id)
+      ->update([
+        'name' => $request->name,
+        'branch_id' => $request->branch,
+        'email' => $request->email,
+        'position' => $request->position
+      ]);
     return response()->json([
       'status' => $this->get_all_account(),
       'notify' => [

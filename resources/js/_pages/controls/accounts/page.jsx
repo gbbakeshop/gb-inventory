@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
 import { get_all_account } from "@/_services/account-service";
 import { useDispatch, useSelector } from "react-redux";
 import { setAccounts } from "../_redux/controls-slice";
-import CreateAccount from "./_components/create-account";
 import AccountTabs from "./_components/account-tabs";
 
 export default function AccountPage({ auth }) {
   const dispatch = useDispatch()
   const { filteredAccounts } = useSelector((state) => state.controls);
+  const { branches } = useSelector((state) => state.app);
   useEffect(() => {
     get_all_account ().then(res=>{
       dispatch(setAccounts(res.status))
@@ -20,7 +20,9 @@ export default function AccountPage({ auth }) {
     return (
         <AdministratorLayout auth={auth} subNav={<RadioGroupComponent />}>
             <ControlsBreadCrumbs />
-            <AccountTabs accounts={filteredAccounts}/>
+            <AccountTabs
+            branches={branches}
+            accounts={filteredAccounts}/>
        
         </AdministratorLayout>
     );

@@ -1,1 +1,0 @@
-import{n as e}from"./app-91a8600d.js";async function n(a){return(await e.get("/api/get_all_selecta_branch/"+a)).data}async function r(a){return(await e.post("/api/get_selecta_branch_sales_report",{data:a})).data}export{n as a,r as g};

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class RawMaterialsBranch extends Model
 {
@@ -16,5 +17,13 @@ class RawMaterialsBranch extends Model
       'bind',
       'warning',
    ];
+   public function raw_materials(): HasOne
+   {
+       return $this->hasOne(RawMaterial::class,'id','raw_materials_id');
+   }
+   public function branch(): HasOne
+   {
+       return $this->hasOne(Branch::class,'id','branch_id');
+   }
    
 }

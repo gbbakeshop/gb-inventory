@@ -9,7 +9,7 @@ class RawMaterialsBranchController extends Controller
 {
   
   public function get_all_branch_raw_materials($branchid){
-    $data = RawMaterialsBranch::find($branchid);
+    $data = RawMaterialsBranch::where('branch_id','=',$branchid)->with(['raw_materials','branch'])->get();
     return response()->json([
       'status' => $data
     ]);

@@ -79,7 +79,6 @@ export const controlsSlice = createSlice({
       state.filteredAccounts =  action.payload;
     },
     setFilteredAccounts:(state, action)=>{
-      state.accounts =  action.payload;
       state.filteredAccounts =  action.payload;
     },
   },

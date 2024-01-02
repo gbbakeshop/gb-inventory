@@ -46,7 +46,7 @@ export default function  BranchRawMaterialsTable({data}) {
                               <th className="flex gap-3 px-6 py-4 font-normal text-gray-900">
                                   <div className="text-sm">
                                       <div className="font-medium text-gray-700">
-                                          {res.raw_materials.name}
+                                          {res.raw_materials?.name}
                                       </div>
                                       <div className="text-gray-400">
                                           {res.branch.branch_name}

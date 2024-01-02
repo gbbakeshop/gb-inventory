@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
-import { CakeIcon, ClipboardDocumentCheckIcon, ShoppingBagIcon, TruckIcon } from '@heroicons/react/24/outline'
+import { CakeIcon, ClipboardDocumentCheckIcon, ShoppingBagIcon, TruckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { Link, usePage } from '@inertiajs/react'
 const plans = [
   
@@ -31,7 +31,7 @@ const plans = [
   {
     name: 'Accounts',
     path:'accounts',
-    icon:<ShoppingBagIcon className='h-6'/>,
+    icon:<UserGroupIcon className='h-6'/>,
     href:route('controls.accounts')
   },
 ]

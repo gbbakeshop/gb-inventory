@@ -71,7 +71,7 @@ export default function BranchSideNavbar({ subNav, account }) {
                 {account.position !== "Baker" &&
                     account.position !== "Chief Baker" &&
                     account.position !== "Lamesador" &&
-                    account.position !== "Supervisor" && (
+                    account.position == "Supervisor" && (
                         <Link
                             href={route("branch.selecta.stock")}
                             className={active("selecta")}

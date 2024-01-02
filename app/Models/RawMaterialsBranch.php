@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne; // Fix the typo here
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class RawMaterialsBranch extends Model
 {
@@ -17,6 +17,12 @@ class RawMaterialsBranch extends Model
         'bind',
         'warning',
     ];
+
+    // protected $primaryKey = ['raw_materials_id', 'branch_id'];
+    protected $primaryKey = null;
+    public $incrementing = false;
+
+    // Override the method to specify the composite primary key
 
     public function raw_materials(): HasOne
     {

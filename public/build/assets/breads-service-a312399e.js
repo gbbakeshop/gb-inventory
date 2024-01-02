@@ -1,0 +1,1 @@
+import{n as e}from"./app-91a8600d.js";async function n(){return(await e.get("/api/get_all_bread")).data}async function r(a){return(await e.post("/api/create_bread",{data:a})).data}async function o(a){return(await e.delete("/api/delete_bread/"+a)).data}async function d(a){return(await e.post("/api/update_bread",{data:a})).data}export{r as c,o as d,n as g,d as u};

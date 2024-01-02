@@ -22,6 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/get_branch_account', 'App\Http\Controllers\UserController@get_branch_account');
 Route::get('/get_all_account', 'App\Http\Controllers\UserController@get_all_account');
+Route::post('/create_account', 'App\Http\Controllers\UserController@create_account');
+Route::post('/update_account', 'App\Http\Controllers\UserController@update_account');
+Route::post('/delete_account', 'App\Http\Controllers\UserController@delete_account');
 // Route::middleware('auth:sanctum')->group(function () {
 Route::get('/get_all_branches', 'App\Http\Controllers\BranchController@get_all_branches');
 //

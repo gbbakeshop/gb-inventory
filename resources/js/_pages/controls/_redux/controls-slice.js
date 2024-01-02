@@ -19,7 +19,9 @@ export const controlsSlice = createSlice({
       target:0
     },
     selecta:[],
-    filteredSelecta:[]
+    filteredSelecta:[],
+    accounts:[],
+    filteredAccounts:[]
   },
   reducers: {
     setStepperValue: (state, action) => {
@@ -72,6 +74,14 @@ export const controlsSlice = createSlice({
     setFilteredSelecta:(state, action)=>{
       state.filteredSelecta =  action.payload;
     },
+    setAccounts:(state, action)=>{
+      state.accounts =  action.payload;
+      state.filteredAccounts =  action.payload;
+    },
+    setFilteredAccounts:(state, action)=>{
+      state.accounts =  action.payload;
+      state.filteredAccounts =  action.payload;
+    },
   },
 });
 
@@ -90,7 +100,9 @@ export const {
   setRecipeList,
   setRecipeListForm,
   setSelecta,
-  setFilteredSelecta
+  setFilteredSelecta,
+  setAccounts,
+  setFilteredAccounts
  } = controlsSlice.actions;
 
 export default controlsSlice.reducer;

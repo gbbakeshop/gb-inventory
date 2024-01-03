@@ -18,12 +18,6 @@ class RawMaterialsBranch extends Model
         'warning',
     ];
 
-    // protected $primaryKey = ['raw_materials_id', 'branch_id'];
-    protected $primaryKey = null;
-    public $incrementing = false;
-
-    // Override the method to specify the composite primary key
-
     public function raw_materials(): HasOne
     {
         return $this->hasOne(RawMaterial::class, 'id', 'raw_materials_id');

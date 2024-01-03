@@ -4,20 +4,24 @@ import BranchBreadCrumbsComponent from "../_components/branch-breadcrumbs-compon
 import BranchRawMaterialsTable from "./_components/branch-raw-materials-table";
 import { useEffect, useState } from "react";
 import { get_all_branch_raw_materials } from "@/_services/raw-materials-branch-service";
+import { setRawMaterials } from "./_redux/raw-materials-slice";
+import { useDispatch } from "react-redux";
 
 export default function BranchRawMaterialsPage({ auth }) {
   const branch_id = window.location.pathname.split('/')[3]
-  const [data,setData] = useState([])
+  const dispatch = useDispatch()
   useEffect(() => {
     get_all_branch_raw_materials(branch_id).then(res=>{
-      setData(res.status)
+      dispatch(setRawMaterials(res.status))
     })
     
   }, []);
     return (
         <AdministratorLayout auth={auth} subNav={<BranchesDisclosure />}>
             <BranchBreadCrumbsComponent />
-            <BranchRawMaterialsTable data={ data}/>
+            <BranchRawMaterialsTable 
+              account={auth.user}
+            branch_id={branch_id}/>
         </AdministratorLayout>
     );
 }

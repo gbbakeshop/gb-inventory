@@ -4,7 +4,7 @@ import { setBranches, setRecipeList, setRecipes } from "@/_redux/app-slice";
 import { get_all_branches } from "@/_services/branches-service";
 import { get_all_recipe } from "@/_services/recipe-service";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function BranchLayout({ children, account }) {
     const dispatch = useDispatch();
@@ -16,6 +16,12 @@ export default function BranchLayout({ children, account }) {
             dispatch(setRecipes(res?.status));
         });
     }, [dispatch]);
+
+    const { branches } = useSelector(
+      (state) => state.app
+  );
+  const branch = branches.find(res=>res.id == account.user.branch_id)
+    console.log("branch", branch);
     return (
         <>
             <Toastify />
@@ -30,6 +36,10 @@ export default function BranchLayout({ children, account }) {
                     <div className="text-sm leading-normal mt-0 text-gray-400 font-bold uppercase">
                         <i className="fas fa-map-marker-alt text-lg text-gray-400"></i>
                        {account.user.position} - ID #: GB - {account.user.id}
+                    </div>
+                    <div className="text-sm leading-normal mt-0 text-gray-400 font-bold uppercase">
+                        <i className="fas fa-map-marker-alt text-lg text-gray-400"></i>
+                       Branch : {branch.branch_name}
                     </div>
                     {children}
                 </div>

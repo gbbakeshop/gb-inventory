@@ -9,10 +9,11 @@ use Illuminate\Http\Request;
 
 class RawMaterialsBranchController extends Controller
 {
-  
-  public function get_all_branch_raw_materials($branchid){
-  
-    $datas = RawMaterialsBranch::where('branch_id','=',$branchid)->with(['raw_materials','branch'])->get();
+
+  public function get_all_branch_raw_materials($branchid)
+  {
+
+    $datas = RawMaterialsBranch::where('branch_id', '=', $branchid)->with(['raw_materials', 'branch'])->get();
 
     // $branches = Branch::all();
     // $datasss = RawMaterial::get();
@@ -41,10 +42,18 @@ class RawMaterialsBranchController extends Controller
   }
 
 
-  public function update_branch_raw_materials(Request $request){
-    $data = RawMaterialsBranch::find($request->data['id'])->update($request->data);
+  public function update_branch_raw_materials(Request $request)
+  {
+   RawMaterialsBranch::find($request->data['id'])->update([
+      'quantity' => $request->data['quantity']
+    ]);
     return response()->json([
-      'status' => $data
+      'status' => 'success',
+      'notify' => [
+        'status' => 'success',
+        'message' => 'Updated Successfully'
+      ],
+      'data' => $this->get_all_branch_raw_materials($request->data['branch_id'])
     ]);
   }
 }

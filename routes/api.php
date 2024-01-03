@@ -45,7 +45,7 @@ Route::delete('/delete_raw_materials/{id}', 'App\Http\Controllers\RawMaterialCon
 Route::post('/update_raw_materials', 'App\Http\Controllers\RawMaterialController@update_raw_materials');
 //
 Route::get('/get_all_branch_raw_materials/{branchid}', 'App\Http\Controllers\RawMaterialsBranchController@get_all_branch_raw_materials');
-Route::post('/update_branch_raw_materials', 'App\Http\Controllers\RawMaterialController@update_branch_raw_materials');
+Route::post('/update_branch_raw_materials', 'App\Http\Controllers\RawMaterialsBranchController@update_branch_raw_materials');
 //
 Route::get('/get_all_raw_materials_group', 'App\Http\Controllers\RawMaterialsGroupController@get_all_raw_materials_group');
 Route::post('/update_raw_materials_group', 'App\Http\Controllers\RawMaterialsGroupController@update_raw_materials_group');

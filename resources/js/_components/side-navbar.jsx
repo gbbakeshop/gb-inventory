@@ -51,7 +51,7 @@ export default function SideNavbar({subNav}) {
                 </Link>
 
                 <Link
-                    href={route("administrator.accounts")}
+                    href={route("controls.accounts")}
                     className={active("accounts")}
                 >
                     <UserGroupIcon className="w-6 h-6" />

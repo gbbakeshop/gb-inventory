@@ -31,9 +31,6 @@ export default function AdministratorLayout({ auth, children, subNav }) {
                             <TopNavbar />
                         </div>
                         <div className="flex-1 w-full">
-                            {/* <div className="p-2 overflow-x-auto">
-                                {children}
-                            </div> */}
                              <div className="p-2">
                                 {children}
                             </div>

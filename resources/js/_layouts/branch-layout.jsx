@@ -21,7 +21,7 @@ export default function BranchLayout({ children, account }) {
       (state) => state.app
   );
   const branch = branches.find(res=>res.id == account.user.branch_id)
-    console.log("branch", branch);
+   
     return (
         <>
             <Toastify />
@@ -39,7 +39,7 @@ export default function BranchLayout({ children, account }) {
                     </div>
                     <div className="text-sm leading-normal mt-0 text-gray-400 font-bold uppercase">
                         <i className="fas fa-map-marker-alt text-lg text-gray-400"></i>
-                       Branch : {branch.branch_name}
+                       Branch : {branch?.branch_name}
                     </div>
                     {children}
                 </div>

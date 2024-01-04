@@ -87,12 +87,15 @@ export default function BranchSideNavbar({ subNav, account }) {
                     <TruckIcon className="w-6 h-6" />
                 </Link>
 
-                <Link
-                    href={route("branch.accounts")}
-                    className={active("accounts")}
-                >
-                    <UserGroupIcon className="w-6 h-6" />
-                </Link>
+                {account.position == "Supervisor" && (
+                    <Link
+                        href={route("branch.accounts")}
+                        className={active("accounts")}
+                    >
+                        <UserGroupIcon className="w-6 h-6" />
+                    </Link>
+                )}
+
                 <Link
                     href={route("branch.attendance")}
                     className={active("attendance")}

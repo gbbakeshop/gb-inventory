@@ -94,35 +94,35 @@ export default function ProductionCreateBeginningForm({ data, account }) {
                     className="flex flex-col h-full w-full"
                 >
                     <div className="flex-none">
-                        <div class="relative overflow-x-auto w-full ">
-                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                        <div className="relative overflow-x-auto w-full ">
+                            <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
                                 <tbody>
-                                    <tr class="bg-white border-b">
+                                    <tr className="bg-white border-b">
                                         <th
                                             scope="row"
-                                            class=" py-4 font-medium text-gray-900 whitespace-nowrap "
+                                            className=" py-4 font-medium text-gray-900 whitespace-nowrap "
                                         >
                                             Name of Recipe
                                         </th>
-                                        <td class=" py-4">{data.name}</td>
+                                        <td className=" py-4">{data.name}</td>
                                     </tr>
-                                    <tr class="bg-white border-b">
+                                    <tr className="bg-white border-b">
                                         <th
                                             scope="row"
-                                            class=" py-4 font-medium text-gray-900 whitespace-nowrap "
+                                            className=" py-4 font-medium text-gray-900 whitespace-nowrap "
                                         >
                                             Target Pieces
                                         </th>
-                                        <td class=" py-4">{data.target}</td>
+                                        <td className=" py-4">{data.target}</td>
                                     </tr>
-                                    <tr class="bg-white border-b">
+                                    <tr className="bg-white border-b">
                                         <th
                                             scope="row"
-                                            class=" py-4 font-medium text-gray-900 whitespace-nowrap "
+                                            className=" py-4 font-medium text-gray-900 whitespace-nowrap "
                                         >
                                             Actual Target
                                         </th>
-                                        <td class=" py-4">
+                                        <td className=" py-4">
                                             {isNaN(actualTarget)
                                                 ? 0
                                                 : actualTarget}

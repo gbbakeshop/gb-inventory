@@ -9,7 +9,8 @@ export default function Domination({branch_id}) {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [exist, setExist] = useState(true);
-    const { date } = useSelector((state) => state.app);
+    const { date,meridiem } = useSelector((state) => state.app);
+    
     const [domination, setDomination] = useState([
         {
             sign: "₱",
@@ -163,7 +164,7 @@ export default function Domination({branch_id}) {
         get_domination({
             date: date,
             branch_id:branch_id,
-            meridiem:moment().format('A')
+            meridiem:meridiem
         })
             .then((res) => {
                 if (moment(date).format("L") < moment().format("L")) {
@@ -183,7 +184,7 @@ export default function Domination({branch_id}) {
             .catch((res) => {
                 setLoading(false);
             });
-    }, [date]);
+    }, [date,meridiem]);
     
     function submitDomination() {
         setLoading(true);

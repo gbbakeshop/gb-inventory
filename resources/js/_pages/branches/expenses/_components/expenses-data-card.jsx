@@ -10,6 +10,7 @@ import TableCharge from "./table-charge";
 import TableExpenses from "./table-expenses";
 import { get_all_raw_materials } from "@/_services/raw-materials-service";
 import ExpensesSkeletonLoader from "./expenses-skeleton-loader";
+import Domination from "./domination";
 
 export default function ExpensesDataCard({ data, account, branch_id }) {
     const [users, setUsers] = useState([]);
@@ -434,29 +435,37 @@ export default function ExpensesDataCard({ data, account, branch_id }) {
                             </div>
                         </div>
                     </div>
-
-                    <TableCredit
-                        selecta={selecta}
-                        breads={breads}
-                        users={users}
-                        branch_id={branch_id}
-                        account={account}
-                    />
-                    <TableCharge
-                        selecta={selecta}
-                        breads={breads}
-                        users={users}
-                        branch_id={branch_id}
-                        account={account}
-                    />
-                    <TableExpenses
-                        rawMaterials={rawMaterials}
-                        selecta={selecta}
-                        breads={breads}
-                        users={users}
-                        branch_id={branch_id}
-                        account={account}
-                    />
+                    <div className="flex xxs:flex-col md:flex-row gap-3">
+                        <div className="flex-1 ">
+                            <TableCredit
+                                selecta={selecta}
+                                breads={breads}
+                                users={users}
+                                branch_id={branch_id}
+                                account={account}
+                            />
+                            <TableCharge
+                                selecta={selecta}
+                                breads={breads}
+                                users={users}
+                                branch_id={branch_id}
+                                account={account}
+                            />
+                            <TableExpenses
+                                rawMaterials={rawMaterials}
+                                selecta={selecta}
+                                breads={breads}
+                                users={users}
+                                branch_id={branch_id}
+                                account={account}
+                            />
+                        </div>
+                        <div className="flex-1 w-full">
+                            <Domination 
+                            branch_id={branch_id}
+                            />
+                        </div>
+                    </div>
                 </>
             )}
         </>

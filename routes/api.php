@@ -96,3 +96,6 @@ Route::post('/get_all_expenses', 'App\Http\Controllers\ExpensesController@get_al
 Route::post('/create_expenses', 'App\Http\Controllers\ExpensesController@create_expenses');
 Route::post('/delete_expenses', 'App\Http\Controllers\ExpensesController@delete_expenses');
 Route::post('/update_expenses', 'App\Http\Controllers\ExpensesController@update_expenses');
+//
+Route::post('/create_domination','App\Http\Controllers\DominationController@create_domination');
+Route::post('/get_domination','App\Http\Controllers\DominationController@get_domination');

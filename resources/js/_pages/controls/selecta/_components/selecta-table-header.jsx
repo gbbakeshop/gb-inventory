@@ -33,7 +33,7 @@ export default function SelectaTableHeader() {
         <div className="lg:flex lg:items-center lg:justify-between p-3">
             <div className="min-w-0 flex-1">
                 <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-                    Group of Bread
+                    List of Selecta
                 </h2>
                 <div className=" flex mx-auto text-gray-600 ">
                     <button type="submit" className=" right-0 top-0 mx-3">

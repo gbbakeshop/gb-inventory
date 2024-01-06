@@ -14,6 +14,7 @@ export const appSlice = createSlice({
     recipeList:[],
     filteredRecipeList:[],
     refresh:0,
+    date:moment().format('L'),
     meridiem:moment().format('A')
   },
   reducers: {

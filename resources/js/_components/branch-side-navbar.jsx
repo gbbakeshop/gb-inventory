@@ -42,17 +42,15 @@ export default function BranchSideNavbar({ subNav, account }) {
                     <HomeIcon className="w-6 h-6" />
                 </Link>
 
-                {account.position !== "Baker" &&
-                    account.position !== "Chief Baker" &&
-                    account.position !== "Lamesador" &&
-                    account.position == "Supervisor" && (
-                        <Link
-                            href={route("branch.expenses")}
-                            className={active("expenses")}
-                        >
-                            <BanknotesIcon className="w-6 h-6" />
-                        </Link>
-                    )}
+                {account.position == "Supervisor" ||
+                account.position == "Cashier" ? (
+                    <Link
+                        href={route("branch.expenses")}
+                        className={active("expenses")}
+                    >
+                        <BanknotesIcon className="w-6 h-6" />
+                    </Link>
+                ) : null}
 
                 <Link
                     href={

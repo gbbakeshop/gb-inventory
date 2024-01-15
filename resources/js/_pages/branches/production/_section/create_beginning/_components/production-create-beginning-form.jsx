@@ -16,6 +16,8 @@ export default function ProductionCreateBeginningForm({ data, account }) {
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
     const [actualTarget, setActualTarget] = useState(0);
+    const [kilo, setKilo] = useState(1)
+
     function submitHandler(e) {
         e.preventDefault();
         const formData = new FormData(ref.current);
@@ -28,8 +30,9 @@ export default function ProductionCreateBeginningForm({ data, account }) {
         );
         const raw_materials = data.bread_group.map((res, index) => ({
             ...res,
+            kilo: kilo,
             bakers_id: account.id,
-            branch_id: account.branch_id,
+            branch_id: account.branch_id == 'admin' ? 0 : account.branch_id,
             meridiem: moment().format("A"),
             new_production: formData
                 .get(`new_production${index}`)
@@ -113,7 +116,7 @@ export default function ProductionCreateBeginningForm({ data, account }) {
                                         >
                                             Target Pieces
                                         </th>
-                                        <td className=" py-4">{data.target}</td>
+                                        <td className=" py-4">{parseFloat(data.target) * parseFloat(kilo)}</td>
                                     </tr>
                                     <tr className="bg-white border-b">
                                         <th
@@ -131,7 +134,15 @@ export default function ProductionCreateBeginningForm({ data, account }) {
                                 </tbody>
                             </table>
                         </div>
-
+                        <Input
+                            onChange={(e) => setKilo(e.target.value)}
+                            value={kilo} // Provide the actual value if applicable
+                            name={`kilo`} // Use a unique name for each input
+                            title='Kilo'
+                            placeholder={`Enter Kilo`}
+                            type="number"
+                        />
+                        <hr class="h-px my-2 bg-gray-700 border-0 " />
                         {data.bread_group.map((res, index) => (
                             <Input
                                 key={index}
@@ -177,13 +188,13 @@ export default function ProductionCreateBeginningForm({ data, account }) {
                                                     {res.raw_materials.name}
                                                 </th>
                                                 <td className="px-2 py-4">
-                                                    {res.grams}mg
+                                                    {res.grams * parseFloat(kilo)}mg
                                                 </td>
                                                 <td className="px-2 py-4">
-                                                    Laptop
+                                                    N/A
                                                 </td>
                                                 <td className="px-2 py-4">
-                                                    $2999
+                                                    N/A
                                                 </td>
                                             </tr>
                                         )

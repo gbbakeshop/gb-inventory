@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->bigInteger('target')->nullable();
+            $table->float('target')->nullable();
             $table->bigInteger('bread_group_token')->nullable();
             $table->bigInteger('raw_materials_group_token')->nullable();
             $table->timestamps();

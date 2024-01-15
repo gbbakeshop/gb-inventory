@@ -1,0 +1,1 @@
+import{p as e}from"./app-5f0ce7e9.js";async function r(){return(await e.get("/api/get_all_bread")).data}async function n(a){return(await e.post("/api/create_bread",{data:a})).data}async function o(a){return(await e.delete("/api/delete_bread/"+a)).data}async function d(a){return(await e.post("/api/update_bread",{data:a})).data}export{n as c,o as d,r as g,d as u};

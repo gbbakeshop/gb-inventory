@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('raw_materials_id')->nullable();
             $table->string('group_name')->nullable();
-            $table->bigInteger('grams')->nullable();
+            $table->float('grams')->nullable();
             $table->bigInteger('token')->nullable();
             $table->timestamps();
         });

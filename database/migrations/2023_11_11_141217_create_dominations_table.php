@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('dominations', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('branch_id')->nullable();
-            $table->bigInteger('bills')->nullable();
-            $table->bigInteger('pcs')->nullable();
-            $table->bigInteger('total')->nullable();
+            $table->float('bills')->nullable();
+            $table->float('pcs')->nullable();
+            $table->float('total')->nullable();
             $table->string('date')->nullable();
             $table->string('meridiem')->nullable();
             $table->timestamps();

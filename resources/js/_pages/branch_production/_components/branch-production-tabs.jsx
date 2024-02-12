@@ -31,7 +31,8 @@ export default function BranchProductionTabs({ account }) {
             account.position !== "Baker" &&
             account.position !== "Chief Baker" &&
             account.position !== "Lamesador" &&
-            account.position == "Supervisor"
+            account.position == "Supervisor" || 
+            account.position == "Cashier"
         ) {
             commonCategories = [
                 ...commonCategories,

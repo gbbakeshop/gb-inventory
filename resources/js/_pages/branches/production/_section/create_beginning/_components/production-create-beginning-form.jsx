@@ -9,6 +9,7 @@ import Select from "@/_components/select";
 import { create_raw_materials } from "@/_services/raw-materials-service";
 import { create_new_records } from "@/_services/bread-record-service";
 import moment from "moment";
+import { usePage } from "@inertiajs/react";
 
 export default function ProductionCreateBeginningForm({ data, account }) {
     const [loading, setLoading] = useState(false);
@@ -17,6 +18,8 @@ export default function ProductionCreateBeginningForm({ data, account }) {
     const [open, setOpen] = useState(false);
     const [actualTarget, setActualTarget] = useState(0);
     const [kilo, setKilo] = useState(1)
+    const { url } = usePage();
+    const path = url.split("/")[3];
 
     function submitHandler(e) {
         e.preventDefault();
@@ -32,7 +35,7 @@ export default function ProductionCreateBeginningForm({ data, account }) {
             ...res,
             kilo: kilo,
             bakers_id: account.id,
-            branch_id: account.branch_id == 'admin' ? 0 : account.branch_id,
+            branch_id: account.branch_id == 'admin' ? path : account.branch_id,
             meridiem: moment().format("A"),
             new_production: formData
                 .get(`new_production${index}`)
